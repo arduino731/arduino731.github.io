@@ -1,0 +1,94 @@
+doctype html(lang='en')
+|
+|
+<head>
+  <!-- Google Analytics --> 
+  //- <script async src="https://www.googletagmanager.com/gtag/js?id=G-BZF27Q02HD"></script>
+  //- <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date()) gtag('config', 'G-BZF27Q02HD')</script>
+  script(async='', src='https://www.googletagmanager.com/gtag/js?id=G-BZF27Q02HD')
+  script.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BZF27Q02HD');
+
+    
+  <!-- Regular data -->
+  <meta charset="utf-8">
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  
+  <!-- Description -->
+  <meta name="author" content="Brian van Vlymen"/>
+  <meta name="description" content="Front-end Developer" />
+  <meta name="keywords"  content="Brian van Vlymen, graphic design, web design, website design, web developer, website builder, responsive web design, front-end developer, build a website, webdesign"/>
+  <meta name="Resource-type" content="Document" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph data -->		
+  <meta property="og:author" content="Brian van Vlymen" />
+  <meta property="og:description" content="Front-end Developer."/>
+  <meta property="og:image" content="https://dejan.works/img/thumbnail.png" />
+  <meta property="og:site_name" content="Brian van Vlymen"/>
+  <meta property="og:title" content="Brian van Vlymen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://van-vlymen.com" />
+  
+  <!-- Title -->
+  <title> Brian van Vlymen </title>
+  
+  <!-- CSS --> 
+  <link href='https://fonts.googleapis.com/css?family=Lato:900italic,300italic', rel='stylesheet', type='text/css' >
+  <link rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/journal/bootstrap.min.css' >
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous" >
+  <link rel='stylesheet', href='/css/cover.css' >
+  <link rel='stylesheet', href='/css/contact.css' >
+  <link rel='stylesheet', href='/css/work.css' >
+  <script src='/bower_components/jquery/dist/jquery.min.js'></script>
+  <script src='/bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+  <script src='/js/index.js'></script>
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/aedf49568f44e378f05b0f42c/fbf8723291c794d66d86dc7b6.js");</script>
+</head>
+
+  body
+    // load navbar.pug
+    include navbar
+
+    // content block
+    block content
+
+
+include footer
+
+  <script src='/js/sliderImage.js'></script>
+  <script src='/js/walkingPaws.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+  script.
+    //- TweenMax.to(".site-wrapper2", 3, { backgroundColor:"#2b3541"})
+    //- TweenMax.to(".site-wrapper2", 3, { backgroundColor:"red"})
+    TweenMax.from(".left-sectionPic1", 3, { y: 1000 , borderRadius: 10, rotation:360, ease:Bounce.easeIn })
+    TweenMax.from(".left-sectionPic2", 4, { y: 1000 , borderRadius: 10, rotation:360, ease:Bounce.easeIn })
+        //- TweenMax.from(".image-paws-left", 4, { y: 500, ease:SteppedEase.config(12)})
+    //- TweenMax.from(".image-paws-right", 4, { y: 500, ease:SteppedEase.config(12)})
+    var tl = new TimelineMax()
+    tl.staggerFrom(".Brian, .vanVlymen", 0.5, {
+      opacity: 0,
+      cycle: {
+        x:[-190, 190]
+      }
+    }, 0.5 )
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
+
+  //- h4 Google Ads
+  //- script(async='', src='//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+  //- // responsive bottom
+  //- ins.adsbygoogle(style='display:block;', data-ad-client='ca-pub-3887486988814609', data-ad-slot='5258747976', data-ad-format='auto')
+  //- script.
+  //-   (adsbygoogle = window.adsbygoogle || []).push({});
+  script.
+    $(document).ready(function() {
+    $('#Brian').fadeIn(5000);
+    $('#vanVlymen').delay(1100).fadeIn(1500);
+    $('#frontEnd').delay(2000).fadeIn(1500);
+    });
+    

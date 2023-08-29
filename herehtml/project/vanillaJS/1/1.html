@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="player">
+     <video class="player__video viewer" src="25ASLSignsBeginners.mp4" autoplay></video>
+
+     <div class="player__controls">
+       <div class="progress">
+        <div class="progress__filled"></div>
+       </div>
+       <button class="player__button toggle" title="Toggle Play">🤙</button>
+       <div class="controller">
+         <button class="player__slider box">&#128266;</button>
+         <input class="player__slider fast_forward" type="range" name="volume" title="Volume" min="0" max="1" step="0.05" value="1">
+       </div>
+       <div class="controller">
+        <button class="player__button box" title="Fast Forward">&#9193;</button>
+        <input class="player__slider fast_forward" type="range" name="playbackRate" title="Fast Forward" min="0.5" max="5" step="0.1" value="1">
+       </div>
+       <button data-skip="-10" class="player__button">« 10s</button>
+       <button data-skip="25" class="player__button">25s »</button>
+       <button  class="magnifying player__button" title="Magnifying Glass">🔎</button>
+
+     </div>
+   </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

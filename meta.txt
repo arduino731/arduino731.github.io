@@ -1,0 +1,12 @@
+<meta http-equiv=content-type content="text/html; charset=utf-8"><meta http-equiv=x-dns-prefetch-control content=on><meta http-equiv=X-UA-Compatible content=chrome=1>
+<meta name=description content="Latest news coverage, email, free stock quotes, live scores and video are just the beginning. Discover more every day at Yahoo!">
+<meta property=og:description content="Latest news coverage, email, free stock quotes, live scores and video are just the beginning. Discover more every day at Yahoo!">
+<meta name=keywords content="yahoo, yahoo home page, yahoo homepage, yahoo search, yahoo mail, yahoo messenger, yahoo games, news, finance, sport, entertainment">
+<meta property=fb:app_id content=458584288257241>
+<meta property=og:image content=https://s.yimg.com/dh/ap/default/130909/y_200_a.png>
+<meta property=fb:pages content="7040724713, 37510781596">
+<meta property=og:url content=http://www.yahoo.com>
+<meta property=og:title content="Yahoo | Mail, Weather, Search, Politics, News, Finance, Sports & Videos">
+<meta name="conf:cjs:locale" content="en-US">
+<meta name="oath:guce:consent-host" content="guce.yahoo.com">
+<meta property="og:type" content="website">

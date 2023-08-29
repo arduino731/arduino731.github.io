@@ -1,0 +1,41 @@
+#contact-container {
+  width: 100%;
+}
+.social {
+  height: 48px;
+  width: 48px;
+  margin: 10px;
+  float: left;
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  -ms-transition: all ease 0.3s;
+  transition: all ease 0.3s;
+}
+
+.social:hover {
+  background-position: 0px -48px;
+}
+
+/* not need this */
+/* not need this */
+/* not need this */
+/* not need this */
+.social-twitter {
+  background-image: url(http://recodenow.com/wp-content/uploads/2016/04/icon-twitter.png);
+}
+
+.social-fb {
+  background-image: url(http://recodenow.com/wp-content/uploads/2016/04/fb-icon.png);
+}
+
+.social-pinterest {
+  background-image: url(http://recodenow.com/wp-content/uploads/2016/04/pinterest-icon.png);
+}
+
+.social-flickr {
+  background-image: url(http://recodenow.com/wp-content/uploads/2016/04/icon-flickr.png);
+}
+#social-buttons {
+padding: 5% 5% 0% 5%;
+}
