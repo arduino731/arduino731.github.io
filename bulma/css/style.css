@@ -1,0 +1,16 @@
+/* Change background color on hover */
+.title span{
+    border-radius: 5px;
+
+}
+
+.content-design:hover {
+    background-color: rgb(207, 92, 92);
+    border-radius: 5px;
+  }
+  .content-led:hover {
+    background-color: rgb(146, 248, 146);
+  }
+  .content-write:hover {
+    background-color: rgb(149, 149, 245);
+  }

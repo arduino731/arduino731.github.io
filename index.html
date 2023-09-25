@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Bulma</title>
     <link rel="stylesheet" href="bulma\css\bulma.min.css">
+    <link rel="stylesheet" href="bulma\css\style.css">
 </head>
 <body>
 
   <section class="section">
-    <div class="container">
-      <div class="block">
+      <article class="block">
         <p class="subtitle">What you include in your portfolio is just as important as what's on your resume. Including a variety of projects in your portfolio is a great way to showcase your design skills, and will also demonstrate that you understand how users interact with websites and apps.</p>
         <ul style="background-color:lightblue">
           <li><strong>How do I start a UX design project?</strong> Begin by defining your project goals and objectives, understanding your target 
@@ -21,31 +21,43 @@
             Making sure you’ve got an impressive portfolio to your name is important for both fresh-faced UX designers and seasoned industry veterans.
           </li>
         </ul>
-      </div>
-      <nav>
-        <figure class="image is-128x128">
-          <img src="/images/paws-logo2.png" alt="paws logo">
-        </figure>
-        <li><a href="/pages/home.html" target="_self">HOME</a></li>
-        <li>WORK</li>
-        <li>BLOG</li>
-        <li><a href="/pages/about.html" target="_self">ABOUT</a></li>
+      </article>
 
+      <nav>
+        <div class="columns">
+          <!-- <div class="column is-offset-one-quarter"></div> -->
+          <div class="column is-half is-centered">
+            <figure class="image is-128x128">
+              <img src="/images/paws-logo2.png" alt="paws logo">
+            </figure>
+          </div>
+          <div class="column"><a href="/pages/home.html" target="_self">HOME</a></div>
+          <div class="column"> WORK </div>
+          <div class="column"> BLOG</div>
+          <div class="column">   <a href="/pages/about.html" target="_self">ABOUT</a></div>
+          <div class="column is-offset-one-quarter"></div>
+        </div> <!-- end columns -->
       </nav>
 
-      <!-- INTRODUCTION UX/UI product designer  -->
-      <h1 class="title">
-        Hi, I'm <span style="background-color: #fffb9c">Brian van Vlymen</span>
-      </h1>
-      <h1 class="title">
-        I design, RGB LED gradient, & write 
-      </h1>
-      <p class="subtitle">
-        I'm a product designer based in Austin, Texas with experience in delivering end to end UX/UI design for software products. I'm passionate about improving the lives of others through design and am constantly looking to learn new things everyday. 
-      </p>  
-      
 
-    </div>
+    <!-- INTRODUCTION UX/UI product designer  -->
+    <main class="columns">
+      <div class="column is-three-fifths is-offset-one-fifth">
+        <h1 class="block title">
+          Hi, I'm <span style="background-color: #fffb9c">Brian van Vlymen</span>
+        </h1>
+        <h1 class="block title">
+          I 
+          <span class="content-design">design</span>,
+          <span class="content-led">RGB LED gradient </span>&
+          <span class="content-write">write</span>
+        </h1>
+        <p class="block subtitle">
+          I'm a product designer based in Austin, Texas with experience in delivering end to end UX/UI design for software products. I'm passionate about improving the lives of others through design and am constantly looking to learn new things everyday. 
+        </p>
+      </div>  
+    </main>
+
   </section>
   <section class="section">
     <div class="container">
