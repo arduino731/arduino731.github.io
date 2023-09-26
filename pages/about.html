@@ -1,50 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="..\bulma\css\bulma.min.css">
+    <head>
+        <div include-html="head.html"></div>
+        <link rel="stylesheet" href="../bulma/css/bulma.min.css">
+        <link rel="stylesheet" href="../bulma/css/style.css">
+        <link rel="icon" href="../images/paws-logo.ico" type="paws logo">
 
-</head>
+    </head>
+    
 <body>
-NAV HERE! 
-<nav class="level">
-    <p class="level-item has-text-centered">
-        <img src="https://bulma.io/images/bulma-type.png" alt="" style="height: 30px;">
-    </p>  
-</nav>
-
-<div class="container is-fluid">
     <section class="section">
-    <h1 class="title has-text-centered ">A little bit about myself.</h1>
-        <div class="notification">
-            <p class="subtitle ">
-                My name is Brian van Vlymen and I'm passionate about improving the lives of others through design. I'm constantly learning new things everyday and love meeting people who are motivated and unafraid of sharing their ideas with the world.
-            </p>
-            <p class="subtitle ">
-                I'm a <a href="https://medium.com/@vanvlymenpaws" target="_blank">taught designer</a> and have learnt a lot of the processes, concepts and theories of UX/UI and product design through attending workshops, reading blogs and applying these to projects in my spare time and at work. I am very much a big-picture thinker and enjoy working on products end to end, from ideation all the way to development.
-            </p>
-            <div class="level">
-                <div class="level-item has-text-centered">
-                    <figure class="image is-128x128">
-                        <img class="is-rounded" src="../images/brian.jpg" alt="Brian">
-                    </figure>
+        <div include-html="header.html"></div>
+        <main>
+            <div class="columns">
+                <div class="column is-three-fifths is-offset-one-fifth box">
+                    <h1 class="title has-text-centered ">A little bit about myself.</h1>
+                    <div class="notification">
+                        <p class="subtitle ">
+                            My name is Brian van Vlymen and I'm passionate about improving the lives of others through design. I'm constantly learning new things everyday and love meeting people who are motivated and unafraid of sharing their ideas with the world.
+                        </p>
+                        <p class="subtitle ">
+                            I'm a <a href="https://medium.com/@vanvlymenpaws" target="_blank">taught designer</a> and have learnt a lot of the processes, concepts and theories of UX/UI and product design through attending workshops, reading blogs and applying these to projects in my spare time and at work. I am very much a big-picture thinker and enjoy working on products end to end, from ideation all the way to development.
+                        </p>
+                        <div class="level">
+                            <div class="level-item has-text-centered">
+                                <figure class="image is-128x128">
+                                    <img class="is-rounded" src="../images/brian.jpg" alt="Brian">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> 
+        </main>
     </section>
-</div>  
 
-My values
-😍 Passion is everything.
-If you don't enjoy what you're doing - move. You are not a tree. Channel your energy into something you believe in. I'm fortunate to be inspired and surrounded by motivated people who enjoy what they do. We only have so much time on this earth to live - so why waste it?
-🤓 Always be learning.
-Humans are constant works in progress that need to receive feedback in order to grow. I am always looking at ways to challenge and improve myself, which is why in my spare time I like to participate in hackathons, read blogs, dabble in new projects and attend meetups.
-🎨 Embrace your creativity.
-Everyone needs a creative outlet of some sort - else, we'd go insane! When I'm not designing, I'm singing with the band, painting artworks as a form of meditation and helping startups realise their potential with design.
-🙏 Stay humble.
-It doesn't matter whether you're the president, manager, homeless or average kid on the street. Treat others with respect as you would yourself because ultimately we're all human sharing the same wants and needs and facing our own battles everyday. Stay true to yourself and stay true to others.
+    <article class="container">
+        <h1 class="title has-text-centered">My values</h1>
+        <div class="columns">
+            <div class="column" style="background-color: rgb(219,68,55); border-radius: 10px">
+                <div class="notification">
+                    <h3 class="title has-text-centered">😍 Passion is everything.</h3>
+                    <p class="subtitle box">If you don't enjoy what you're doing - move. You are not a tree. Channel your energy into something you believe in. I'm fortunate to be inspired and surrounded by motivated people who enjoy what they do. We only have so much time on this earth to live - so why waste it? 🤓 Always be learning.</p>
+                    <h3 class="title has-text-centered">🤓 Always be learning.</h3>
+                    <p class="subtitle box">Humans are constant works in progress that need to receive feedback in order to grow. I am always looking at ways to challenge and improve myself, which is why in my spare time I like to participate in hackathons, read blogs, dabble in new projects and attend meetups.</p>
+                    <h3 class="title has-text-centered">🎨 Embrace your creativity.</h3>
+                    <p class="subtitle box">Everyone needs a creative outlet of some sort - else, we'd go insane! When I'm not designing, I'm singing with the band, painting artworks as a form of meditation and helping startups realise their potential with design.</p>
+                    <h3 class="title has-text-centered">🙏 Stay humble.</h3>
+                    <p class="subtitle box">It doesn't matter whether you're the president, manager, homeless or average kid on the street. Treat others with respect as you would yourself because ultimately we're all human sharing the same wants and needs and facing our own battles everyday. Stay true to yourself and stay true to others.</p>
+                </div>
+            </div>
+        </div>    
+    </article>
 
+    <article class="section">
+        <h1 class="title has-text-centered">Testimonials</h1>
+    </article>
+
+        
+<script type="text/javascript" src="../script/wrapperDOM.js"></script>
 </body>
 </html>

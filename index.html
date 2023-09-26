@@ -1,16 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello Bulma</title>
-    <link rel="stylesheet" href="bulma\css\bulma.min.css">
-    <link rel="stylesheet" href="bulma\css\style.css">
+  <div include-html="pages/head.html"></div>
+  <link rel="stylesheet" href="bulma/css/bulma.min.css">
+  <link rel="stylesheet" href="bulma/css/style.css">
+  <link rel="icon" href="images/paws-logo.ico" type="paws logo">
 </head>
 <body>
 
   <section class="section">
-      <article class="block">
+      
+
+      <div include-html="pages/header.html"></div>
+
+    <!-- INTRODUCTION UX/UI product designer  -->
+    <main class="columns section">
+      <div class="column is-three-fifths is-offset-one-fifth box has-text-centered">
+        <h1 class="block title">
+          Hi, I'm <span style="background-color: rgb(15,157,88)">Brian van Vlymen</span>
+        </h1>
+        <h1 class="block title">
+          I 
+          <span class="content-design">design</span>,
+          <span class="content-led">RGB LED gradient </span>&
+          <span class="content-write">write</span>
+        </h1>
+        <p class="block subtitle">
+          I'm a product designer based in Austin, Texas with experience in delivering end to end UX/UI design for software products. I'm passionate about improving the lives of others through design and am constantly looking to learn new things everyday. 
+        </p>
+        <p class="block subtitle" style="text-decoration: underline">
+          Check out my work
+        </p>
+      </div>  
+    </main>
+
+  </section>
+  <section class="section">
+      <h1 class="title">
+        This is going to be personal User Interface (UI) projects 
+      </h1>
+      <p class="subtitle">
+        Analyze a web page or portion of a web page for conformance with WCAG 2.0 Color Contrast requirements.
+      </p>
+
+      <div class="block">
+        <h1 class="title">Tools We Will Use</h1>
+        <ol>
+          <li class="subtitle">Figma</li>
+          <li class="subtitle">Color Contrast Analyzer</li>
+          <li class="subtitle">Logo Makers</li>
+        </ol>
+      </div>
+    </div> <!-- end section -->
+<article class="block">
         <p class="subtitle">What you include in your portfolio is just as important as what's on your resume. Including a variety of projects in your portfolio is a great way to showcase your design skills, and will also demonstrate that you understand how users interact with websites and apps.</p>
         <ul style="background-color:lightblue">
           <li><strong>How do I start a UX design project?</strong> Begin by defining your project goals and objectives, understanding your target 
@@ -22,73 +64,13 @@
           </li>
         </ul>
       </article>
+    <footer>
+      <div include-html="/pages/footer.html"></div>
+    </footer>
 
-      <nav>
-        <div class="columns">
-          <!-- <div class="column is-offset-one-quarter"></div> -->
-          <div class="column is-half is-centered">
-            <figure class="image is-128x128">
-              <img src="/images/paws-logo2.png" alt="paws logo">
-            </figure>
-          </div>
-          <div class="column"><a href="/pages/home.html" target="_self">HOME</a></div>
-          <div class="column"> WORK </div>
-          <div class="column"> BLOG</div>
-          <div class="column">   <a href="/pages/about.html" target="_self">ABOUT</a></div>
-          <div class="column is-offset-one-quarter"></div>
-        </div> <!-- end columns -->
-      </nav>
-
-
-    <!-- INTRODUCTION UX/UI product designer  -->
-    <main class="columns">
-      <div class="column is-three-fifths is-offset-one-fifth">
-        <h1 class="block title">
-          Hi, I'm <span style="background-color: #fffb9c">Brian van Vlymen</span>
-        </h1>
-        <h1 class="block title">
-          I 
-          <span class="content-design">design</span>,
-          <span class="content-led">RGB LED gradient </span>&
-          <span class="content-write">write</span>
-        </h1>
-        <p class="block subtitle">
-          I'm a product designer based in Austin, Texas with experience in delivering end to end UX/UI design for software products. I'm passionate about improving the lives of others through design and am constantly looking to learn new things everyday. 
-        </p>
-      </div>  
-    </main>
-
-  </section>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        This is going to be personal User Interface (UI) projects 
-      </h1>
-      <p class="subtitle">
-        Analyze a web page or portion of a web page for conformance with WCAG 2.0 Color Contrast requirements.
-      </p>
-
-      <div class="block">
-        <h1 class="title">Tools We Will Use</h1>
-        <ol>
-          <li>Figma</li>
-          <li>Color Contrast Analyzer</li>
-          <li>Logo Makers</li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="level">
-      <div class="level-item has-text-centered">
-        <p>An example of logo here</p>
-      </div>
-      <div class="level-item has-text-centered">
-        <figure class="image is-128x128">
-        <img src="/images/paws-logo1.png" alt="Paws logo">
-        </figure>
-      </div>
-    </div>
   </section>
     
-</body>
+</body>    
+<script type="text/javascript" src="script/wrapperDOM.js"></script>
+
 </html>
