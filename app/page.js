@@ -25,7 +25,7 @@ export default function Page(){
             <section className="padding py-2"> 
                 <About />   
             </section>
-            <section className="brian py-2 m-5 bg-slate-500 ring-red-400 border-4 border-slate-800 rounded-md"> 
+            <section className="py-2 m-5 bg-slate-500 ring-red-400 border-4 border-slate-800 rounded-md"> 
                 <Projects />   
             </section>
         </main>
