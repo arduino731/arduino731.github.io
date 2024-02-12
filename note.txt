@@ -1,0 +1,6 @@
+snippets 
+    create a React Arrow function Componet with ES7 module system
+    rafce 
+
+npm run dev 
+npm run build 
