@@ -4,3 +4,7 @@ Begin by defining your project goals and objectives, understanding your target a
 
 ![Paws-logo](https://github.com/arduino731/arduino731.github.io/assets/4556609/75d54db2-040d-4c97-a8e6-cbfc93adc58a) 
 
+no framework 
+remove bluma
+change to windtail 
+
