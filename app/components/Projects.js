@@ -53,6 +53,15 @@ console.log(postImage);
                         height={100} 
                     /> 
                 </a>
+                <a href="/projects3" >
+                    <Image 
+                        src="/images/projects/secondPort.png" 
+                        className="" 
+                        alt="logo"
+                        width={110} 
+                        height={100} 
+                    /> 
+                </a>
                 
             </div>
 
