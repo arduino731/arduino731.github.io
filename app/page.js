@@ -1,9 +1,6 @@
 import React from 'react'
 
 import "./index.css"
-// import Image from 'next/image';
-import Head from './components/Head';
-import Nav from './components/Nav';
 import Section from './components/Section';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -14,13 +11,6 @@ import ImageSlider from './components/ImageSlider';
 export default function Page(){
     return(
         <main className="bg-slate-300 relative">
-            <section>
-                {/* <!-- Site logo, navigation, and header content --> */}
-                <Head />
-            </section>
-            <section>
-                <Nav />
-            </section>
             <section className=""> 
                 <Section />   
             </section>

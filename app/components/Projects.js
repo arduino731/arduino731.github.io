@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-key */
+"use client"
 import Image from 'next/image'
-
+import motion from "framer-motion"
 
 // githubURL
 // https://github.com/arduino731/jennifershows_Angular
@@ -10,21 +12,30 @@ const projectImages = ["secondPort.png", "secondPort.png", "secondPort.png"]
 const projects = [
     {
         image: "secondPort.png",
-        url : "github.com1", 
+        url : "/projects/1", 
         className: "flex"
     },{
         image: "secondPort.png",
-        url : "github.com2", 
+        url : "/projects/2", 
         className: "flex"
     },{
         image: "secondPort.png",
-        url : "github.com3", 
+        url : "/projects/3", 
         className: "flex"
     }
 ]
-const postImage = projects.map((image) => image.url);
-console.log(postImage);
 
+
+
+const box = {
+    x: 50
+}
+const imageVariants = {
+    top: { x: "100", scale: 1 },
+    left: { x: "-50%", scale: 0.7 },
+    right: { x: "-90%", scale: 0.5 },
+    bottom: { x: "90%", scale: 0.5 },
+  };
 
  const Projects = () => {
     return ( 
@@ -34,35 +45,27 @@ console.log(postImage);
                 <p>adversarial search programming</p>
             </div>
                     
-            <div className="flex">
-                <a href="/projects1" >
+            <div className="flex justify-center items-center h-screen">
+                {projects.map((item, index) => (
+                <a href={item.url} >
+
                     <Image 
-                        src="/images/projects/secondPort.png" 
-                        className="" 
-                        alt="logo"
-                        width={110} 
-                        height={100} 
-                    /> 
+                        key={index}
+                        src={`/images/projects/${item.image}`} 
+                        alt={`/images/projects/${item.image}`} 
+                        initial="top"
+                        className="m-2 border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-300 hover:shadow-lightspot" 
+                        animate={{x:100 }}
+                        transition={{ duration: 0.5 }}
+                        width={200} 
+                        height={200} 
+                    />                                         
                 </a>
-                <a href="/projects2" >
-                    <Image 
-                        src="/images/projects/secondPort.png" 
-                        className="" 
-                        alt="logo"
-                        width={110} 
-                        height={100} 
-                    /> 
-                </a>
-                <a href="/projects3" >
-                    <Image 
-                        src="/images/projects/secondPort.png" 
-                        className="" 
-                        alt="logo"
-                        width={110} 
-                        height={100} 
-                    /> 
-                </a>
-                
+                ))}
+
+
+
+
             </div>
 
             <ol class=" text-center ">

@@ -59,7 +59,7 @@ const ImageSlider = () => {
       };
 
   return (
-    <div >
+    <div>
         <h1 className=" bg-slate-500 items-center justify-center flex text-5xl">About</h1>
         <div className="flex items-center flex-col justify-center bg-slate-500 h-screen ">
         
