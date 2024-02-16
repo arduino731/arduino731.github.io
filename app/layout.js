@@ -1,6 +1,10 @@
+// import { Rubik } from 'next/font/google'
 import Head from './components/Head';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+
+// const rubik = Rubik({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Freelance Developer • Brian van Vlymen',
@@ -11,7 +15,7 @@ export default function RootLayout({ children }) {
  return (
     <html lang="en">
       
-      <body className="bg-slate-300 relative">
+      <body className="">
         <Head />
         <Nav />
         {children}

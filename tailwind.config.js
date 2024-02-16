@@ -8,13 +8,14 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       boxShadow: {
-        'lightspot': "0 0 20vh white",
+        'lightspot': "0 0 20vh white"
+      },
+      colors: {
+        'primary': '#7856ff'
+      },
+      height: {
+        'screen/2': "50vh"
       }
     },
   },

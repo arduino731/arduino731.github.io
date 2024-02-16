@@ -1,6 +1,14 @@
 snippets 
     create a React Arrow function Componet with ES7 module system
     "rafce" 
+    "rfc"
 
 npm run dev 
 npm run build 
+
+
+First, run the development server:
+
+```bash
+npm run dev
+

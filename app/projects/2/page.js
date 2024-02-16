@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../index.css"
+import "../../globals.css"
 import Project2 from './Project2'
 
 export default function page() {

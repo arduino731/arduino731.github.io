@@ -8,11 +8,22 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+body{
+    @apply bg-slate-300;
+}
 
 .BVV {
       color: black;
       text-transform: uppercase;
     }
+
+h1 {
+    @apply text-red-300 font-bold text-5xl;
+}
+a {
+    @apply border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
+}
+
 @layer utilities {
     .padding{
         @apply sm:px-16 px-8 sm:py-24 py-12;

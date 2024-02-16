@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "./index.css"
+import "./globals.css"
 import Section from './components/Section';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -10,7 +10,7 @@ import ImageSlider from './components/ImageSlider';
 
 export default function Page(){
     return(
-        <main className="bg-slate-300 relative">
+        <main className="">
             <section className=""> 
                 <Section />   
             </section>

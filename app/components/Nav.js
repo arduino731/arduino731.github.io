@@ -1,20 +1,21 @@
 import Image from 'next/image'
+import Link from 'next/link'
+import Logo from './wolfIcon.png'
 
 const Nav = () => {
     return (
         <header className="padding-x">
             <nav>
                 <div className="p-2 flex justify-between">
-                    <a href="/" >
+                <Link href="/">
                         <Image 
-                            src="/images/wolfIcon.png" 
+                            src={Logo} 
                             className="" 
                             alt="logo"
-                            width={130} 
+                            width={100} 
                             height={100} 
                         /> 
-                    </a>
-                     
+                 </Link>    
                     <button>
                         <Image 
                             src="/images/moon.png" 

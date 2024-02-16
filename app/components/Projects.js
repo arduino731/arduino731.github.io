@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-key */
 "use client"
 import Image from 'next/image'
-import motion from "framer-motion"
+
 
 // githubURL
 // https://github.com/arduino731/jennifershows_Angular
@@ -48,13 +48,12 @@ const imageVariants = {
             <div className="flex justify-center items-center h-screen">
                 {projects.map((item, index) => (
                 <a href={item.url} >
-
                     <Image 
                         key={index}
                         src={`/images/projects/${item.image}`} 
                         alt={`/images/projects/${item.image}`} 
                         initial="top"
-                        className="border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-300 hover:shadow-lightspot" 
+                        className="" 
                         animate={{x:100 }}
                         transition={{ duration: 0.5 }}
                         width={200} 
