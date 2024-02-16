@@ -5,15 +5,20 @@ export default function Project1() {
   return (
     <article>
       <div style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
-        <div className="flex justify-center h-screen/2">
+        {/* <div className="flex justify-center h-screen/2"> */}
+        <div className="my-2" style={{ position: 'relative', height: '300px' }} >
           <Image 
               src="/images/ScreenshotRWD.png" 
               alt="ScreenshotRWD"
-              width={1000} 
-              height={1000} 
-              className="border-solid border-2 border-slate-100 my-4 h-auto rounded-md" 
+              // width={1000} 
+              // height={1000} 
+              className="border-solid border-2 border-slate-100 py-2 h-auto rounded-md" 
               quality={100}
-              priority={true}
+              // priority={true}
+              fill
+              style={{
+                objectFit: 'contain',
+              }}
           />
         </div>
       </div>
@@ -22,6 +27,46 @@ export default function Project1() {
         <h1 className="m-5">Featured Project</h1>
         <div className="m-5">
           <a href="https://github.com/arduino731/van-vlymen-paws-portfolio" target="_blank"> GITHUB</a>
+        </div>
+      </div>
+
+      <div class="px-2">
+        
+          <h2 className="text-center w-screen">
+            <p>Animated Cat Paws: Moving upwards with a fading opacity effect.</p>
+            <p>Responsive Design: A mobile phone and a desktop monitor with arrows indicating adaptability.</p>
+            <p>GSAP Animations: A gear with motion lines, representing heavy-duty animations.</p>
+            <p>Performance & Accessibility: A combination of a performance speedometer and an accessibility symbol.</p>
+          </h2>
+          <div class="flex -mx-2">
+            <div class="w-1/4 px-2">
+            <div class="bg-slate-800 w-full relative">
+              {/* <img className="rounded " src="/images/dogPawsEffect.webp"/> */}
+              <Image 
+              src="/images/dogPawsEffect.webp" 
+              alt="dogPawsEffect"
+              // width={1000} 
+              // height={1000} 
+              className=" h-auto rounded-full" 
+              quality={100}
+              // priority={true}
+              fill
+              style={{
+                objectFit: 'contain',
+              }}
+          /> 
+              <h1 className="text-center text-lg">Animated Dog Paws</h1>
+            </div>
+          </div>
+          <div class="w-1/4 px-2">
+            <div class="bg-gray-500 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+          </div>
+          <div class="w-1/4 px-2">
+            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+          </div>
+          <div class="w-1/4 px-2">
+            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+          </div>
         </div>
       </div>
       
