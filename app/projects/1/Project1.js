@@ -31,42 +31,67 @@ export default function Project1() {
       </div>
 
       <div class="px-2">
-        
           <h2 className="text-center w-screen">
             <p>Animated Cat Paws: Moving upwards with a fading opacity effect.</p>
             <p>Responsive Design: A mobile phone and a desktop monitor with arrows indicating adaptability.</p>
             <p>GSAP Animations: A gear with motion lines, representing heavy-duty animations.</p>
             <p>Performance & Accessibility: A combination of a performance speedometer and an accessibility symbol.</p>
           </h2>
-          <div class="flex -mx-2">
+          <div class="flex mx-2">
             <div class="w-1/4 px-2">
-            <div class="bg-slate-800 w-full relative">
-              {/* <img className="rounded " src="/images/dogPawsEffect.webp"/> */}
-              <Image 
-              src="/images/dogPawsEffect.webp" 
-              alt="dogPawsEffect"
-              // width={1000} 
-              // height={1000} 
-              className=" h-auto rounded-full" 
-              quality={100}
-              // priority={true}
-              fill
-              style={{
-                objectFit: 'contain',
-              }}
-          /> 
               <h1 className="text-center text-lg">Animated Dog Paws</h1>
+              <div class="flex flex-row items-center justify-center">
+                <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
+                  <Image 
+                  src="/images/wolf_paw_Right1.png" 
+                  alt="wolf paw right" 
+                  quality={100}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  /> 
+                </div>
+                <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
+                  <Image 
+                  src="/images/wolfpawLeft1.png" 
+                  alt="wolf paw left" 
+                  quality={100}
+                  // priority={true}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  /> 
+                
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="w-1/4 px-2">
-            <div class="bg-gray-500 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
-          </div>
-          <div class="w-1/4 px-2">
-            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
-          </div>
-          <div class="w-1/4 px-2">
-            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
-          </div>
+            <div class="w-1/4 px-2">
+              <h1 className="text-center text-lg">Responsive Design</h1>
+              <div class="flex flex-row items-center justify-center">
+                <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
+                  <Image 
+                  src="/images/responsive.png" 
+                  alt="responsive" 
+                  // className="rounded-full" 
+                  quality={100}
+                  // priority={true}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  /> 
+                
+                </div>
+              </div>
+            </div>
+            <div class="w-1/4 px-2">
+              <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+            </div>
+            <div class="w-1/4 px-2">
+              <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+            </div>
         </div>
       </div>
       
