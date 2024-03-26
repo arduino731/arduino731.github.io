@@ -5,16 +5,12 @@ export default function Project1() {
   return (
     <article>
       <div style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
-        {/* <div className="flex justify-center h-screen/2"> */}
         <div className="my-2" style={{ position: 'relative', height: '300px' }} >
           <Image 
               src="/images/ScreenshotRWD.png" 
               alt="ScreenshotRWD"
-              // width={1000} 
-              // height={1000} 
               className="border-solid border-2 border-slate-100 py-2 h-auto rounded-md" 
               quality={100}
-              // priority={true}
               fill
               style={{
                 objectFit: 'contain',
@@ -24,18 +20,20 @@ export default function Project1() {
       </div>
 
       <div className="text-center">
-        <h1 className="m-5">Featured Project</h1>
+        <h1 className="m-5 md:text-5xl">Featured Project</h1>
         <div className="m-5">
           <a href="https://github.com/arduino731/van-vlymen-paws-portfolio" target="_blank"> GITHUB</a>
         </div>
       </div>
 
-      <div class="px-2">
-          <h2 className="text-center w-screen">
-            <p>Animated Cat Paws: Moving upwards with a fading opacity effect.</p>
-            <p>Responsive Design: A mobile phone and a desktop monitor with arrows indicating adaptability.</p>
-            <p>GSAP Animations: A gear with motion lines, representing heavy-duty animations.</p>
-            <p>Performance & Accessibility: A combination of a performance speedometer and an accessibility symbol.</p>
+      <div>
+          <h2 className="text-left">
+            <div className="md:mx-20 my-3">
+              <p><span className="font-bold">Animated Cat Paws:</span> Moving upwards with a fading opacity effect.</p>
+              <p><span className="font-bold">Responsive Design:</span> A mobile phone and a desktop monitor with arrows indicating adaptability.</p>
+              <p><span className="font-bold">GSAP Animations:</span> A gear with motion lines, representing heavy-duty animations.</p>
+              <p><span className="font-bold">Performance & Accessibility:</span> A combination of a performance speedometer and an accessibility symbol.</p>
+            </div>
           </h2>
           <div class="flex mx-2">
             <div class="w-1/4 px-2">
@@ -57,7 +55,6 @@ export default function Project1() {
                   src="/images/wolfpawLeft1.png" 
                   alt="wolf paw left" 
                   quality={100}
-                  // priority={true}
                   fill
                   style={{
                     objectFit: 'contain',
@@ -87,36 +84,47 @@ export default function Project1() {
               </div>
             </div>
             <div class="w-1/4 px-2">
-              <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+            <h1 className="text-center text-lg">GSAP Animations</h1>
+              <div class="flex flex-row items-center justify-center">
+                <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
+                  <Image 
+                  src="/images/greensock.png" 
+                  alt="greensock" 
+                  quality={100}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  /> 
+                
+                </div>
+              </div>
             </div>
             <div class="w-1/4 px-2">
-              <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
+            <h1 className="text-center text-lg">Performance & Accessibility</h1>
+              <div class="flex flex-row items-center justify-center">
+                <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
+                  <Image 
+                  src="/images/access.png" 
+                  alt="access" 
+                  quality={100}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                  }}
+                  /> 
+                
+                </div>
+              </div>
             </div>
-        </div>
+          </div>
       </div>
       
-      <div class="px-2">
-        <div class="flex -mx-2">
-          <div class="w-1/3 px-2">
-            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png"/> </div>
-          </div>
-          <div class="w-1/3 px-2">
-            <div class="bg-gray-500 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
-          </div>
-          <div class="w-1/3 px-2">
-            <div class="bg-gray-400 w-full h-full"><img src="/images/ScreenshotRWD.png" /> </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="text-xs">
-      <h2>LatestNews</h2>
-      <h1>Pages & Routes</h1>
-      <h2>Client Components </h2>
-      <p>Portfolio: This section should be the core of your site. For each project, include:
+      <div className="text-xs m-5 ">
+      <p><span className="font-bold">Portfolio:</span> This section should be the core of your site. For each project, include:
       A brief description of the project, your role, and the problem it solved.
       Technologies used, showcasing your coding proficiency.
-      Links to the live project (if available) and code repositories.
+      Links to the live project and code repositories.
       A video demo for complex projects, highlighting key features and your problem-solving approach.
       High-quality images of the project interfaces.</p>
       </div>
@@ -131,19 +139,10 @@ export default function Project1() {
           <p className='mb-3'>In summary, this project is a testament to my coding proficiency, showcasing my ability to solve problems, animate elements, and optimize performance, all while creating an engaging and accessible user experience. Get ready to be wowed!</p>
         </div>
       </div>
-      <iframe className="w-full aspect-video" width="250" height="315" src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      <iframe width="250" height="315" src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe className="w-full aspect-video" width="200" height="315" src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
+      <iframe width="200" height="315" src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
       <iframe width="315" height="560" src="https://www.youtube.com/embed/2vOmAAKTv74" title="portfolio2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <Image 
-          src="/images/UX.webp" 
-          alt="UX"
-          width={1000} 
-          height={1000} 
-          className="" 
-          quality={100}
-          // style={{height:"auto"}}
-      />
 
     </article>
   )

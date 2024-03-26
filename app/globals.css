@@ -13,12 +13,11 @@ body{
 }
 
 .BVV {
-      color: black;
       text-transform: uppercase;
     }
 
 h1 {
-    @apply text-red-300 font-bold text-5xl;
+    @apply text-slate-800 font-bold;
 }
 a {
     @apply border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;

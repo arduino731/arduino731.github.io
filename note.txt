@@ -3,12 +3,12 @@ snippets
     "rafce" 
     "rfc"
 
-npm run dev 
-npm run build 
+$ npm run dev 
+$ npm run build 
 
 
 First, run the development server:
 
 ```bash
-npm run dev
+$ npm run dev
 

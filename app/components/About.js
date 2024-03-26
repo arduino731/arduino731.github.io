@@ -3,8 +3,9 @@ import Image from 'next/image'
 const About = () => {
     return (
       <div>
+
         <div className="flex items-center justify-center">
-          <h1 className="text-5xl">About</h1>
+          <h1 className="md:text-3xl">About</h1>
         </div>
         <div className="p-2 m-4 flex justify-center ">
           <div className=" w-1/4 text-center">
