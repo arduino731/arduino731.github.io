@@ -14,10 +14,10 @@ export default function Page(){
             <section className=""> 
                 <Section />   
             </section>
-            <section className="padding py-2"> 
+             <section className="padding">{/*  globals.css padding*/}
                 <About />   
             </section>
-            <section className="py-5 bg-slate-500 ring-red-400 border-4 border-slate-800 rounded-sm"> 
+            <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-sm"> 
                 <Projects />   
             </section>
             <section className=""> 

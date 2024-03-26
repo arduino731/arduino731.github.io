@@ -5,7 +5,7 @@ const About = () => {
       <div>
 
         <div className="flex items-center justify-center">
-          <h1 className="md:text-3xl">About</h1>
+          <h1 className="text-3xl">About</h1>
         </div>
         <div className="p-2 m-4 flex justify-center ">
           <div className=" w-1/4 text-center">
@@ -16,8 +16,8 @@ const About = () => {
               width={100} 
               height={100} 
             />
-            <h1 className="text-3xl">FAST</h1>
-            <p className="">Fast load times and lag free interaction, my highest priority.</p>
+            <h1 className="lg:text-3xl ">FAST</h1>
+            <p className="sm:text-sm">Fast load times and lag free interaction, my highest priority.</p>
           </div>
           <div className=" w-1/4 text-center">
             <Image 
@@ -28,7 +28,7 @@ const About = () => {
               width={100} 
               height={100} 
             />
-            <h1 className="text-3xl">RESPONSIVE </h1>
+            <h1 className="lg:text-3xl ">RESPONSIVE </h1>
             <p className="">My layouts will work on any device, big or small.</p>
           </div>
           <div className=" w-1/4 text-center">
@@ -39,7 +39,7 @@ const About = () => {
               width={100} 
               height={100} 
             />
-            <h1 className="text-3xl">INTUITIVE</h1>
+            <h1 className="lg:text-3xl ">INTUITIVE</h1>
             <p className="">Strong preference for easy to use, intuitive UX/UI.</p>
           </div>
           <div className=" w-1/4 text-center">
@@ -50,7 +50,7 @@ const About = () => {
               width={100} 
               height={100} 
             />
-            <h1 className="text-3xl">DYNAMIC</h1>
+            <h1 className="lg:text-3xl">DYNAMIC</h1>
             <p className="">Websites don&apos;t have to be static, I love making pages come to life.</p>
           </div>
         </div>

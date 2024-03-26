@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <div>
-      <footer className="text-center text-5xl">Footer</footer>
+      <footer className="text-center sm:text-5xl">Footer</footer>
       <div style={{position:"relative", height: "100px"}}>
         <Image 
           src="/images/footer.png" 

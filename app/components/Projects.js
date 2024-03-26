@@ -45,7 +45,7 @@ const imageVariants = {
                 <p>adversarial search programming</p>
             </div>
                     
-            <div className="flex justify-center items-center h-screen">
+            <div className="flex justify-center items-center m-4">
                 {projects.map((item, index) => (
                 <a href={item.url} >
                     <Image 
