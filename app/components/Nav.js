@@ -32,12 +32,12 @@ const Nav = () => {
                         <div className="flex items-end justify-end">
                             <p>Provide options for users to switch between light and dark modes to accommodate varying preferences and visual needs.</p>
                             <Image 
-                            src="/images/arrowUp.png" 
-                            className="" 
-                            alt="arrow up"
-                            width={20} 
-                            height={20} 
-                        />
+                                src="/images/arrowUp.png" 
+                                className="" 
+                                alt="arrow up"
+                                width={20} 
+                                height={20} 
+                            />
                         </div>
                         <p>Background: #121212 - a very dark grey, easier on the eyes than pure black.
 Text: #FFFFFF - pure white, to maintain high contrast against the dark grey.
