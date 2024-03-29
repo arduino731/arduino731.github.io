@@ -11,14 +11,13 @@
 body{
     @apply bg-slate-300;
 }
-
 .BVV {
       text-transform: uppercase;
     }
-
 h1 {
     @apply text-slate-800 font-bold;
 }
+
 a {
     @apply border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
 }

@@ -1,10 +1,7 @@
-// import { Rubik } from 'next/font/google'
 import Head from './components/Head';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-
-// const rubik = Rubik({ subsets: ['latin'] })
-
+import ClientNextThemes from './clientNextThemes'
 
 export const metadata = {
   title: 'Freelance Developer • Brian van Vlymen',
@@ -13,12 +10,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
  return (
-    <html lang="en">
-      
-      <body className="">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-slate-700 dark:bg-slate-400">
         <Head />
         <Nav />
-        {children}
+          <ClientNextThemes>{children}</ClientNextThemes>
         <Footer />
       </body>
     </html>

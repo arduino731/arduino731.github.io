@@ -12,3 +12,7 @@ First, run the development server:
 ```bash
 $ npm run dev
 
+Image: 
+    dark:bg-slate-700 bg-slate-400
+text:
+    dark:text-lightgrey text-darkgrey
