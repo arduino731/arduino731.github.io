@@ -1,8 +1,8 @@
 
 
 export default function Project3() {
-  const[color, setChangeColor] = useState();
-  const { theme, setTheme } = useTheme()
+  // const[color, setChangeColor] = useState();
+  // const { theme, setTheme } = useTheme()
 
  
 
