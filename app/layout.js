@@ -13,8 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className="bg-slate-700 dark:bg-slate-400">
         <Head />
-        <Nav />
-          <ClientNextThemes>{children}</ClientNextThemes>
+          <ClientNextThemes>
+            <Nav />
+            {children}
+          </ClientNextThemes>
         <Footer />
       </body>
     </html>
