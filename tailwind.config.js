@@ -19,6 +19,13 @@ module.exports = {
         'screen/2': "50vh"
       },
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "12px",
+        md: "32px"
+      }
+    }
   },
   plugins: [],
   darkMode: 'class'

@@ -17,7 +17,7 @@ export default function Page(){
              <section className="padding">{/*  globals.css padding*/}
                 <About />   
             </section>
-            <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-sm"> 
+            <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-md container"> 
                 <Projects />   
             </section>
             <section className=""> 

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.lobster-regular {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+.color1 {
+    color:#5cc2cc;
+}
+
+.color2 {
+    color:#0c717e;
+}
+.color3 {
+    color:#4c4b4e;
+}
+.color4 {
+    color:#838c8b;
+}
+.color5 {
+    color:#746c71;
+}
