@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css');
+
 
 .lobster-regular {
     font-family: "Lobster", sans-serif;
@@ -22,4 +24,14 @@
 }
 .color5 {
     color:#746c71;
+}
+
+.body3 {
+    @apply bg-blue-600 text-white tracking-wider;
+}
+.nav-link{
+    @apply text-lg font-bold duration-300;
+}
+.nav-link:hover{
+    @apply text-yellow-500;
 }
