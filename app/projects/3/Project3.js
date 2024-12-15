@@ -1,25 +1,32 @@
 "use client"
 import "./css/style.css"
-import "./js/main.js"
 import Image from 'next/image'
-// import Script from "./js/main.js";
-
+import React, { useEffect, useState, useRef } from 'react'; 
 
 export default function Project3() {
 
+
+  useEffect(() =>{
+    const navMenu = document.getElementById("nav-menu");
+    const navLink = document.querySelectorAll(".nav-link");
+    const hamburger = document.getElementById("hamburger");
+  })
+
+
+
   return (
-    <div>
-     <h1 class="bg-white text-3xl font-bold underline bg-slate-500 container">Surf Website || TailwindCSS </h1>
-     <h1 class="bg-white">Project 3</h1>
+      <div>
+       <h1 class="bg-white text-3xl font-bold underline bg-slate-500 container">Surf Website || TailwindCSS </h1>
+       <h1 class="bg-white">Project 3</h1>
      <h1 class="text-3xl font-bold underline bg-slate-500 container lobster-regular">Hello world! </h1>
      
      <section class="body3">
-      <header id="navbar" class="bg-blue-950 fixed w-full left-0 z-50 top-0">
+      <header id="navbar" class="bg-green-950 fixed w-full left-0 z-50 top-0">
         <nav class="container flex items-center justify-between h-16 sm:h-20">
-          <div className="font-Lobster sm:text-2xl">Surf Store</div>
+          <div className="lobster-regular sm:text-2xl">Surf Store</div>
           
-          <div id="nav-menu" class="absolute top-0 left-0 min-h-[80vh] w-full 
-          bg-blue-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden">
+          <div id="nav-menu" class="absolute top-2/3 left-[-100%] min-h-[80vh] w-full 
+          bg-yellow-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden">
             <ul class="flex flex-col items-center gap-8">
               <li>
                 <a href="#home" class="nav-link">Home</a>
@@ -59,20 +66,23 @@ export default function Project3() {
                 height={200} 
               /> 
             </div>
-
-            <div class="text-xl cursor-pointer z-50 ">
-              <i class="ri-menu-4-line" id="hamburger"></i>
-            </div>
-
-
           </div>
+          <div class="text-xl cursor-pointer z-50 ">
+            <i class="ri-menu-4-line" id="hamburger"></i>
+          </div>
+
+
         </nav>
       </header>
      </section>
 
-     {/* <Script></Script> */}
+     
 
   
     </div>
-  )
+  );
+ 
 }
+
+
+

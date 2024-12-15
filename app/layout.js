@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ClientNextThemes from './clientNextThemes'
 
+
 export const metadata = {
   title: 'Freelance Developer • Brian van Vlymen',
   description: 'Personal site and portfolio of freelance developer Brian van Vlymen.',
