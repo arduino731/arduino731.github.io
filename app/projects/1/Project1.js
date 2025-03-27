@@ -4,9 +4,46 @@ import Image from 'next/image'
 export default function Project1() {
   return (
     <article>
-      <h1 className="text-center m-10 md:text-5xl text-white stroke-cyan-500 ">Featured Project</h1>
+      <h1 className="text-center m-10 md:text-5xl text-white">Featured Project</h1>
 
       <div style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
+
+        <div class="flex w-full items-center bg-white p-6 rounded-lg shadow-lg justify-around">
+          <h2>Mobile-like Design</h2>
+          <div class="m-5 relative w-80 h-[500px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
+          <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-lg"></div>
+
+          <iframe 
+              class="w-full h-full rounded-[30px]" 
+              src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" 
+              title="Mobile-like Design Portfolio"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              frameborder="0" 
+              allowfullscreen>
+          </iframe>
+          </div>
+
+          <div class="w-64 h-32 bg-red-500 text-white flex items-center justify-center rounded-md">
+            Desktop-like Design
+          </div>
+
+          <div class="relative w-[640px] h-[400px] bg-gray-900 rounded-lg shadow-2xl border-8 border-gray-300 overflow-hidden">
+          <div class="absolute top-0 left-0 w-full h-10 bg-gray-800 flex items-center px-4">
+              <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+              <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+              <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+          </div>
+          <iframe 
+              class="w-full h-full mt-10" 
+              src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" 
+              title="Desktop-like Design Portfolio" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+          </div>
+        </div>
+
         <div className="my-2" style={{ position: 'relative', height: '300px' }} >
           <Image 
               src="/images/ScreenshotRWD.png" 
@@ -131,7 +168,7 @@ export default function Project1() {
       </div>
       
       <div className="flex flex-col w-1/2 text-left mx-auto">
-        <div className="text-lg rounded-md border-2 border-solid border-slate-400 dark:bg-slate-700 bg-slate-400 ">
+        <div className="p-5 text-lg rounded-md border-2 border-solid border-slate-400 dark:bg-slate-700 bg-slate-400 ">
           <p className='mb-3'>Get ready to be amazed by the second major project in my portfolio! This project is not just a website; it's an experience. Developed using the Pug template engine (formerly known as Jade), this project showcases my expertise in creating dynamic and engaging web applications.</p>
           <p className='mb-3'>Here's the exciting part: every time you refresh the browser page, you'll witness two adorable paws in motion, gracefully moving from the bottom to the top of your screen. These paws don't just appear; they fade in with a captivating opacity effect that changes every second, adding a touch of whimsy to the user experience.</p>
           <p className='mb-3'>But that's not all! This project is a masterclass in responsiveness and cross-browser compatibility. Whether you're on a mobile device or a desktop, the images resize seamlessly, ensuring a flawless experience across all platforms. And yes, it's built with jQuery, but it's versatile enough to work with vanilla JavaScript too.</p>
@@ -140,6 +177,8 @@ export default function Project1() {
           <p className='mb-3'>In summary, this project is a testament to my coding proficiency, showcasing my ability to solve problems, animate elements, and optimize performance, all while creating an engaging and accessible user experience. Get ready to be wowed!</p>
         </div>
       </div>
+
+
       <iframe className="w-full aspect-video" width="200" height="315" src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;"></iframe>
       <iframe width="200" height="315" src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
