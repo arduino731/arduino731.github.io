@@ -4,6 +4,8 @@ import Image from 'next/image'
 export default function Project1() {
   return (
     <article>
+      <h1 className="text-center m-10 md:text-5xl text-white stroke-cyan-500 ">Featured Project</h1>
+
       <div style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
         <div className="my-2" style={{ position: 'relative', height: '300px' }} >
           <Image 
@@ -19,11 +21,10 @@ export default function Project1() {
         </div>
       </div>
 
-      <div className="text-center">
-        <h1 className="m-5 md:text-5xl">Featured Project</h1>
-        <div className="m-5">
-          <a href="https://github.com/arduino731/van-vlymen-paws-portfolio" target="_blank"> GITHUB</a>
-        </div>
+      <div className="m-5 p-10 text-2xl text-center">
+        <a href="https://github.com/arduino731/van-vlymen-paws-portfolio" target="_blank"> 
+          <button>GITHUB</button>
+        </a>
       </div>
 
       <div>
@@ -37,7 +38,7 @@ export default function Project1() {
           </h2>
           <div class="flex mx-2">
             <div class="w-1/4 px-2">
-              <h1 className="text-center text-lg">Animated Dog Paws</h1>
+              <h2 className="text-center text-lg">Animated Dog Paws</h2>
               <div class="flex flex-row items-center justify-center">
                 <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
                   <Image 
@@ -65,7 +66,7 @@ export default function Project1() {
               </div>
             </div>
             <div class="w-1/4 px-2">
-              <h1 className="text-center text-lg">Responsive Design</h1>
+              <h2 className="text-center text-lg">Responsive Design</h2>
               <div class="flex flex-row items-center justify-center">
                 <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
                   <Image 
@@ -84,7 +85,7 @@ export default function Project1() {
               </div>
             </div>
             <div class="w-1/4 px-2">
-            <h1 className="text-center text-lg">GSAP Animations</h1>
+            <h2 className="text-center text-lg">GSAP Animations</h2>
               <div class="flex flex-row items-center justify-center">
                 <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
                   <Image 
@@ -101,7 +102,7 @@ export default function Project1() {
               </div>
             </div>
             <div class="w-1/4 px-2">
-            <h1 className="text-center text-lg">Performance & Accessibility</h1>
+            <h2 className="text-center text-lg">Performance & Accessibility</h2>
               <div class="flex flex-row items-center justify-center">
                 <div class="w-1/4 relative h-full" style={{position:"relative", height: "100px"}}>
                   <Image 
@@ -130,7 +131,7 @@ export default function Project1() {
       </div>
       
       <div className="flex flex-col w-1/2 text-left mx-auto">
-        <div className="text-lg bg-slate-200 rounded-md border-2 border-solid border-slate-400 ">
+        <div className="text-lg rounded-md border-2 border-solid border-slate-400 dark:bg-slate-700 bg-slate-400 ">
           <p className='mb-3'>Get ready to be amazed by the second major project in my portfolio! This project is not just a website; it's an experience. Developed using the Pug template engine (formerly known as Jade), this project showcases my expertise in creating dynamic and engaging web applications.</p>
           <p className='mb-3'>Here's the exciting part: every time you refresh the browser page, you'll witness two adorable paws in motion, gracefully moving from the bottom to the top of your screen. These paws don't just appear; they fade in with a captivating opacity effect that changes every second, adding a touch of whimsy to the user experience.</p>
           <p className='mb-3'>But that's not all! This project is a masterclass in responsiveness and cross-browser compatibility. Whether you're on a mobile device or a desktop, the images resize seamlessly, ensuring a flawless experience across all platforms. And yes, it's built with jQuery, but it's versatile enough to work with vanilla JavaScript too.</p>

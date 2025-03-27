@@ -17,5 +17,7 @@ Image:
 text:
     dark:text-lightgrey text-darkgrey
 
+For project1
+body className="bg-slate-700 dark:bg-slate-400
 
 Experience with payment integration services like Stripe or PayPal and cloud platforms like AWS, Azure, or GCP.
