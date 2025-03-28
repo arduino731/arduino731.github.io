@@ -1,0 +1,22 @@
+@tailwind utilities; 
+
+@tailwind base;
+@tailwind components;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+h1 {
+    @apply text-slate-800 font-bold;
+    /* -webkit-text-stroke: 2px black; */
+}
+
+/* a {
+    @apply dark:bg-slate-700 bg-slate-400 p-2 border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
+} */

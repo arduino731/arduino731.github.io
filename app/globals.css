@@ -9,27 +9,22 @@
     scroll-behavior: smooth;
 }
 body{
-    @apply bg-slate-300;
+    @apply bg-slate-700 dark:bg-slate-400;
 }
-.BVV {
-      text-transform: uppercase;
-    }
+
 h1 {
     @apply text-slate-800 font-bold;
-    -webkit-text-stroke: 2px black;
 }
 
 a {
-    @apply dark:bg-slate-700 bg-slate-400 p-2 border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
+    @apply dark:bg-slate-700 bg-slate-400 mt-6 px-6 py-3 border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
 }
 
 @layer utilities {
     .padding{
         @apply sm:px-16 px-1 sm:py-24 py-2;
     }
-    .padding-x {
-        @apply sm:px-16 px-8;
-      }
+
     .brian {
         @apply font-bold underline
     }

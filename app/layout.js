@@ -1,5 +1,5 @@
-import Head from './components/Head';
-import Nav from './components/Nav';
+import Head from './components/1Head';
+import Nav from './components/2Nav';
 import Footer from './components/Footer';
 import ClientNextThemes from './clientNextThemes'
 
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
  return (
     <html lang="en" suppressHydrationWarning>
-      <body className="bg-slate-700 dark:bg-slate-400">
+      <body>
         <Head />
           <ClientNextThemes>
             <Nav />
