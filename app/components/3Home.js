@@ -10,9 +10,13 @@ const Home = () => {
             <p className="text-lg md:text-xl colorText max-w-2xl">
                 I build beautiful and functional websites using modern technologies.
             </p>
-            <a className="button1" href="#projects">
-                View My Work
-            </a>
+
+            <div className="m-4">
+                <a href="#projects">
+                    <button className="px-4 py-2 hoverSpotlight colorText colorBackgroundOpposite">View My Work</button>
+                </a>
+            </div>
+
         </div>
         
     );
