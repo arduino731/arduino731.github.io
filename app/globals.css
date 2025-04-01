@@ -8,19 +8,28 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body{
-    @apply bg-slate-700 dark:bg-slate-400;
-}
 
-h1 {
+/* h1 {
     @apply text-slate-800 font-bold;
-}
+} */
 
 a {
     @apply dark:bg-slate-700 bg-slate-400 mt-6 px-6 py-3 border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
 }
 
 @layer utilities {
+    .colorBackground{
+        @apply dark:bg-slate-700  bg-slate-400 
+    }
+    .colorBackgroundOpposite{
+        @apply bg-slate-700  dark:bg-slate-400 
+    }
+    .colorText{
+        @apply dark:text-slate-900 text-gray-200
+    }
+
+
+    
     .padding{
         @apply sm:px-16 px-1 sm:py-24 py-2;
     }

@@ -15,10 +15,6 @@ export default function Page(){
                 <Home />   
             </section>
 
-
-
-
-            
             <section className="padding">{/*  globals.css padding*/}
                 <About />   
             </section>

@@ -20,14 +20,13 @@ const Nav = () => {
       }
 
     return (
-        <header className="md:px-16 px-8">
-            <nav>
-                <div className="p-6 flex justify-between items-center">
+        <nav className="colorBackground md:px-16 px-8">
+                <div className="flex justify-between items-center">
                     {/* wolfIcon.png */}
                     <Link href="/">
                         <Image 
                             src={Logo} 
-                            className="dark:bg-slate-700 bg-slate-400 rounded-sm w-12 h-12 md:w-24 md:h-24" 
+                            className="colorBackgroundOpposite rounded-sm w-12 h-12 md:w-24 md:h-24" 
                             alt="logo"
                             width={100} 
                             height={100} 
@@ -58,28 +57,13 @@ const Nav = () => {
                     </button>
                 </div>
 
-                {/* <div className="dark:bg-slate-700 bg-slate-400 font-semibold text-white p-2 m-2 rounded-md"> */}
-                    {/* <div className="flex items-end justify-end">
-                        <p>Provide options for users to switch between light and dark modes to accommodate varying preferences and visual needs.</p>
-                        
-                        <Image 
-                            src="/images/arrowUp.png" 
-                            className="" 
-                            alt="arrow up"
-                            width={20} 
-                            height={20} 
-                        />
-                    </div> */}
 
 
 
-                    <div className="flex items-center justify-center m-4 bg-slate-400">
-                    
-                    <p>Home, About, Portfolio, Services, Contact Us</p>
-                    </div>
-                {/* </div> */}
+                <div className="flex items-center justify-center m-4 bg-slate-400">
+                    <p class="colorText">Home, About, Portfolio, Services, Contact Us</p>
+                </div>
             </nav>
-        </header>
     )
 }
 export default Nav

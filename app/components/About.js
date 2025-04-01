@@ -2,7 +2,9 @@ import Image from 'next/image'
 
 const About = () => {
     return (
-      <div>
+            
+            
+      <div style={{background:"blue"}}>
 
         <div className="flex items-center justify-center">
           <h1 className="text-3xl">About</h1>
