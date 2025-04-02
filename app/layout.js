@@ -1,6 +1,6 @@
 import Head from './components/1Head';
 import Nav from './components/2Nav';
-import Footer from './components/Footer';
+import Footer from './components/8Footer';
 import ClientNextThemes from './clientNextThemes'
 
 

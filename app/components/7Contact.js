@@ -1,10 +1,13 @@
+
 import React from 'react'
 import Image from 'next/image'
 
-export default function Footer() {
+export default function Contact() {
   return (
-    <div>
-      <footer className="text-center sm:text-5xl">Footer</footer>
+    <div className="colorBackground">
+      <p className="text-center">coming soon contact...</p>
+      
+      {/* <footer className="text-center sm:text-5xl">Footer</footer>
       <div style={{position:"relative", height: "100px"}}>
         <Image 
           src="/images/footer.png" 
@@ -15,8 +18,9 @@ export default function Footer() {
             objectFit: 'contain',
           }}
         /> 
-      </div>
+      </div> */}
     </div>
     
   )
 }
+

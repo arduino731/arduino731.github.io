@@ -29,13 +29,15 @@ const Head = () => {
             {/* <!-- Open Graph data -->		 */}
             <meta property="og:author" content="Brian van Vlymen" />
             <meta property="og:description" content="Front-end Developer."/>
-            <meta property="og:image" content="https://dejan.works/img/thumbnail.png" />
+            {/* <meta property="og:image" content="https://dejan.works/img/thumbnail.png" /> */}
             <meta property="og:site_name" content="Brian van Vlymen"/>
             <meta property="og:title" content="Brian van Vlymen" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://van-vlymen.com" />
 
             <link rel="icon" type="image/x-icon" href="/images/favicon.ico"></link>
+            {/* <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></link> */}
+
         </div>
     )
 }

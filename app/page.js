@@ -3,11 +3,15 @@ import React from 'react'
 import "./globals.css"
 import Home from './components/3Home';
 import About from './components/4About';
-// import Services from './components/5services';
-import Projects from './components/Projects';
+import Services from './components/5Services';
+import Projects from './components/6Projects';
+import Contact from './components/7Contact';
 import TernaryOperatorUseState from './components/TernaryOperatorUseState';
 import ImageSlider from './components/ImageSlider';
 
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 export default function Page(){
     return(
@@ -18,13 +22,16 @@ export default function Page(){
             <section>
                 <About />   
             </section>
-            {/* <section>
+            <section>
                 <Services />   
-            </section> */}
+            </section>
 
 
             <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-md container"> 
                 <Projects />   
+            </section>
+            <section>
+                <Contact />
             </section>
             <section > 
                 <TernaryOperatorUseState /> 

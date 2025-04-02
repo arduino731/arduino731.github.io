@@ -22,8 +22,10 @@ const About = () => {
     // };
 
     window.addEventListener("scroll", () => {
-        let aboutMe= document.getElementById("aboutMe");
-        if (window.scrollY > 335) {
+        const aboutMe= document.getElementById("aboutMe");
+        const scrollHeight = aboutMe.scrollHeight;
+        console.log(scrollHeight)
+        if (window.scrollY > scrollHeight + 250)  {
           aboutMe.classList.add("opacity-100");
           aboutMe.classList.remove("opacity-0");
         } else {
@@ -31,6 +33,7 @@ const About = () => {
           aboutMe.classList.remove("opacity-100");
         }
     });
+    
   });
 
 
@@ -38,14 +41,14 @@ const About = () => {
        
     
       <div className="colorBackgroundOpposite">
-        <motion.nav
+        {/* <motion.nav
           className="fixed top-44 left-0 w-full bg-gray-800 text-white p-4 shadow-lg"
           initial={{ opacity: 1, y: 0 }}
           animate={{ opacity: hidden ? 0 : 1, y: hidden ? -50 : 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
         >
           <h1 className="text-center text-lg font-bold">Scrolling Navbar</h1>
-        </motion.nav>
+        </motion.nav> */}
 
 
 
@@ -55,27 +58,30 @@ const About = () => {
         <div id="aboutURL" className="flex items-center justify-center">
           <div id="aboutMe" className="opacity-0 transition-opacity duration-1000 ease-in-out">
             <div class="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
-            <h1  className="colorBackground colorTextOpposite rounded-md px-10 text-5xl m-4 text-center">About Me</h1>
+              <h1  className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center">About Me</h1>
 
-            <p>
-            Suggested Structure for Your Portfolio:
-            About Me:
-            <br></br>
+              <p className="break-normal">
+                Suggested Structure for Your Portfolio:
+              </p> 
+              <p className="break-normal">
+              About Me:
 
-            A brief paragraph introducing yourself.
+                A brief paragraph introducing yourself.
 
-            Your background, interests, and passion for web development.
-            </p>
-
-
-
-
-
-
+                Your background, interests, and passion for web development.
+              </p>
+            </div>
+          </div>
+        </div> 
 
 
 
-    <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white">I specialize in:</h2>
+
+
+
+
+
+    {/* <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white">I specialize in:</h2>
 
     <div class="flex items-center gap-4 p-6 bg-blue-500 text-white rounded-lg shadow-lg">
         <span class="text-3xl">📱</span>
@@ -112,28 +118,12 @@ const About = () => {
         <p class="mt-3 text-lg text-gray-600 dark:text-gray-400">
             Let's build something amazing together! 🚀💻
         </p>
-    </div>
-</div>
-
-          </div>
-        </div>
-
-
-<p>
-I specialize in:
-✅ Responsive Web Design – Ensuring seamless experiences across all devices.
-✅ Frontend & Backend Development – Building interactive UIs with React, Tailwind CSS, and JavaScript.
-✅ Performance Optimization – Writing clean, efficient, and scalable code.
-✅ Web Animations & Effects – Creating smooth and engaging user experiences.
-
-💡 My goal? To bring ideas to life with code and create visually stunning, user-friendly websites that make an impact.
-
-Let's build something amazing together! 🚀💻
-</p>
+    </div>*/}
 
 
 
-        <div className="p-2 m-4 flex justify-center ">
+
+        {/* <div className="p-2 m-4 flex justify-center ">
           <div className=" w-1/4 text-center">
             <Image 
               src="/images/fast.png" 
@@ -179,26 +169,33 @@ Let's build something amazing together! 🚀💻
             <h1 className="lg:text-3xl">DYNAMIC</h1>
             <p className="">Websites don&apos;t have to be static, I love making pages come to life.</p>
           </div>
-        </div>
+        </div> */}
 
 
 
 
-        <p>When creating a portfolio for a full-stack development role, the primary focus should be on showcasing your skills, projects, and relevant experience in the field of computer science and web development. Therefore, emphasizing your educational background and technical expertise is usually more important than displaying professional pictures of yourself.</p>        
+        {/* <p>
+          When creating a portfolio for a full-stack development role, the primary focus should be on showcasing your skills, 
+          projects, and relevant experience in the field of computer science and web development. Therefore, emphasizing your 
+          educational background and technical expertise is usually more important than displaying professional pictures of 
+          yourself.
+        </p>        
           
-          <ol className="list-decimal pl-4">
-            <li className="mb-2"><span className="font-bold"> Relevance:</span> Your portfolio should primarily highlight your qualifications and experience that are directly related to the job you &apos;re applying for. Your computer science degree demonstrates your formal education in the field, which is highly relevant to full-stack development roles.</li>  
-            <li className="mb-2"><span className="font-bold">Technical Skills:</span> Employers are generally more interested in your technical skills, coding abilities, and project work. Your portfolio should showcase your projects, coding proficiency, and problem-solving skills.</li>  
-            <li className="mb-2"><span className="font-bold">Professionalism:</span> While it &apos; s important to have a professional appearance, including a professional photo of yourself on your portfolio can be a nice touch, but it should not be the primary focus. The emphasis should be on your work and accomplishments, not your appearance.</li>  
-          </ol>  
+        <ol className="list-decimal pl-4">
+          <li className="mb-2"><span className="font-bold"> Relevance:</span> Your portfolio should primarily highlight your qualifications and experience that are directly related to the job you &apos;re applying for. Your computer science degree demonstrates your formal education in the field, which is highly relevant to full-stack development roles.</li>  
+          <li className="mb-2"><span className="font-bold">Technical Skills:</span> Employers are generally more interested in your technical skills, coding abilities, and project work. Your portfolio should showcase your projects, coding proficiency, and problem-solving skills.</li>  
+          <li className="mb-2"><span className="font-bold">Professionalism:</span> While it &apos; s important to have a professional appearance, including a professional photo of yourself on your portfolio can be a nice touch, but it should not be the primary focus. The emphasis should be on your work and accomplishments, not your appearance.</li>  
+        </ol>  
 
-        <p>That said, it &apos;s still important to maintain a professional appearance online, including on platforms like LinkedIn. You can have a professional photo on your LinkedIn profile and include a link to your portfolio there. However, your portfolio&apos;s primary focus should be on showcasing your skills, projects, and achievements in the field of computer science and web development.
-
-Remember, your portfolio is a tool to sell your technical abilities and experience to potential employers, so make sure it effectively communicates your expertise in those areas.</p>
+        <p>
+          That said, it &apos;s still important to maintain a professional appearance online, including on platforms like LinkedIn. You can have a professional photo on your LinkedIn profile and include a link to your portfolio there. However, your portfolio&apos;s primary focus should be on showcasing your skills, projects, and achievements in the field of computer science and web development.
+          Remember, your portfolio is a tool to sell your technical abilities and experience to potential employers, 
+          so make sure it effectively communicates your expertise in those areas.
+        </p> */}
           
              
-      </div> 
-    )}
+    </div> // end function 
+  )}
     
     
   export default About
