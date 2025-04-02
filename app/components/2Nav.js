@@ -73,10 +73,10 @@ const Nav = () => {
                 {/* Navigation Buttons */}
                 <div className={`flex lg:flex-row flex-col lg:gap-4 gap-2 mx-4 ${isOpen ? "block" : "hidden"} lg:flex`}>
                     <a href="#home"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Home</button></a>
-                    <a href="#about"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">About</button></a>
+                    <a href="#aboutURL"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">About</button></a>
+                    <a href="#services"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Services</button></a>
                     <a href="#projects"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Portfolio</button></a>
                     <a href="#contact"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Contact</button></a>
-                    <a href="#services"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Services</button></a>
                 </div>
             </nav>
         </nav>
