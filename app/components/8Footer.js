@@ -15,17 +15,17 @@ export default function Footer() {
         </div>
 
         <ul class="colorText flex flex-col md:flex-row gap-4 text-sm">
-          <li><a href="#" class="hover:text-red-600 transition">Home</a></li>
-          <li><a href="#" class="hover:text-red-600 transition">About</a></li>
-          <li><a href="#" class="hover:text-red-600 transition">Portfolio</a></li>
-          <li><a href="#" class="hover:text-red-600 transition">Services</a></li>
-          <li><a href="#" class="hover:text-red-600 transition">Contact</a></li>
+          <li><a href="#home" class=" transition hoverSpotlight p-4">Home</a></li>
+          <li><a href="#aboutURL" class=" transition hoverSpotlight p-4">About</a></li>
+          <li><a href="#servicesURL" class=" transition hoverSpotlight p-4">Portfolio</a></li>
+          <li><a href="#projects" class=" transition hoverSpotlight p-4">Services</a></li>
+          <li><a href="#contact" class=" transition hoverSpotlight p-4">Contact</a></li>
         </ul>
 
         <div class="colorText flex gap-4 mt-6 md:mt-0">
 
-          <a href="#" class=" hover:text-red-600 transition">
-            <FontAwesomeIcon icon={faFacebook} />afd
+          <a href="#" class=" hover:text-red-600 hoverSpotlight  transition p-4">
+            <FontAwesomeIcon icon={faFacebook} />adf
           </a>
           
 

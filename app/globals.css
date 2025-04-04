@@ -10,8 +10,14 @@
 }
 
 .hoverSpotlight{
-    @apply border-solid border-2 border-slate-900  rounded-md  shadow-[0_0_10px_black] hover:border-slate-600 hover:shadow-lightspot;
-    
+    @apply 
+    border-solid 
+    border-2
+    border-slate-900  
+    rounded-md  
+    shadow-[0_0_10px_black]
+   hover:border-slate-600 
+    hover:shadow-lightspot;
 }
 
 @layer utilities {
