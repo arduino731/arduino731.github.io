@@ -6,7 +6,6 @@ import About from './components/4About';
 import Services from './components/5Services';
 import Projects from './components/6Projects';
 import Contact from './components/7Contact';
-import TernaryOperatorUseState from './components/TernaryOperatorUseState';
 import ImageSlider from './components/ImageSlider';
 
 
@@ -26,16 +25,14 @@ export default function Page(){
                 <Services />   
             </section>
 
-
             <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-md container"> 
                 <Projects />   
             </section>
+            <section > 
+                <ImageSlider />  
+            </section>
             <section>
                 <Contact />
-            </section>
-            <section > 
-                <TernaryOperatorUseState /> 
-                <ImageSlider />  
             </section>
         </main>
     )

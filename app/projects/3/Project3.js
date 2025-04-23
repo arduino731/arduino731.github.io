@@ -44,7 +44,7 @@ export default function Project3() {
 
             <div class="absolute bottom-0 -right-10 opacity-90">
               <Image 
-                src={`/images/projects/project3/surfIcon.png`} 
+                src={`/images/surfIcon.png`} 
                 alt={"surfIcon"} 
                 initial="top"
                 className="w-32" 

@@ -8,18 +8,18 @@ import Image from 'next/image'
 // https://github.com/arduino731/van-vlymen-paws-portfolio
 
 
-const projectImages = ["secondPort.png", "secondPort.png", "secondPort.png"]
+const projectImages = ["secondPort.png", "ec2.png", "surfIcon.png"]
 const projects = [
     {
         image: "secondPort.png",
         url : "/projects/1", 
         className: "flex"
     },{
-        image: "secondPort.png",
+        image: "ec2.png",
         url : "/projects/2", 
         className: "flex"
     },{
-        image: "secondPort.png",
+        image: "surfIcon.png",
         url : "/projects/3", 
         className: "flex"
     }
@@ -40,7 +40,7 @@ const imageVariants = {
  const Projects = () => {
     return ( 
         <div>
-            <div className="flex items-center justify-center">
+            <div id="projects" className="flex items-center justify-center" >
                 <h1 className="text-5xl">PROJECTS</h1>
                 <p>adversarial search programming</p>
             </div>
@@ -50,8 +50,8 @@ const imageVariants = {
                 <a href={item.url} >
                     <Image 
                         key={index}
-                        src={`/images/projects/${item.image}`} 
-                        alt={`/images/projects/${item.image}`} 
+                        src={`/images/${item.image}`} 
+                        alt={`/images/${item.image}`} 
                         initial="top"
                         className="" 
                         animate={{x:100 }}
