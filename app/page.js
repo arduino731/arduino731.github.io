@@ -25,7 +25,7 @@ export default function Page(){
                 <Services />   
             </section>
 
-            <section className="p-5 bg-slate-500 border-2 border-slate-800 rounded-md container"> 
+            <section > 
                 <Projects />   
             </section>
             <section > 

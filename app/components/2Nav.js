@@ -40,13 +40,37 @@ const Nav = () => {
             isScrolled ? 'text-sm' : 'text-base'
           }`}
         >
-          {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => (
-            <a href={`/#${label.toLowerCase()}${label === 'About' ? 'URL' : ''}`} key={index}>
-              <button className="px-3 py-2 hoverSpotlight colorTextOpposite colorBackground rounded">
-                {label}
-              </button>
-            </a>
-          ))}
+        {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => {
+            let href = '#';
+            switch (label) {
+                case 'Home':
+                href = '/';
+                break;
+                case 'About':
+                href = '/#about';
+                break;
+                case 'Portfolio':
+                href = '/#portfolio';
+                break;
+                case 'Services':
+                href = '/#services'; 
+                break;
+                case 'Contact':
+                href = '/#contact'; 
+                break;
+                default:
+                href = '/';
+            }
+
+            return (
+                <Link href={href} key={index}>
+                <button className="px-3 py-2 hoverSpotlight colorTextOpposite colorBackground rounded">
+                    {label}
+                </button>
+                </Link>
+            );
+        })}
+
         </div>
 
         {/* Moon/Sun toggle */}
@@ -76,13 +100,38 @@ const Nav = () => {
         </button>
         {isOpen && (
           <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => (
-              <a href={`/#${label.toLowerCase()}${label === 'About' ? 'URL' : ''}`} key={index}>
-                <button className="w-full px-4 py-2 hoverSpotlight colorTextOpposite colorBackground text-left rounded">
-                  {label}
-                </button>
-              </a>
-            ))}
+            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => {
+                let href = '#';
+
+                switch (label) {
+                    case 'Home':
+                    href = '/';
+                    break;
+                    case 'About':
+                    href = '/#about';
+                    break;
+                    case 'Portfolio':
+                    href = '/#portfolio';
+                    break;
+                    case 'Services':
+                    href = '/#services'; // still anchor link if it's a section
+                    break;
+                    case 'Contact':
+                    href = '/#contact'; // same here
+                    break;
+                    default:
+                    href = '/';
+                }
+
+                return (
+                    <Link href={href} key={index}>
+                    <button className="px-3 py-2 hoverSpotlight colorTextOpposite colorBackground rounded">
+                        {label}
+                    </button>
+                    </Link>
+                );
+            })}
+
           </div>
         )}
       </div>

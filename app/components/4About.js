@@ -55,7 +55,7 @@ const About = () => {
 
 
 
-        <div id="aboutURL" className="flex items-center justify-center">
+        <div id="about" className="flex items-center justify-center">
           <div id="aboutMe" className="opacity-0 transition-opacity duration-1000 ease-in-out">
             <div class="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1  className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center">About Me</h1>

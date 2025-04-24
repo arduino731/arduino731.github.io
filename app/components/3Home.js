@@ -2,7 +2,7 @@
 const Home = () => {
     return (
         
-        <div className="colorBackground h-screen flex flex-col justify-center items-center text-center px-6">
+        <div id="Home" className="colorBackground h-screen flex flex-col justify-center items-center text-center px-6">
             <h1 className="text-4xl md:text-6xl colorTextOpposite font-bold mb-4">Hello, I am&nbsp;
                 <span className="uppercase colorText font-bold">Brian van Vlymen</span>
             </h1>
@@ -12,7 +12,7 @@ const Home = () => {
             </p>
 
             <div className="m-4">
-                <a href="#projects">
+                <a href="/#portfolio">
                     <button className="px-4 py-2 hoverSpotlight colorText colorBackgroundOpposite">View My Work</button>
                 </a>
             </div>
