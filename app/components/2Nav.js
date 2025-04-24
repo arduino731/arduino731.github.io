@@ -22,7 +22,7 @@ const Nav = () => {
       }
 
     return (
-        <nav className="colorBackground md:px-16 px-8">
+        <nav className="colorBackground px-8 pb-4 md:pb-2">
             <div className="flex justify-between items-center">
                 {/* wolfIcon.png */}
                 <Link href="/">
