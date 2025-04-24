@@ -1,85 +1,93 @@
 'use client'
-// import { ThemeProvider } from 'next-themes'
+
+import { useTheme } from 'next-themes'
 import Image from 'next/image'
 import Link from 'next/link'
+import React, { useState, useEffect } from 'react'
 import Logo from './wolfIcon.png'
-import React, {useState, useEffect} from 'react'
-import {useTheme} from 'next-themes'
-
 
 const Nav = () => {
-    const[color, setChangeColor] = useState()
-    const[mounted, setMounted] = useState(false)
-    const { theme, setTheme } = useTheme()
-    const [isOpen, setIsOpen] = useState(false); // dropdown menu 
+  const [isOpen, setIsOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [color, setChangeColor] = useState(false)
+  const { theme, setTheme } = useTheme()
 
-    useEffect(() => {
-        setMounted(true)
-      }, [])
-    
-      if (!mounted) {
-        return null
-      }
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
-    return (
-        <nav className="colorBackground px-8 pb-4 md:pb-2">
-            <div className="flex justify-between items-center">
-                {/* wolfIcon.png */}
-                <Link href="/">
-                    <Image 
-                        src={Logo} 
-                        className="colorBackgroundOpposite hoverSpotlight rounded-sm w-12 h-12 md:w-24 md:h-24" 
-                        alt="logo"
-                        width={100} 
-                        height={100} 
-                    /> 
-                </Link>    
-                <button 
-                className="rounded-lg dark:bg-slate-700 mt-4 bg-slate-400 w-12 h-12 md:w-24 md:h-24" onClick={() => 
-                    [
-                        setTheme(theme === 'light' ? 'dark' : 'light' ), 
-                        setChangeColor(!color)
-                    ]}>
-                    { color ?
-                    <Image 
-                    src="/images/moon.png" 
-                    className="" 
-                    alt="arrow up"
-                    width={100} 
-                    height={100} 
-                    /> : 
-                    <Image 
-                    src="/images/sun.png" 
-                    className="" 
-                    alt="arrow up"
-                    width={100} 
-                    height={100} 
-                    />
-                    }
+  return (
+    <nav className={`sticky top-0 z-50 colorBackgroundOpposite transition-all duration-300 ease-in-out ${isScrolled ? 'py-2 shadow-md' : 'py-4'}`}>
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex-shrink-0">
+          <Image
+            src={Logo}
+            alt="Logo"
+            width={isScrolled ? 40 : 64}
+            height={isScrolled ? 40 : 64}
+            className="rounded-sm transition-all duration-300 ease-in-out"
+          />
+        </Link>
+
+        {/* Centered nav buttons */}
+        <div
+          className={`hidden lg:flex gap-4 transition-all duration-300 ease-in-out ${
+            isScrolled ? 'text-sm' : 'text-base'
+          }`}
+        >
+          {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => (
+            <a href={`/#${label.toLowerCase()}${label === 'About' ? 'URL' : ''}`} key={index}>
+              <button className="px-3 py-2 hoverSpotlight colorTextOpposite colorBackground rounded">
+                {label}
+              </button>
+            </a>
+          ))}
+        </div>
+
+        {/* Moon/Sun toggle */}
+        <button
+          className="rounded-lg dark:bg-slate-700 bg-slate-400 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center"
+          onClick={() => {
+            setTheme(theme === 'light' ? 'dark' : 'light')
+            setChangeColor(!color)
+          }}
+        >
+          <Image
+            src={color ? '/images/moon.png' : '/images/sun.png'}
+            alt="toggle theme"
+            width={24}
+            height={24}
+          />
+        </button>
+      </div>
+
+      {/* Mobile dropdown nav */}
+      <div className="lg:hidden mt-2 px-4">
+        <button
+          onClick={() => setIsOpen(!isOpen)}
+          className="text-2xl focus:outline-none"
+        >
+          ☰
+        </button>
+        {isOpen && (
+          <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out">
+            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => (
+              <a href={`/#${label.toLowerCase()}${label === 'About' ? 'URL' : ''}`} key={index}>
+                <button className="w-full px-4 py-2 hoverSpotlight colorTextOpposite colorBackground text-left rounded">
+                  {label}
                 </button>
-            </div>
-
-
-            <nav className="colorBackgroundOpposite p-4 flex justify-center rounded-md">
-                <div className="flex justify-between items-center">
-                    {/* Hamburger Menu */}
-                    <button 
-                    onClick={() => setIsOpen(!isOpen)} 
-                    className="lg:hidden text-black text-2xl focus:outline-none"
-                    >
-                    ☰
-                    </button>
-                </div>
-                {/* Navigation Buttons */}
-                <div className={`flex lg:flex-row flex-col lg:gap-4 gap-2 mx-4 ${isOpen ? "block" : "hidden"} lg:flex`}>
-                    <a href="/#home"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Home</button></a>
-                    <a href="/#aboutURL"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">About</button></a>
-                    <a href="/#servicesURL"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Services</button></a>
-                    <a href="/#projects"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Portfolio</button></a>
-                    <a href="/#contact"><button className="px-4 py-2 hoverSpotlight colorTextOpposite colorBackground">Contact</button></a>
-                </div>
-            </nav>
-        </nav>
-    )
+              </a>
+            ))}
+          </div>
+        )}
+      </div>
+    </nav>
+  )
 }
+
 export default Nav
