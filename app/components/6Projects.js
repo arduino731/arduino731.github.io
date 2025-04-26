@@ -40,7 +40,7 @@ const imageVariants = {
  const Projects = () => {
     return ( 
         <div>
-            <div id="portfolio" className="flex items-center justify-center" >
+            <div id="projects" className="flex items-center justify-center" >
                 <h1 className="text-5xl">PROJECTS</h1>
                 <p>adversarial search programming</p>
             </div>

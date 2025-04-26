@@ -16,8 +16,16 @@ export default function Project3() {
 
   return (
       <div>
-       <h1 class="bg-white text-3xl font-bold underline bg-slate-500 container">Surf Website || TailwindCSS </h1>
-       <h1 class="bg-white">Project 3</h1>
+      <h1 class="bg-white text-3xl font-bold underline bg-slate-500 container">Surf Website || TailwindCSS </h1>
+      <h1 class="bg-white">Project 3</h1>
+        <div className="text-xs m-5 ">
+          <p><span className="font-bold">Portfolio:</span> This section should be the core of your site. For each project, include:
+          A brief description of the project, your role, and the problem it solved.
+          Technologies used, showcasing your coding proficiency.
+          Links to the live project and code repositories.
+          A video demo for complex projects, highlighting key features and your problem-solving approach.
+          High-quality images of the project interfaces.</p>
+        </div>
      <h1 class="text-3xl font-bold underline bg-slate-500 container lobster-regular">Hello world! </h1>
      
      <section class="body3">

@@ -12,7 +12,7 @@ const Home = () => {
             </p>
 
             <div className="m-4">
-                <a href="/#portfolio">
+                <a href="/#projects">
                     <button className="px-4 py-2 hoverSpotlight colorText colorBackgroundOpposite">View My Work</button>
                 </a>
             </div>

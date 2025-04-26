@@ -1,7 +1,46 @@
+'use client'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
-
+import './style.css'
+import useHandleScroll from '../../hooks/HandleScroll'
 
 export default function Project1() {
+  const handleScroll = useHandleScroll(['gitHub', 'keyFeatures','keyFeatures2'])
+    // const [sectionInView, setSectionInView] = useState(null)
+  
+    // useEffect(() => {
+    //   const sections = ['gitHub', 'keyFeatures','keyFeatures2']
+
+    //   const handleScroll = () => {
+    //     for (let id of sections) {
+    //       const el = document.getElementById(id)
+    //       if (!el) continue
+    
+    //       const rect = el.getBoundingClientRect()
+
+    //         if (rect.top >= 0 && rect.bottom <= window.innerHeight){
+    //           if (id === 'keyFeatures') {
+    //             const boldEls = el.querySelectorAll('.keyFeatures')
+    //             boldEls.forEach((bold, index) => {
+    //               setTimeout(() => {
+    //                 bold.classList.add('animate')
+    //               }, index * 200) // delay by 200ms each
+    //             })
+    //           }
+
+    //         setSectionInView(id)
+    //         break
+    //         } else if (id === 'keyFeatures') {
+    //           const boldEls = el.querySelectorAll('.keyFeatures')
+    //           boldEls.forEach((bold) => bold.classList.remove('animate'))
+    //         }
+    //     }
+    //   }
+    //   window.addEventListener('scroll', handleScroll)
+    //   handleScroll() // run on first load
+    //   return () => window.removeEventListener('scroll', handleScroll)
+    // }, []) 
+
   return (
     <article>
       <div class="flex items-center colorBackgroundOpposite pb-2">
@@ -52,7 +91,6 @@ export default function Project1() {
 
         </div>
       </div> 
-
       <div className="colorBackground" style={{ position: 'relative', height: '300px' }} >
         <Image 
             src="/images/ScreenshotRWD.png" 
@@ -66,19 +104,84 @@ export default function Project1() {
         />
       </div>
 
-      <div className="m-5 p-10 text-2xl text-center">
-        <a href="https://github.com/arduino731/van-vlymen-paws-portfolio" target="_blank"> 
-          <button>GITHUB</button>
-        </a>
+        <div>
+
+        <div 
+          className={`duration-1000 ease-in-out transition-opacity text-2xl m-5 p-10 text-center   
+            ${handleScroll === 'gitHub' ? 'opacity-100' : 'opacity-0'}`}
+          id="gitHub">
+          <p className="text-lg ">
+            🔍 Want to see more source code?
+            <br />
+            Check out my GitHub!
+          </p>
+          
+          <a
+          href="https://github.com/van-vlymen-paws-portfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hoverSpotlight colorTextOpposite colorBackground inline-block mt-4 px-6 py-2  rounded transition-all duration-500 ease-in-out"
+          >
+            Visit My GitHub →
+          </a>
+        </div>
+
+
+        <div 
+          className={`md:mx-20 my-6 p-6 colorBackground rounded-lg colorTextOpposite duration-1000 ease-in-out transition-opacity 
+            ${handleScroll === 'keyFeatures' ? 'opacity-100' : 'opacity-0'}`} 
+        
+          id="keyFeatures">
+          <h2 className="text-center text-5xl font-bold mb-6 ">Key Features</h2>
+          
+          <div className="flex flex-col gap-4 ">
+            <div className="flex flex-row items-start">
+              <span className="font-bold keyFeatures">🐾 Animated Cat Paws:</span>
+              <span>Moving upwards with a fading opacity effect.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold keyFeatures">📱 Responsive Design:</span>
+              <span>A mobile phone and a desktop monitor with arrows indicating adaptability.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold keyFeatures">⚙️ GSAP Animations: </span>
+              <span>A gear with motion lines, representing heavy-duty animations.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold keyFeatures">🚀 Performance & Accessibility:</span>
+              <span>A combination of a performance speedometer and an accessibility symbol.</span>
+            </div>
+          </div>
+        </div>
+
+        <div 
+          className={`md:mx-20 my-6 p-6 colorBackground rounded-lg colorTextOpposite duration-1000 ease-in-out transition-opacity 
+            ${handleScroll === 'keyFeatures2' ? 'opacity-100' : 'opacity-0'}`} 
+        
+          id="keyFeatures2">
+          <h2 className="text-center text-5xl font-bold mb-6 ">Key Features</h2>
+          
+          <div className="flex flex-col gap-4 ">
+            <div className="flex flex-row items-start">
+              <span className="font-bold">🐾 Animated Cat Paws:</span>
+              <span>Moving upwards with a fading opacity effect.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold">📱 Responsive Design:</span>
+              <span>A mobile phone and a desktop monitor with arrows indicating adaptability.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold">⚙️ GSAP Animations: </span>
+              <span>A gear with motion lines, representing heavy-duty animations.</span>
+            </div>
+            <div className="flex flex-row items-start">
+              <span className="font-bold">🚀 Performance & Accessibility:</span>
+              <span>A combination of a performance speedometer and an accessibility symbol.</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="md:mx-20 my-3 p-5">
-        <h2 className="text-center text-2xl font-bold mb-4">Key Features</h2>
-        <p><span className="font-bold">Animated Cat Paws:</span> Moving upwards with a fading opacity effect.</p>
-        <p><span className="font-bold">Responsive Design:</span> A mobile phone and a desktop monitor with arrows indicating adaptability.</p>
-        <p><span className="font-bold">GSAP Animations:</span> A gear with motion lines, representing heavy-duty animations.</p>
-        <p><span className="font-bold">Performance & Accessibility:</span> A combination of a performance speedometer and an accessibility symbol.</p>
-      </div>
 
 
 
@@ -166,14 +269,6 @@ export default function Project1() {
             </div>
           </div>
       
-      <div className="text-xs m-5 ">
-      <p><span className="font-bold">Portfolio:</span> This section should be the core of your site. For each project, include:
-      A brief description of the project, your role, and the problem it solved.
-      Technologies used, showcasing your coding proficiency.
-      Links to the live project and code repositories.
-      A video demo for complex projects, highlighting key features and your problem-solving approach.
-      High-quality images of the project interfaces.</p>
-      </div>
       
       <div className="flex flex-col w-1/2 text-left mx-auto">
         <div className="p-5 text-lg rounded-md border-2 border-solid border-slate-400 dark:bg-slate-700 bg-slate-400 ">

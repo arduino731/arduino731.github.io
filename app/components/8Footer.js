@@ -17,7 +17,7 @@ export default function Footer() {
         <ul class="colorText flex flex-col md:flex-row gap-4 text-sm">
           <li><a href="#home" class=" transition hoverSpotlight p-4">Home</a></li>
           <li><a href="#aboutURL" class=" transition hoverSpotlight p-4">About</a></li>
-          <li><a href="#servicesURL" class=" transition hoverSpotlight p-4">Portfolio</a></li>
+          <li><a href="#servicesURL" class=" transition hoverSpotlight p-4">Projects</a></li>
           <li><a href="#projects" class=" transition hoverSpotlight p-4">Services</a></li>
           <li><a href="#contact" class=" transition hoverSpotlight p-4">Contact</a></li>
         </ul>

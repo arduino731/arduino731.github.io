@@ -40,7 +40,7 @@ const Nav = () => {
             isScrolled ? 'text-sm' : 'text-base'
           }`}
         >
-        {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => {
+        {['Home', 'About', 'Services', 'Projects', 'Contact'].map((label, index) => {
             let href = '#';
             switch (label) {
                 case 'Home':
@@ -49,8 +49,8 @@ const Nav = () => {
                 case 'About':
                 href = '/#about';
                 break;
-                case 'Portfolio':
-                href = '/#portfolio';
+                case 'Projects':
+                href = '/#projects';
                 break;
                 case 'Services':
                 href = '/#services'; 
@@ -100,7 +100,7 @@ const Nav = () => {
         </button>
         {isOpen && (
           <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out">
-            {['Home', 'About', 'Services', 'Portfolio', 'Contact'].map((label, index) => {
+            {['Home', 'About', 'Services', 'Projects', 'Contact'].map((label, index) => {
                 let href = '#';
 
                 switch (label) {
@@ -110,8 +110,8 @@ const Nav = () => {
                     case 'About':
                     href = '/#about';
                     break;
-                    case 'Portfolio':
-                    href = '/#portfolio';
+                    case 'Projects':
+                    href = '/#projects';
                     break;
                     case 'Services':
                     href = '/#services'; // still anchor link if it's a section
