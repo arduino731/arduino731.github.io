@@ -8,7 +8,7 @@ const Services = () => {
         const serviceHandleScroll = document.getElementById("serviceHandleScroll");
         const scrollHeight = serviceHandleScroll.scrollHeight; //732
         console.log(scrollHeight)
-        if (window.scrollY > scrollHeight) {
+        if (window.scrollY > scrollHeight + 250) {
           serviceHandleScroll.classList.add("opacity-100");
           serviceHandleScroll.classList.remove("opacity-0");
         } else {
@@ -19,8 +19,8 @@ const Services = () => {
   });
 
   return (
-      <div className="colorBackground">
-        <div id="Services" className="flex items-center justify-center">
+      <div className="colorBackground ">
+        <div id="services" className="flex items-center justify-center py-16 px-6 md:px-20">
           <div id="serviceHandleScroll" className="opacity-0 transition-opacity duration-1000 ease-in-out">
             <div class="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1  className="colorBackgroundOpposite colorText rounded-md text-5xl p-2 text-center">Services</h1>

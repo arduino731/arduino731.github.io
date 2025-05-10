@@ -64,8 +64,8 @@ const colorMap = {
 
   export default function ProjectsSection() {
     return (
-      <div className="colorBackgroundOpposite">
-        <div id="projects">
+      <div className="colorBackgroundOpposite ">
+        <div id="projects" className="py-16 px-6 md:px-20">
           <div id="projectsHandleScroll">
             <div className="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1 className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center">PROJECTS</h1>
