@@ -5,15 +5,15 @@ import { useState, useEffect } from "react";
 const Services = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
-        const service = document.getElementById("services");
-        const scrollHeight = service.scrollHeight; //732
+        const serviceHandleScroll = document.getElementById("serviceHandleScroll");
+        const scrollHeight = serviceHandleScroll.scrollHeight; //732
         console.log(scrollHeight)
         if (window.scrollY > scrollHeight) {
-          service.classList.add("opacity-100");
-          service.classList.remove("opacity-0");
+          serviceHandleScroll.classList.add("opacity-100");
+          serviceHandleScroll.classList.remove("opacity-0");
         } else {
-          service.classList.add("opacity-0");
-          service.classList.remove("opacity-100");
+          serviceHandleScroll.classList.add("opacity-0");
+          serviceHandleScroll.classList.remove("opacity-100");
         }
     });
   });
@@ -21,7 +21,7 @@ const Services = () => {
   return (
       <div className="colorBackground">
         <div id="Services" className="flex items-center justify-center">
-          <div id="services" className="opacity-0 transition-opacity duration-1000 ease-in-out">
+          <div id="serviceHandleScroll" className="opacity-0 transition-opacity duration-1000 ease-in-out">
             <div class="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1  className="colorBackgroundOpposite colorText rounded-md text-5xl p-2 text-center">Services</h1>
               <div class="flex items-center gap-4 p-6 bg-blue-500 text-white rounded-lg shadow-lg">

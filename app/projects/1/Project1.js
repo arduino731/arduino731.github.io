@@ -43,22 +43,22 @@ export default function Project1() {
 
   return (
     <article>
-      <div class="flex items-center colorBackgroundOpposite pb-2">
-        <div class="flex-grow border-t border-gray-300"></div>
-        <h1 class="p-4 colorBackground colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10 ">Featured Project</h1>
-        <div class="flex-grow border-t border-gray-300"></div>
+      <div className="flex items-center colorBackgroundOpposite pb-2">
+        <div className="flex-grow border-t border-gray-300"></div>
+        <h1 className="p-4 colorBackground colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10 ">Featured Project</h1>
+        <div className="flex-grow border-t border-gray-300"></div>
       </div>
-      <div class="p-8" style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
-        <div class="dark:bg-slate-700 bg-slate-400 flex flex-row md:flex-row w-3/4 m-auto p-6 items-center rounded-lg shadow-lg justify-around border-gray-300 border-8 flex-wrap">
+      <div className="p-8" style={{ background: 'linear-gradient(90deg, rgba(184,204,220,1) 0%, rgba(41,52,64,1) 35%, rgba(158,182,203,1) 100%)' }}>
+        <div className="dark:bg-slate-700 bg-slate-400 flex flex-row md:flex-row w-3/4 m-auto p-6 items-center rounded-lg shadow-lg justify-around border-gray-300 border-8 flex-wrap">
           {/* <!-- First Box with Background --> */}
-          <div class="flex flex-col items-center justify-center w-64 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
-            <h2 class="text-lg font-bold">Mobile-like Design</h2>
+          <div className="flex flex-col items-center justify-center w-64 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
+            <h2 className="text-lg font-bold">Mobile-like Design</h2>
             {/* <!-- Mobile-like Box (Placed Inside the Bottom of H2) --> */}
-            <div class="m-5 relative w-auto md:w-56 h-[500px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
-              <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-lg"></div>
+            <div className="m-5 relative w-auto md:w-56 h-[500px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
+              <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-lg"></div>
               {/* <!-- Embedded YouTube Video --> */}
               <iframe  
-                class="w-full h-full rounded-[30px]" 
+                className="w-full h-full rounded-[30px]" 
                 src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" 
                 title="Mobile-like Design Portfolio"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -68,18 +68,18 @@ export default function Project1() {
             </div>
           </div>
         {/* <!-- Second Box with Background --> */}
-        <div class="flex flex-col items-center justify-center w-64 md:w-96 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
-          <h2 class="text-lg font-bold ">Desktop-like Design</h2>
+        <div className="flex flex-col items-center justify-center w-64 md:w-96 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
+          <h2 className="text-lg font-bold ">Desktop-like Design</h2>
           {/* <!-- Mobile-like Box with YouTube Iframe --> */}
-          <div class="m-5 relative md:w-80 w-auto h-[300px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
-            <div class="absolute top-0 left-0 w-full h-10 bg-gray-800 flex items-center px-4">
-                    <span class="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
-                    <span class="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
-                    <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+          <div className="m-5 relative md:w-80 w-auto h-[300px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-10 bg-gray-800 flex items-center px-4">
+                    <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+                    <span className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+                    <span className="w-3 h-3 bg-green-500 rounded-full"></span>
             </div>
             {/* <!-- Embedded YouTube Video --> */}
             <iframe  
-              class="w-full h-full rounded-[30px]" 
+              className="w-full h-full rounded-[30px]" 
               src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" 
               title="Desktop-like Design Portfolio"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -117,7 +117,7 @@ export default function Project1() {
           </p>
           
           <a
-          href="https://github.com/van-vlymen-paws-portfolio"
+          href="https://github.com/arduino731/van-vlymen-paws-portfolio"
           target="_blank"
           rel="noopener noreferrer"
           className="hoverSpotlight colorTextOpposite colorBackground inline-block mt-4 px-6 py-2  rounded transition-all duration-500 ease-in-out"
