@@ -104,7 +104,7 @@ export default function Project1() {
         />
       </div>
 
-        <div>
+      <div className="bg-yellow-500">
 
         <div 
           className={`duration-1000 ease-in-out transition-opacity text-2xl m-5 p-10 text-center   

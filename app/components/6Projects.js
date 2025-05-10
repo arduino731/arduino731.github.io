@@ -16,9 +16,12 @@ const projects = [
       image: "/images/secondPort.png",
       url: "/projects/1",
       tags: [
-        { name: "React", color: "blue" },
-        { name: "D3.js", color: "green" },
-        { name: "Tailwind", color: "purple" }
+        { name: "HTML5/CSS3", color: "orange" },
+        { name: "Tailwind CSS", color: "teal" },
+        { name: "Bootstrap", color: "indigo" },
+        { name: "NPM Modules", color: "red" },
+        { name: "LocalStorage", color: "yellow" },
+        { name: "Image Optimization", color: "green" }
       ]
     },
     {
@@ -39,7 +42,7 @@ const projects = [
     {
       id: 3,
       title: "E-commerce Platform",
-      description: "A full-featured online store with product listings, cart functionality, and secure checkout.",
+      description: "Coming soon...",
       image: "/images/surfIcon.png",
       url: "/projects/3",
       tags: [
@@ -60,6 +63,8 @@ const colorMap = {
   amber: "bg-amber-100 text-amber-800",
   indigo: "bg-indigo-100 text-indigo-800",
   gray: "bg-gray-100 text-gray-800",
+  orange: "bg-orange-200 text-orange-900", 
+  red: "bg-rose-100 text-rose-800", 
 };
 
   export default function ProjectsSection() {
