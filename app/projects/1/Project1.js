@@ -15,7 +15,6 @@ export default function Project1() {
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
-
       {/* Project Summary */}
       <div
         className={`scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
@@ -74,40 +73,38 @@ export default function Project1() {
         }`}
         data-id="built"
       >
-        <div className="text-center mb-6 fadeIn">
+        <div className="text-center mb-6 fadeIn ">
           <h2 className="text-3xl font-bold colorTextOpposite mb-2 fadeIn">💡 What I Built</h2>
           <p className="colorTextOpposite text-lg fadeIn">Interactive Front-End Developer features of this project:</p>
         </div>
-        <ul className="list-disc list-inside space-y-4 text-left colorTextOpposite text-base md:text-lg">
-          <li>Provisioned AWS EC2 instance, security group, and Elastic IP using <strong>Terraform</strong>.</li>
-          <li>
-            Created reusable <code className="colorBackgroundOpposite colorText px-1 py-0.5 rounded text-sm">deploy.sh</code> to automate code sync and container restart with <strong>rsync + SSH</strong>.
-          </li>
-          <li>Built and deployed frontend (Nginx) and backend (Node.js) apps using <strong>Docker Compose</strong>.</li>
-          <li>Implemented <strong>CloudWatch Agent</strong> and a daily cron script to monitor uptime and disk space.</li>
-          <li>Secured SSH access with <strong>fail2ban</strong> to block brute-force login attempts.</li>
-          <li>
-            Developed a <code className="colorBackgroundOpposite colorText px-1 py-0.5 rounded text-sm">backup.sh</code> strategy to archive Docker volumes and support restoration.
-          </li>
+
+
+        {/* here */}
+        <h1 className="colorTextOpposite text-lg text-left fadeIn">📱 Mobile + Desktop Animated Portfolio</h1>
+        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
+          <li className="fadeIn">Pug (Jade) for templating</li>
+          <li className="fadeIn">Express.js for backend routing</li>
+          <li className="fadeIn">GSAP and TweenMax for animation</li>
+          <li className="fadeIn">jQuery + Vanilla JS for dynamic interactivity</li>
+          <li className="fadeIn">Google Analytics for SEO and performance insight</li>
         </ul>
-        <div className="flex flex-col gap-4 ">
-            <div className="flex flex-row items-start">
-              <span className="font-bold">🐾 Animated Cat Paws:</span>
-              <span>Moving upwards with a fading opacity effect.</span>
-            </div>
-            <div className="flex flex-row items-start">
-              <span className="font-bold">📱 Responsive Design:</span>
-              <span>A mobile phone and a desktop monitor with arrows indicating adaptability.</span>
-            </div>
-            <div className="flex flex-row items-start">
-              <span className="font-bold">⚙️ GSAP Animations: </span>
-              <span>A gear with motion lines, representing heavy-duty animations.</span>
-            </div>
-            <div className="flex flex-row items-start">
-              <span className="font-bold">🚀 Performance & Accessibility:</span>
-              <span>A combination of a performance speedometer and an accessibility symbol.</span>
-            </div>
-          </div>
+        <h1 className="colorTextOpposite text-lg text-left fadeIn">✨ Key Features:</h1>
+        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
+          <li className="fadeIn">Scroll-activated animations</li>
+          <li className="fadeIn">Dynamic paw animations with fading effects</li>
+          <li className="fadeIn">Fully responsive layout from mobile to desktop</li>
+          <li className="fadeIn">Animated headings using GSAP</li>
+          <li className="fadeIn">Accessibility-conscious design (contrast, alt tags, navigation)</li>
+        </ul>
+        <h1 className="colorTextOpposite text-lg text-left fadeIn">🛠️ Tools & Technologies</h1>
+        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
+          <li className="fadeIn">HTML5/CSS3 + Tailwind CSS</li>
+          <li className="fadeIn">Bootstrap</li>
+          <li className="fadeIn">Font Awesome</li>
+          <li className="fadeIn">NPM Modules</li>
+          <li className="fadeIn">LocalStorage for performance boost</li>
+          <li className="fadeIn">Image optimization (WebP, responsive sizes)</li>
+        </ul>
       </div>
 
       {/* GitHub and Live Link Section */}
@@ -167,7 +164,7 @@ export default function Project1() {
 
 
 
-          <div class="flex mx-2">
+          {/* <div class="flex mx-2 colorBackground">
             <div class="w-1/4 px-2">
               <h2 className="text-center text-lg">Animated Dog Paws</h2>
               <div class="flex flex-row items-center justify-center">
@@ -249,19 +246,9 @@ export default function Project1() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
       
-      
-      <div className="flex flex-col w-1/2 text-left mx-auto">
-        <div className="p-5 text-lg rounded-md border-2 border-solid border-slate-400 dark:bg-slate-700 bg-slate-400 ">
-          <p className='mb-3'>Get ready to be amazed by the second major project in my portfolio! This project is not just a website; it's an experience. Developed using the Pug template engine (formerly known as Jade), this project showcases my expertise in creating dynamic and engaging web applications.</p>
-          <p className='mb-3'>Here's the exciting part: every time you refresh the browser page, you'll witness two adorable paws in motion, gracefully moving from the bottom to the top of your screen. These paws don't just appear; they fade in with a captivating opacity effect that changes every second, adding a touch of whimsy to the user experience.</p>
-          <p className='mb-3'>But that's not all! This project is a masterclass in responsiveness and cross-browser compatibility. Whether you're on a mobile device or a desktop, the images resize seamlessly, ensuring a flawless experience across all platforms. And yes, it's built with jQuery, but it's versatile enough to work with vanilla JavaScript too.</p>
-          <p className='mb-3'>Now, let's talk about the animations. My full name isn't just displayed; it's animated, bringing some HTML elements to life with the power of GSAP. This isn't just any animation; it's heavy-duty, with transforms and transforms galore. But fear not, for GSAP handles it all with ease, proving itself as a powerful library for all your animation needs.</p>
-          <p className='mb-3'>And there's more! This project is packed with features like Express, NPM modules, Google Analytics, and the TweenMax library. But it's not just about the bells and whistles; it's also about accessibility enhancements and performance optimization, ensuring that everyone can enjoy this digital masterpiece.</p>
-          <p className='mb-3'>In summary, this project is a testament to my coding proficiency, showcasing my ability to solve problems, animate elements, and optimize performance, all while creating an engaging and accessible user experience. Get ready to be wowed!</p>
-        </div>
-      </div>
+    
 
     </article>
   )
