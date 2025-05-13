@@ -1,44 +1,44 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState, useRef } from 'react';
 
-export default function useHandleScroll(sectionIds = []) {
-  const [handleScroll, setHandleScroll] = useState(null)
-  const hasAnimated = useRef(false)
+export default function useHandleScroll() {
+  const [visibleSection, setVisibleSection] = useState(null);
+  const animatedSections = useRef(new Set());
 
   useEffect(() => {
     const handleScroll = () => {
-      const middle = window.innerHeight / 2
+      const middle = window.innerHeight / 2;
+      const sections = document.querySelectorAll('.scrollHandle');
 
-      for (let id of sectionIds) {
-        const el = document.getElementById(id)
-        if (!el) continue
+      for (let section of sections) {
+        const rect = section.getBoundingClientRect();
+        const id = section.dataset.id;
 
-        const rect = el.getBoundingClientRect()
-        const inView = rect.top <= middle && rect.bottom >= middle
+        const inView = rect.top <= middle && rect.bottom >= middle;
 
         if (inView) {
-          setHandleScroll(id)
+          setVisibleSection(id);
 
-          if (id === 'keyFeatures' && !hasAnimated.current) {
-            hasAnimated.current = true // prevent future triggers
+          if (!animatedSections.current.has(id)) {
+            animatedSections.current.add(id);
+            const animatableEls = section.querySelectorAll('.fadeIn');
 
-            const boldEls = el.querySelectorAll('.keyFeatures')
-            boldEls.forEach((bold, index) => {
+            animatableEls.forEach((el, index) => {
               setTimeout(() => {
-                bold.classList.add('animate')
-              }, index * 200)
-            })
+                el.classList.add('animate');
+              }, index * 200);
+            });
           }
 
-          break
+          break;
         }
       }
-    }
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    handleScroll()
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
 
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [sectionIds])
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  return handleScroll
+  return visibleSection;
 }
