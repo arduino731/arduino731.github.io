@@ -6,10 +6,7 @@ import Home from './components/3Home';
 import About from './components/4About';
 import Services from './components/5Services';
 import Projects from './components/6Projects';
-import ImageSlider from './components/ImageSlider'; // need do better than this
-import useHandleScroll from './hooks/HandleScroll';
-
-
+import ImageSlider from './components/7ImageSlider'; // need do better than this
 
 export default function Page(){
     return(

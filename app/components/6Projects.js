@@ -1,6 +1,6 @@
-/* eslint-disable react/jsx-key */
 "use client"
 import Image from 'next/image'
+import useHandleScroll from '../hooks/HandleScroll';
 
 // githubURL
 // https://github.com/arduino731/jennifershows_Angular
@@ -67,121 +67,53 @@ const colorMap = {
   red: "bg-rose-100 text-rose-800", 
 };
 
-  export default function ProjectsSection() {
-    return (
-      <div className="colorBackgroundOpposite ">
-        <div id="projects" className="py-16 px-6 md:px-20">
-          <div id="projectsHandleScroll">
-            <div className="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
-              <h1 className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center">PROJECTS</h1>
-              
-              {/* This is the key change: Using grid with responsive columns */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {projects.map((item, index) => (
-                  <div key={item.id} className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                    <div className="cursor-pointer w-full h-64 colorBackground flex items-center justify-center" onClick={() => window.location.href = item.url}>
-                      <Image 
-                        key={index}
-                        src={item.image}
-                        alt={`${item.title} project`}
-                        className="w-full h-full object-contain"
-                        width={400}
-                        height={300}
-                      />                                         
-                    </div>
-                    <div className="p-4 colorBackground h-full">
-                      <h3 className="text-lg text-center font-semibold mb-2 colorTextOpposite">{item.title}</h3>
-                      <p className="text-sm text-gray-600 mb-2 colorTextOpposite">{item.description}</p>
-                      <div className="flex flex-wrap gap-2 ">
-                        {item.tags.map((tag, tagIndex) => (
-                          <span
-                            key={tagIndex}
-                            className={`inline-block text-xs px-2 py-1 rounded-full text-black
-                            ${colorMap[tag.color]} `}
-                          >
-                            {tag.name}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+export default function ProjectsSection() {
+  const currentSection = useHandleScroll();
+  
+  return (
+    <div className="colorBackgroundOpposite ">
+      <div id="projects" className="py-16 px-6 md:px-20">
+        <div className={`scrollHandle transition-opacity duration-1000 ease-in-out flex flex-col gap-6 p-8 max-w-4xl mx-auto
+        ${
+        currentSection === 'Projects' ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-id="Projects"
+        >
+          <h1 className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center fadeIn">PROJECTS</h1>
+          {/* This is the key change: Using grid with responsive columns */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((item, index) => (
+              <div key={item.id} className=" overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
+                <div className="relative w-full h-64 bg-gray-100 flex items-center justify-center cursor-pointer" onClick={() => window.location.href = item.url}>
+                  <Image 
+                    key={index}
+                    src={item.image}
+                    alt={`${item.title} project`}
+                    className="fadeIn w-full object-contain h-48 sm:h-56 md:h-64 lg:h-72 rounded-md"
+                    width={400}
+                    height={300}
+                  />                                         
+                </div>
+                <div className="p-4 colorBackground h-full">
+                  <h3 className="text-lg text-center font-semibold mb-2 colorTextOpposite">{item.title}</h3>
+                  <p className="text-sm text-gray-600 mb-2 colorTextOpposite">{item.description}</p>
+                  <div className="flex flex-wrap gap-2 ">
+                    {item.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className={`inline-block text-xs px-2 py-1 rounded-full text-black
+                        ${colorMap[tag.color]} `}
+                      >
+                        {tag.name}
+                      </span>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
-    );
-  }
-
-            {/* <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"> */}
-                {/* <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300"> */}
-                    {/* <img src="https://placekitten.com/400/300" alt="Image 1" class="w-full h-auto object-cover"/> */}
-                {/* {projects.map((item, index) => (
-                    <a href={item.url} >
-                        <Image 
-                            key={index}
-                            src={`/images/${item.image}`} 
-                            alt={`/images/${item.image}`} 
-                            initial="top"
-                            className="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300" 
-                            animate={{x:100 }}
-                            transition={{ duration: 0.5 }}
-                            width={200} 
-                            height={200} 
-                        />                                         
-                    </a>
-                ))} */}
-                {/* </div> */}
-            {/* </div> */}
-                
-            {/* <div className="flex justify-center items-center m-4">
-                {projects.map((item, index) => (
-                <a href={item.url} >
-                    <Image 
-                        key={index}
-                        src={`/images/${item.image}`} 
-                        alt={`/images/${item.image}`} 
-                        initial="top"
-                        className="" 
-                        animate={{x:100 }}
-                        transition={{ duration: 0.5 }}
-                        width={200} 
-                        height={200} 
-                    />                                         
-                </a>
-                ))}
-            </div> */}
-
-//             <section class="bg-yellow-400 p-6">
-
-//   <h1 class="text-3xl font-bold text-center mb-8">My Gallery</h1>
-
-//   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/400/300" alt="Image 1" class="w-full h-auto object-cover"/>
-//     </div>
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/401/300" alt="Image 2" class="w-full h-auto object-cover"/>
-//     </div>
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/402/300" alt="Image 3" class="w-full h-auto object-cover"/>
-//     </div>
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/403/300" alt="Image 4" class="w-full h-auto object-cover"/>
-//     </div>
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/404/300" alt="Image 5" class="w-full h-auto object-cover"/>
-//     </div>
-//     <div class="overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-//       <img src="https://placekitten.com/405/300" alt="Image 6" class="w-full h-auto object-cover"/>
-//     </div>
-//   </div>
-
-// </section>
-
-//         </div>       
-//      );
-//  }
-  
-//  export default Projects;
+    </div>
+  );
+}

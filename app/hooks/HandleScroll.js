@@ -1,4 +1,14 @@
 import { useEffect, useState, useRef } from 'react';
+// snippet 
+// <div className={`scrollHandle transition-opacity duration-1000 ease-in-out 
+// ${
+//    currentSection === 'About' ? 'opacity-100' : 'opacity-0'
+//  }`}
+//  data-id="About"
+// >
+// <p className="fadeIn"></p>
+// </div>
+
 
 export default function useHandleScroll() {
   const [visibleSection, setVisibleSection] = useState(null);
