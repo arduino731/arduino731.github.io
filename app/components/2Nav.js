@@ -99,7 +99,7 @@ const Nav = () => {
           ☰
         </button>
         {isOpen && (
-          <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out">
+          <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out items-center">
             {['Home', 'About', 'Services', 'Projects', 'Contact'].map((label, index) => {
                 let href = '#';
 
