@@ -1,27 +1,26 @@
 'use client'
-import { useState, useEffect } from "react";    // framer motion
+// import { useState, useEffect } from "react";    // framer motion
+import useHandleScroll from '../hooks/HandleScroll';
 
 const About = () => {
-  const [hidden, setHidden] = useState(false);  // framer motion  
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-        const aboutHandleScroll= document.getElementById("aboutHandleScroll");
-        const scrollHeight = aboutHandleScroll.scrollHeight;
-        console.log(scrollHeight)
-        if (window.scrollY > scrollHeight)  {
-          aboutHandleScroll.classList.add("opacity-100");
-          aboutHandleScroll.classList.remove("opacity-0");
-        } else {
-          aboutHandleScroll.classList.add("opacity-0");
-          aboutHandleScroll.classList.remove("opacity-100");
-        }
-    });
-  });
+  const currentSection = useHandleScroll();
 
   return (
-
+      // <div
+      //   className={
+      //      `scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out 
+      
+      //     ${ currentSection === 'projectSummary' ? 'opacity-100' : 'opacity-0'
+      //      }`}
+      //   data-id="projectSummary"
+      // ></div>
       <section id="about" className="colorBackgroundOpposite py-16 px-6 md:px-20">
-        <div id="aboutHandleScroll" className="opacity-0 transition-opacity duration-1000 ease-in-out max-w-4xl mx-auto">
+        <div className={`scrollHandle opacity-0 transition-opacity duration-1000 ease-in-out max-w-4xl mx-auto
+        ${
+           currentSection === 'about' ? 'opacity-100' : 'opacity-0'
+         }`}
+         data-id="about"
+      >
           <h2 className="text-4xl md:text-5xl font-bold text-center colorBackground colorTextOpposite rounded-md p-2 my-8 animate-fadeInUp">About Me</h2>
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 ">

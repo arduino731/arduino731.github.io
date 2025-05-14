@@ -115,28 +115,64 @@ export default function Project1() {
         data-id="gitHub"
       >
         <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground colorTextOpposite rounded-lg shadow-md border-slate-300 border">
-          <p className="text-lg mt-6 colorTextOpposite">
+          <p className="text-lg mt-6 colorTextOpposite fadeIn">
             🌐 Want to view the live demo?
             <br />
             Access the running project on AWS EC2:
           </p>
+          <p className="text-md mt-2 colorTextOpposite fadeIn">
+            <code className="colorBackgroundOpposite colorText font-extrabold px-1 py-0.5 rounded text-sm fadeIn">Note:</code> 
+            Live demo currently unavailable due to server transition. Source code and full functionality can be reviewed on GitHub.</p>
           <a
-            href="https://github.com/arduino731/van-vlymen-paws-portfolio"
-            target="_blank"
+            href="#"
+            target=""
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite fadeIn inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
           >
             🌐 View Live Project →
           </a>
         </div>
-        <div className="mx-auto max-w-xl text-center p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
-          <p className="text-lg mt-10 ">
+        <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+          <h4 className="text-lg font-bold fadeIn">Interactive Front-End Developer</h4>
+          <p className="text-lg fadeIn">
             🔍 Want to see more source code?
             <br />
             Check out my GitHub!
           </p>
           <a
             href="https://github.com/arduino731/van-vlymen-paws-portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
+          >
+            Visit My GitHub →
+          </a>
+        </div>
+        <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+          <h4 className="text-lg font-bold fadeIn">Angular App</h4>
+          <p className="text-lg fadeIn">
+            🔍 Want to see more source code?
+            <br />
+            Check out my GitHub!
+          </p>
+          <a
+            href="https://github.com/arduino731/jennifershows_Angular"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
+          >
+            Visit My GitHub →
+          </a>
+        </div>
+        <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+          <h4 className="text-lg font-bold fadeIn">Full Stack Authentication App with Express, MongoDB, and EJS</h4>
+          <p className="text-lg fadeIn">
+            🔍 Want to see more source code?
+            <br />
+            Check out my GitHub!
+          </p>
+          <a
+            href="https://github.com/arduino731/vanVlymenList"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"

@@ -12,12 +12,7 @@ First, run the development server:
 ```bash
 $ npm run dev
 
-Image: 
-    dark:bg-slate-700 bg-slate-400
-text:
-    dark:text-lightgrey text-darkgrey
+TailWind globals.css 
 
-For project1
-body className="bg-slate-700 dark:bg-slate-400
 
 Experience with payment integration services like Stripe or PayPal and cloud platforms like AWS, Azure, or GCP.
