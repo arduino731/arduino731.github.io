@@ -32,8 +32,8 @@ const projects = [
       url: "/projects/2",
       tags: [
         { name: "Linux", color: "slate" },
-        { name: "Docker", color: "blue" },
-        { name: "Teffaform", color: "purple" },
+        { name: "Container-Docker", color: "blue" },
+        { name: "IaC-Terraform", color: "purple" },
         { name: "Automation", color: "teal" },
         { name: "Monitoring", color: "yellow" },
         { name: "AWS", color: "amber" }
@@ -47,8 +47,10 @@ const projects = [
       url: "/projects/3",
       tags: [
         { name: "Next.js", color: "indigo" },
-        { name: "Stripe", color: "green" },
-        { name: "Prisma", color: "gray" }
+        { name: "API-Plaid", color: "white" },
+        { name: "NOSQL", color: "green" },
+        { name: "IaC-Terraform, ", color: "purple" },
+        { name: "Docker", color: "blue" }
       ]
     }
   ];
@@ -65,6 +67,7 @@ const colorMap = {
   gray: "bg-gray-100 text-gray-800",
   orange: "bg-orange-200 text-orange-900", 
   red: "bg-rose-100 text-rose-800", 
+  white: "bg-gray-100 text-gray-800", 
 };
 
 export default function ProjectsSection() {
