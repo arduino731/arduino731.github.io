@@ -78,7 +78,7 @@ export default function Project2() {
             Access the running project on AWS EC2:
           </p>
           <a
-            href="http://ec2-3-86-244-173.compute-1.amazonaws.com/"
+            href="#"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite fadeIn inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
@@ -93,7 +93,7 @@ export default function Project2() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/DevOps-Linux-System-Admin"
+            href="https://github.com/arduino731/MernEcommercePro"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
