@@ -1,11 +1,13 @@
 import React from 'react'
 import "../../globals.css"
-import Project3 from './Project3'
+import Project2 from './Project3'
+import "./style.css"
+
 
 export default function page() {
   return (
     <section>
-      <Project3 />  
+      <Project2 />  
     </section>
   )
 }

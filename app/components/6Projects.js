@@ -42,14 +42,16 @@ const projects = [
     {
       id: 3,
       title: "E-commerce Platform",
-      description: "Coming soon...",
-      image: "/images/surfIcon.png",
+      description: "A full-stack e-commerce web application built with the MERN stack (MongoDB, Express, React, Node.js). It features user authentication with Passport.js, dynamic product listings, shopping cart functionality, user profiles, and product review submission. The platform includes role-based access, responsive UI design, and real-time feedback with toast notifications. Reviews are posted and automatically scrolled into view with visual highlights for seamless UX. Deployed on an AWS EC2 instance using Docker and automated with Bash scripting",
+      image: "/images/ecommerce.png",
       url: "/projects/3",
       tags: [
         { name: "Next.js", color: "indigo" },
+        { name: "Tailwind CSS", color: "teal" },
+        { name: "API-Passport", color: "black" },
         { name: "API-Plaid", color: "white" },
         { name: "NOSQL", color: "green" },
-        { name: "IaC-Terraform, ", color: "purple" },
+        { name: "IaC-Terraform", color: "purple" },
         { name: "Docker", color: "blue" }
       ]
     }
@@ -68,6 +70,7 @@ const colorMap = {
   orange: "bg-orange-200 text-orange-900", 
   red: "bg-rose-100 text-rose-800", 
   white: "bg-gray-100 text-gray-800", 
+  black: "bg-black text-gray-100", 
 };
 
 export default function ProjectsSection() {
