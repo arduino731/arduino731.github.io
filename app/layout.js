@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next"
 import Head from './components/1Head';
 import Nav from './components/2Nav';
 import Footer from './components/8Footer';
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body>
         <Head />
+        <Analytics />
           <ClientNextThemes>
             <Nav />
             {children}
