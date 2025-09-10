@@ -16,7 +16,7 @@ const About = () => {
 
           <div className="flex flex-col md:flex-row items-center md:items-start gap-8 ">
             <div className="w-40 h-40 relative rounded-full overflow-hidden border-4 border-slate-400 shadow-lg fadeIn">
-              <img src="/images/profile.jpg" alt="Brian van Vlymen" className="w-full h-full object-cover" />
+              <img src="/images/portfolio.jpeg" alt="Brian van Vlymen" className="w-full h-full object-cover" />
             </div>
 
             <div className="flex-1 text-lg colorBackground colorTextOpposite rounded-md p-4 leading-relaxed fadeIn">
