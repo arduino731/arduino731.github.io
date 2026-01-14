@@ -12,7 +12,7 @@ const projects = [
     {
       id: 1,
       title: "Interactive Front-End Developer Showcase",
-      description: "A responsive, animated portfolio showcasing front-end skills using Pug, Tailwind CSS, GSAP, and Express. Features scroll-triggered animations, mobile-first design, accessibility, and SEO. Built to demonstrate real-world UI/UX and modern web development practices.",
+      description: "A high-performance, responsive portfolio engineered to demonstrate core frontend mastery and accessibility standards.",
       image: "/images/secondPort.png",
       url: "/projects/1",
       tags: [
