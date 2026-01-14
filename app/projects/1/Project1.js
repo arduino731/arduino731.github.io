@@ -23,7 +23,9 @@ export default function Project1() {
         data-id="projectSummary"
       >
         <p className="text-center text-2xl font-bold mb-6 fadeIn">
-        A dynamic, responsive portfolio built with modern web technologies to demonstrate front-end development expertise. Features mobile-first design, smooth GSAP animations, custom JS interactions, and accessibility best practices. Designed using Pug templates and styled with Tailwind CSS, this project highlights UI/UX principles, SEO optimization, and performance tuning for real-world production readiness.
+        While I am proficient in React, I chose to build this specific showcase using Vanilla JavaScript, Pug, and Express.
+
+        My goal was to demonstrate a "Fundamentals-First" approach—mastering Direct DOM Manipulation, Server-Side Rendering (SSR), and Web Performance without the abstraction of a framework. This deep-dive into the core of the web ensures that I build React applications that are not just functional, but highly optimized and fully accessible from the ground up.
         </p>
           {/* <!-- First Box with Background --> */}
         <div className="colorBackground flex flex-row md:flex-row w-3/4 m-auto p-6 items-center rounded-lg shadow-lg justify-around border-slate-300 border flex-wrap">

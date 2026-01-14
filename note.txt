@@ -1,18 +1,10 @@
-snippets 
-    create a React Arrow function Componet with ES7 module system
-    "rafce" 
-    "rfc"
+Should you run npm audit fix? No.
+Should you update random warnings? No.
 
-$ npm run dev 
-$ npm run build 
+You can simply ignore that message in your terminal. It will appear every time you run npm run dev, but it is harmless.
 
 
-First, run the development server:
-
-```bash
-$ npm run dev
-
-TailWind globals.css 
+$ npm run dev (Development Mode)
+$ npm run build (Production Mode)
 
 
-Experience with payment integration services like Stripe or PayPal and cloud platforms like AWS, Azure, or GCP.
