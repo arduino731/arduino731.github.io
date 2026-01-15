@@ -1,4 +1,4 @@
-This is my Source Code Main branch. This is where I write My React code, edit my CSS, and do my daily work.
+Main: This is my Source Code Main branch. This is where I write My React code, edit my CSS, and do my daily work.
 
 # Brian van Vlymen - Front-End Web Developer Portfolio 
 Individual Project Highlights
@@ -8,6 +8,7 @@ Individual Project Highlights
 $${\color{red}Welcome \space \color{#2048f7}to \space \color{orange}van-vlymen-paws-portfolio}$$ 
 
 My specialized portfolio displays exceptional work with a minimalist yet impactful design. Created with React, Next.js, and WindTail CSS, it's hosted on GitHub Actions for swift modern website development.
+
 
 
 
