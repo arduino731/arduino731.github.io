@@ -82,37 +82,40 @@ export default function Project1() {
         }`}
         data-id="built"
       >
-        <div className="text-center mb-6 fadeIn ">
-          <h2 className="text-3xl font-bold colorTextOpposite mb-2 fadeIn">💡 What I Built</h2>
-          <p className="colorTextOpposite text-lg fadeIn">Interactive Front-End Developer features of this project:</p>
+        <div className="text-center mb-6 fadeIn">
+          <h2 className="text-3xl font-bold colorTextOpposite mb-2 fadeIn">🛠️ Technical Showcase</h2>
+          <p className="colorTextOpposite text-lg fadeIn">
+            An engineering-focused breakdown of my professional development background:
+          </p>
         </div>
 
+        {/* Section 1: Core Stack */}
+        <h3 className="colorTextOpposite text-xl font-semibold text-left fadeIn mt-4">🏗️ Core Project Stack</h3>
+        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg mb-4">
+          <li className="fadeIn">Pug (Jade) & Vanilla JavaScript (ES6+)</li>
+          <li className="fadeIn">Express.js & Node.js Backend Architecture</li>
+          <li className="fadeIn">GSAP (TweenMax) for High-Performance Animations</li>
+          <li className="fadeIn">Tailwind CSS & Bootstrap for Mobile-First Design</li>
+          <li className="fadeIn">Google Analytics & SEO Performance Monitoring</li>
+        </ul>
 
-        {/* here */}
-        <h1 className="colorTextOpposite text-lg text-left fadeIn">📱 Mobile + Desktop Animated Portfolio</h1>
-        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
-          <li className="fadeIn">Pug (Jade) for templating</li>
-          <li className="fadeIn">Express.js for backend routing</li>
-          <li className="fadeIn">GSAP and TweenMax for animation</li>
-          <li className="fadeIn">jQuery + Vanilla JS for dynamic interactivity</li>
-          <li className="fadeIn">Google Analytics for SEO and performance insight</li>
+        {/* Section 2: Logic & Games */}
+        <h3 className="colorTextOpposite text-xl font-semibold text-left fadeIn mt-4">🕹️ Logic & Game Development</h3>
+        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg mb-4">
+          <li className="fadeIn">Developed **Tetris** & **Tic Tac Toe** using DOM manipulation</li>
+          <li className="fadeIn">Engineered **Simon Game** with jQuery sequence logic</li>
+          <li className="fadeIn">Built functional **Calculator** using Angular 1.3</li>
+          <li className="fadeIn">Utilized **AJAX & JSON** for dynamic API integration</li>
         </ul>
-        <h1 className="colorTextOpposite text-lg text-left fadeIn">✨ Key Features:</h1>
+
+        {/* Section 3: Engineering Skills */}
+        <h3 className="colorTextOpposite text-xl font-semibold text-left fadeIn mt-4">✨ Key Engineering Features</h3>
         <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
-          <li className="fadeIn">Scroll-activated animations</li>
-          <li className="fadeIn">Dynamic paw animations with fading effects</li>
-          <li className="fadeIn">Fully responsive layout from mobile to desktop</li>
-          <li className="fadeIn">Animated headings using GSAP</li>
-          <li className="fadeIn">Accessibility-conscious design (contrast, alt tags, navigation)</li>
-        </ul>
-        <h1 className="colorTextOpposite text-lg text-left fadeIn">🛠️ Tools & Technologies</h1>
-        <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg">
-          <li className="fadeIn">HTML5/CSS3 + Tailwind CSS</li>
-          <li className="fadeIn">Bootstrap</li>
-          <li className="fadeIn">Font Awesome</li>
-          <li className="fadeIn">NPM Modules</li>
-          <li className="fadeIn">LocalStorage for performance boost</li>
-          <li className="fadeIn">Image optimization (WebP, responsive sizes)</li>
+          <li className="fadeIn">Scroll-activated & hardware-accelerated animations</li>
+          <li className="fadeIn">Cross-browser stability (Chrome, Safari, Firefox)</li>
+          <li className="fadeIn">WebP Optimization & Lazy-loading for Core Web Vitals</li>
+          <li className="fadeIn">Version Control (Git) & CI/CD deployment workflows</li>
+          <li className="fadeIn">Accessibility-conscious design (ARIA labels & semantic HTML)</li>
         </ul>
       </div>
 
