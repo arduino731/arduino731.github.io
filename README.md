@@ -1,5 +1,6 @@
 
-$${\color{red}Welcome \space \color{#2048f7}to \space \color{orange}van-vlymen-paws-portfolio}$$ 
+$${\color{red}Welcome \space \color{#2048f7}to \space \color{orange}van-vlymen-paws-portfolio}$$
+$${\color{red}Welcome \space \color{#2048f7}to \space \color{orange}van-vlymen-paws-portfolio}$$
 
 My specialized portfolio displays exceptional work with a minimalist yet impactful design. Created with React, Next.js, and WindTail CSS, it's hosted on GitHub Actions for swift modern website development.
 
@@ -66,6 +67,7 @@ Once you have pasted the text above into your `README.md` file, run these comman
     ```bash
     git push origin main
     ```
+
 
 
 
