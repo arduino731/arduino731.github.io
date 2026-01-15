@@ -22,27 +22,35 @@ export default function Project1() {
         }`}
         data-id="projectSummary"
       >
-        <p className="text-center text-2xl font-bold mb-6 fadeIn">
-        While I am proficient in React, I chose to build this specific showcase using Vanilla JavaScript, Pug, and Express.
+        <div className="flex flex-col gap-10">
+          <p className="text-center text-2xl md:text-1xl fadeIn">
+            While I am proficient in React, I chose to build this specific showcase using{" "}
+            <span className="colorText colorBackgroundOpposite"> {/* Changed p to span */}
+              <code className="colorBackground colorTextOpposite px-1 py-0.5 rounded text-lm font-bold">Vanilla JavaScript</code>,{" "}
+              <code className="colorBackground colorTextOpposite px-1 py-0.5 rounded text-lm font-bold">Pug</code>, and{" "}
+              <code className="colorBackground colorTextOpposite px-1 py-0.5 rounded text-lm font-bold">Express</code>
+            </span>
+          </p>
 
-        My goal was to demonstrate a "Fundamentals-First" approach—mastering Direct DOM Manipulation, Server-Side Rendering (SSR), and Web Performance without the abstraction of a framework. This deep-dive into the core of the web ensures that I build React applications that are not just functional, but highly optimized and fully accessible from the ground up.
-        </p>
+          <p className="text-center text-2xl md:text-1xl fadeIn py-5">
+            My goal was to demonstrate a "Fundamentals-First" approach—mastering Direct DOM Manipulation, Server-Side Rendering (SSR), and Web Performance without the abstraction of a framework. This deep-dive into the core of the web ensures that I build React applications that are not just functional, but highly optimized and fully accessible from the ground up.
+          </p>
+        </div>
           {/* <!-- First Box with Background --> */}
         <div className="colorBackground flex flex-row md:flex-row w-3/4 m-auto p-6 items-center rounded-lg shadow-lg justify-around border-slate-300 border flex-wrap">
-          <div className="fadeIn flex flex-col items-center justify-center w-64 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
+          <div className="mb-3 fadeIn flex flex-col items-center justify-center w-64 h-auto colorBackgroundOpposite colorText rounded-lg shadow-md ">
             <h2 className="text-lg font-bold">Mobile-like Design</h2>
             {/* <!-- Mobile-like Box (Placed Inside the Bottom of H2) --> */}
             <div className="m-5 relative w-auto md:w-56 h-[500px] bg-black rounded-[40px] shadow-xl border-[10px] border-gray-500 overflow-hidden">
               <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-24 h-6 bg-gray-800 rounded-b-lg"></div>
               {/* <!-- Embedded YouTube Video --> */}
-              <iframe  
-                className="w-full h-full rounded-[30px]" 
-                src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1" 
+              <iframe 
+                className="w-full h-full rounded-[30px] border-none" // added border-none
+                src="https://www.youtube.com/embed/2vOmAAKTv74?autoplay=1&mute=1" // added &mute=1
                 title="Mobile-like Design Portfolio"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                frameborder="0" 
-                allowfullscreen>
-              </iframe>
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
             </div>
           </div>
           {/* <!-- Second Box with Background --> */}
@@ -61,8 +69,7 @@ export default function Project1() {
                 src="https://www.youtube.com/embed/gUfnJ_Gykg0?autoplay=1" 
                 title="Desktop-like Design Portfolio"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                frameborder="0" 
-                allowfullscreen>
+                allowFullScreen>
               </iframe>
             </div>
           </div>

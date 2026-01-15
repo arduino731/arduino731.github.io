@@ -2,7 +2,8 @@
 const nextConfig = {
     output: "export",
     images: {
-        unoptimized: true
+        unoptimized: true,
+        qualities: [25, 50, 75, 100],
     },
     reactStrictMode: true,
 }
