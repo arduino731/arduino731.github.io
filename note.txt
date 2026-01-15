@@ -5,6 +5,5 @@ You can simply ignore that message in your terminal. It will appear every time y
 
 
 $ npm run dev (Development Mode)
-$ npm run build (Production Mode)
 
 
