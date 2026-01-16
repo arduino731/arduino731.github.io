@@ -152,7 +152,7 @@ export default function Project1() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/van-vlymen-paws-portfolio"
+            href="https://github.com/arduino731/paws-frontend-showcase"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
