@@ -4,6 +4,7 @@ import "../../globals.css"
 import "./style.css"
 import Showcases from './Showcases'
 import PawsFrontendShowcase from './PawsFrontendShowcase'
+import TetrisGame from './Tetris-game'
 
 
 
@@ -16,12 +17,17 @@ export default function Page() {
 
   return (
     <main>
+      {/* 1. The Main List */}
       {view === 'list' && (
-        <Showcases onProjectClick={() => setView('pawsFrontendShowcase')} />
+        <Showcases onProjectClick={(projectName) => setView(projectName)} />
       )}
-      
-      {view === 'pawsFrontendShowcase' && (
+      {/* 2. Paws Project */}
+      {view === 'paws' && (
         <PawsFrontendShowcase onBack={() => setView('list')} />
+      )}
+      {/* 3. Tetris Project */}
+      {view === 'tetris' && (
+        <TetrisGame onBack={() => setView('list')} />
       )}
     </main>   
   )

@@ -1,7 +1,7 @@
 import useHandleScroll from '../hooks/HandleScroll'
  
 const Home = () => {
-    const currentSection = useHandleScroll();
+    const { visibleSection: currentSection } = useHandleScroll();
     return (
         <div id="Home" className={`scrollHandle transition-opacity duration-1000 ease-in-out colorBackground h-screen flex flex-col justify-center items-center text-center px-3
         ${

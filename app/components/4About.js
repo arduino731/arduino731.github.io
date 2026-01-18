@@ -3,7 +3,7 @@ import useHandleScroll from '../hooks/HandleScroll';
 import Image from 'next/image';
 
 const About = () => {
-  const currentSection = useHandleScroll();
+  const { visibleSection: currentSection } = useHandleScroll();
 
   return (
 <section id="about" className="colorBackgroundOpposite py-16 px-6 md:px-20">

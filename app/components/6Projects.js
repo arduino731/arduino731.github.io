@@ -74,7 +74,7 @@ const colorMap = {
 };
 
 export default function ProjectsSection() {
-  const currentSection = useHandleScroll();
+  const { visibleSection: currentSection } = useHandleScroll();
   
   return (
     <div className="colorBackgroundOpposite ">

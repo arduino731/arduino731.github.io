@@ -2,7 +2,7 @@
 import useHandleScroll from '../hooks/HandleScroll';
 
 const Services = () => {
-    const currentSection = useHandleScroll();
+    const { visibleSection: currentSection } = useHandleScroll();
 
   return (
       <div className="colorBackground ">
