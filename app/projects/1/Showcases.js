@@ -2,9 +2,9 @@
 import Image from 'next/image'
 import './style.css'
 import useHandleScroll from '../../hooks/HandleScroll'
-import Link from 'next/link'
+// import Link from 'next/link'
 
-export default function Project1({ onProjectClick }) {
+export default function Showcases({ onProjectClick }) {
   const currentSection = useHandleScroll();
 
   return (
@@ -42,7 +42,15 @@ export default function Project1({ onProjectClick }) {
           </div>
         </div>
         <div className="w-1/3 p-2">
-          <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6">Box 3</div>
+          <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6">
+            <p className="text-lg font-bold">Chess Game</p>
+            <button
+              onClick={() => onProjectClick()}
+              className="hoverSpotlight colorText colorBackgroundOpposite  inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
+            >
+              🌐 View Project →
+            </button>
+          </div>
         </div>
       </div>
     </article>

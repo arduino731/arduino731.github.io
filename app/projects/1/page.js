@@ -7,7 +7,7 @@ import PawsFrontendShowcase from './PawsFrontendShowcase'
 
 
 
-export default function page() {
+export default function Page() {
   const [view, setView] = useState('list');
   
   useEffect(() => {
