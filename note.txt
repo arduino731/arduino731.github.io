@@ -5,7 +5,7 @@ You can simply ignore that message in your terminal. It will appear every time y
 
 
 $ npm run dev (Development Mode)
-
+$ npm run dev (Deployment Mode)
 when you are done commit and it will automatic
 Github Actions deployment. 
 
