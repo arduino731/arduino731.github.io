@@ -1,12 +1,28 @@
-import React from 'react'
+"use client"
+import React, { useState, useEffect} from 'react'
 import "../../globals.css"
 import "./style.css"
-import Project1 from './Project1'
+import Showcases from './Showcases'
+import PawsFrontendShowcase from './PawsFrontendShowcase'
+
+
 
 export default function page() {
+  const [view, setView] = useState('list');
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [view]); // This runs every time 'view' changes
+
   return (
     <main>
-      <Project1 />
+      {view === 'list' && (
+        <Showcases onProjectClick={() => setView('pawsFrontendShowcase')} />
+      )}
+      
+      {view === 'pawsFrontendShowcase' && (
+        <PawsFrontendShowcase onBack={() => setView('list')} />
+      )}
     </main>   
   )
 }
