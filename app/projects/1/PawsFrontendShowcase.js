@@ -3,9 +3,19 @@ import Image from 'next/image'
 import './style.css'
 import useHandleScroll from '../../hooks/HandleScroll'
 
-export default function PawsFrontendShowcase({ onBack}) {
-  const currentSection = useHandleScroll();
+export default function PawsFrontendShowcase({onBack}) {
+  const { visibleSection:currentSection, showScrollButton } = useHandleScroll();
 
+  const scrollToContent = () => {
+    const element = document.getElementById('target-section');
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start' // This aligns the top of the section with the top of the screen
+      });
+    }
+  };
+  
   return (
     <article className="colorBackgroundOpposite colorText">
       <button 
@@ -14,6 +24,18 @@ export default function PawsFrontendShowcase({ onBack}) {
       >
         ← Back to Showcase
       </button>
+      {/* Wrap the button in a centering div */}
+      <div className="fixed top-[150px] left-1/2 -translate-x-1/2 z-50">
+          <button 
+              onClick={scrollToContent}
+              className={`shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 
+              transition-all duration-700 animate-bounce hover:scale-110 active:scale-95
+              ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}
+              `}
+          >
+              ↓ Scroll Down
+          </button>
+      </div>
       {/* Section Header */}
       <div className="flex items-center colorBackground pb-2">
         <div className="flex-grow border-t border-gray-300"></div>
@@ -23,8 +45,10 @@ export default function PawsFrontendShowcase({ onBack}) {
 
       {/* Project Summary */}
       <div
-        className={`scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
-          currentSection === 'projectSummary' ? 'opacity-100' : 'opacity-0'
+        id="target-section"
+        className={`scroll-mt-[150px] scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
+          // Add "!currentSection ||" so it's visible by default
+          !currentSection || currentSection === 'projectSummary' ? 'opacity-100' : 'opacity-0'
         }`}
         data-id="projectSummary"
       >
@@ -108,10 +132,10 @@ export default function PawsFrontendShowcase({ onBack}) {
         {/* Section 2: Logic & Games */}
         <h3 className="colorTextOpposite text-xl font-semibold text-left fadeIn mt-4">🕹️ Logic & Game Development</h3>
         <ul className="list-disc list-inside space-y-1 text-left colorTextOpposite text-base md:text-lg mb-4">
-          <li className="fadeIn">Developed **Tetris** & **Tic Tac Toe** using DOM manipulation</li>
-          <li className="fadeIn">Engineered **Simon Game** with jQuery sequence logic</li>
-          <li className="fadeIn">Built functional **Calculator** using Angular 1.3</li>
-          <li className="fadeIn">Utilized **AJAX & JSON** for dynamic API integration</li>
+          <li className="fadeIn">Developed <strong>Tetris</strong> & <strong>Tic Tac Toe</strong> using DOM manipulation</li>
+          <li className="fadeIn">Engineered <strong>Simon Game</strong> with jQuery sequence logic</li>
+          <li className="fadeIn">Built functional <strong>Calculator</strong> using Angular 1.3</li>
+          <li className="fadeIn">Utilized <strong>AJAX & JSON</strong> for dynamic API integration</li>
         </ul>
 
         {/* Section 3: Engineering Skills */}

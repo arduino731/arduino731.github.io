@@ -6,7 +6,7 @@ import Image from 'next/image'
 import useHandleScroll from '../hooks/HandleScroll';
 
 const ImageSlider = () => {
-  const currentSection = useHandleScroll();
+  const { visibleSection: currentSection } = useHandleScroll();
   const [positionIndexes, setPositionIndexes] = useState([0, 1, 2, 3, 4])
 
   const handleNext = () => {

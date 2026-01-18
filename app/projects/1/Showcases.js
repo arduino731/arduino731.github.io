@@ -5,10 +5,10 @@ import useHandleScroll from '../../hooks/HandleScroll'
 // import Link from 'next/link'
 
 export default function Showcases({ onProjectClick }) {
-  const currentSection = useHandleScroll();
+  const { visibleSection: currentSection } = useHandleScroll();
 
   return (
-    <article className="colorBackgroundOpposite colorText">
+    <article className="colorBackgroundOpposite colorText opacity-100">
       {/* Section Header */}
       <div className="flex items-center colorBackground pb-2">
         <div className="flex-grow border-t border-gray-300"></div>
@@ -22,10 +22,10 @@ export default function Showcases({ onProjectClick }) {
           <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 ">
             <p className="text-lg font-bold">Paws Frontend Showcase</p>
             <button
-              onClick={() => onProjectClick()}
+              onClick={() => onProjectClick('paws')}
               className="hoverSpotlight colorText colorBackgroundOpposite  inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
             >
-              🌐 View Project →
+              🌐 View Paws Project →
             </button>
           </div>
 
@@ -34,10 +34,10 @@ export default function Showcases({ onProjectClick }) {
           <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6">
             <p className="text-lg font-bold">Tetris Game</p>
             <button
-              onClick={() => onProjectClick()}
+              onClick={() => onProjectClick('tetris')}
               className="hoverSpotlight colorText colorBackgroundOpposite  inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
             >
-              🌐 View Project →
+              🌐 View Tetris Game →
             </button>
           </div>
         </div>
