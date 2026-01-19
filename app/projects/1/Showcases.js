@@ -31,7 +31,17 @@ export default function Showcases({ onProjectClick }) {
       </button>
     </div>
   </div>
-
+  <div className="w-full md:w-1/2 lg:w-1/3 p-3">
+    <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
+      <p className="text-xl font-bold">Minimax AI Tic-Tac-Toe</p>
+      <button
+        onClick={() => onProjectClick('tictactoe')}
+        className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded-full font-semibold transition-all duration-500 ease-in-out transform hover:scale-105"
+      >
+        🌐 View Tic Tac Toe →
+      </button>
+    </div>
+  </div>
   <div className="w-full md:w-1/2 lg:w-1/3 p-3">
     <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
       <p className="text-xl font-bold">Tetris Game</p>
@@ -44,17 +54,6 @@ export default function Showcases({ onProjectClick }) {
     </div>
   </div>
 
-  <div className="w-full md:w-1/2 lg:w-1/3 p-3">
-    <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
-      <p className="text-xl font-bold">Tic Tac Toe</p>
-      <button
-        onClick={() => onProjectClick('tictactoe')}
-        className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded-full font-semibold transition-all duration-500 ease-in-out transform hover:scale-105"
-      >
-        🌐 View Tic Tac Toe →
-      </button>
-    </div>
-  </div>
 
   <div className="w-full md:w-1/2 lg:w-1/3 p-3">
     <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
