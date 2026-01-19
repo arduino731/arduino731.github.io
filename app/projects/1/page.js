@@ -5,6 +5,7 @@ import "./style.css"
 import Showcases from './Showcases'
 import PawsFrontendShowcase from './PawsFrontendShowcase'
 import TetrisGame from './Tetris-game'
+import TicTacToe from './TicTacToe'
 
 
 
@@ -28,6 +29,10 @@ export default function Page() {
       {/* 3. Tetris Project */}
       {view === 'tetris' && (
         <TetrisGame onBack={() => setView('list')} />
+      )}
+      {/* 4. Tic Tac Toe Project */}
+      {view === 'tictactoe' && (
+        <TicTacToe onBack={() => setView('list')} />
       )}
     </main>   
   )

@@ -25,7 +25,7 @@ export default function PawsFrontendShowcase({onBack}) {
         ← Back to Showcase
       </button>
       {/* Wrap the button in a centering div */}
-      <div className="fixed top-[150px] left-1/2 -translate-x-1/2 z-50">
+      <div className="fixed top-[250px] left-1/2 -translate-x-1/2 z-50">
           <button 
               onClick={scrollToContent}
               className={`shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 
@@ -46,10 +46,11 @@ export default function PawsFrontendShowcase({onBack}) {
       {/* Project Summary */}
       <div
         id="target-section"
-        className={`scroll-mt-[150px] scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
+        className={`scroll-mt-[150px] scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out 
+          ${
           // Add "!currentSection ||" so it's visible by default
           !currentSection || currentSection === 'projectSummary' ? 'opacity-100' : 'opacity-0'
-        }`}
+          }`}
         data-id="projectSummary"
       >
         <div className="flex flex-col gap-10">
