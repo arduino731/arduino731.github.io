@@ -5,7 +5,7 @@ import "./style.css"
 import Showcases from './Showcases'
 import PawsFrontendShowcase from './PawsFrontendShowcase'
 import TetrisGame from './Tetris-game'
-import TicTacToe from './TicTacToe'
+import TicTacToe from './TicTacToe/TicTacToeGame'
 
 
 
