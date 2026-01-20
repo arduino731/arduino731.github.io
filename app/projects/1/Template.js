@@ -61,6 +61,23 @@ export default function TetrisGame({ onBack }) {
         <div className="bg-gray-200 p-10 my-10 rounded-lg shadow-lg fadeIn">  
             <h2 className="text-2xl font-bold mb-4 colorText">Tic Tac Toe Game</h2>
             <h1>Hello World</h1>
+        </div>
+        
+        <div className="mx-auto max-w-xl text-center p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+          <h4 className="text-lg font-bold fadeIn">Paws Frontend Showcase</h4>
+          <p className="text-lg fadeIn">
+            🔍 Want to see more source code?
+            <br />
+            Check out my GitHub!
+          </p>
+          <a
+            href="https://github.com/arduino731/paws-frontend-showcase"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
+          >
+            Visit My GitHub →
+          </a>
         </div>    
       </div>
     </article>
