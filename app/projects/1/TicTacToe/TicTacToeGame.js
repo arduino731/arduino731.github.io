@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import useHandleScroll from '../../hooks/HandleScroll'
+import useHandleScroll from '../../../hooks/HandleScroll'
 import { minimax, checkWinner } from './utils/tttMiniMaxLogic';
 
 export default function TicTacToeGame({ onBack }) {
@@ -10,15 +10,25 @@ export default function TicTacToeGame({ onBack }) {
   const [status, setStatus] = useState("Your turn! (O)");
   const [scores, setScores] = useState({ win: 0, lose: 0, tie: 0 });
 
-  // Load scores from LocalStorage only once on mount
+  // 2. Load from LocalStorage once when the component mounts
   useEffect(() => {
     const savedScores = localStorage.getItem('tictactoe-scores');
-    if (savedScores) setScores(JSON.parse(savedScores));
-  }, []);
+    if (savedScores) {
+      try {
+        setScores(JSON.parse(savedScores));
+      } catch (e) {
+        console.error("Failed to parse scores", e);
+      }
+    }
+  }, []); // Empty array means this runs ONLY once on page load
 
-  // Save scores to LocalStorage whenever they change
+  // 3. Save to LocalStorage whenever 'scores' state changes
   useEffect(() => {
-    localStorage.setItem('tictactoe-scores', JSON.stringify(scores));
+    // Only save if scores are actually different from initial 0
+    // This prevents overwriting your data with {0,0,0} on the first split-second of load
+    if (scores.win !== 0 || scores.lose !== 0 || scores.tie !== 0) {
+      localStorage.setItem('tictactoe-scores', JSON.stringify(scores));
+    }
   }, [scores]);
 
   // FIX: Re-adding the missing scrollToContent function
@@ -128,11 +138,43 @@ export default function TicTacToeGame({ onBack }) {
           ${!currentSection || currentSection === 'TicTacToeGame' ? 'opacity-100' : 'opacity-0'}`}
         data-id="TicTacToeGame"
       >
-        <h2 className="text-2xl font-bold fadeIn">Project Overview</h2>
-        <p className="fadeIn mt-4 text-xl leading-relaxed">
-          An "Impossible to Win" game built with <strong>React</strong> and the <strong>Minimax Algorithm</strong>. 
-          This project demonstrates recursive logic, state management, and optimized UI rendering.
-        </p>
+    <div 
+      id="tic-tac-toe-content" 
+      className={`scroll-mt-[150px] scrollHandle md:mx-20 p-8 colorBackgroundOpposite rounded-xl colorText transition-opacity duration-1000 ease-in-out
+        ${!currentSection || currentSection === 'TicTacToeGame' ? 'opacity-100' : 'opacity-0'}`}
+      data-id="TicTacToeGame"
+    >
+      {/* Header Section */}
+      <h2 className="text-3xl font-bold fadeIn tracking-tight">Minimax AI Tic-Tac-Toe</h2>
+      
+      <p className="fadeIn mt-4 text-xl leading-relaxed opacity-90">
+        An <strong>"Impossible-to-Win"</strong> strategic game built to showcase advanced frontend logic and algorithm implementation. 
+        This project highlights the bridge between game theory and modern web performance.
+      </p>
+
+      {/* Technical Spec Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 fadeIn">
+        
+        {/* Core Engine */}
+        <div className="p-4 border-l-4 border-blue-500 bg-blue-50/10 rounded-r-lg">
+          <h3 className="text-sm uppercase tracking-widest font-bold text-blue-400">Core Engine</h3>
+          <p className="text-lg mt-1 font-medium">Recursive Minimax Algorithm (Game Theory)</p>
+        </div>
+
+        {/* Tech Stack */}
+        <div className="p-4 border-l-4 border-cyan-500 bg-cyan-50/10 rounded-r-lg">
+          <h3 className="text-sm uppercase tracking-widest font-bold text-cyan-400">Tech Stack</h3>
+          <p className="text-lg mt-1 font-medium">React, Tailwind CSS, LocalStorage API</p>
+        </div>
+
+        {/* Focus Area */}
+        <div className="p-4 border-l-4 border-purple-500 bg-purple-50/10 rounded-r-lg">
+          <h3 className="text-sm uppercase tracking-widest font-bold text-purple-400">Focus</h3>
+          <p className="text-lg mt-1 font-medium">State management, persistent UI rendering</p>
+        </div>
+
+      </div>
+    </div>
 
         {/* Start of Game Section */}
         <div className="bg-gray-200 p-6 sm:p-10 my-10 rounded-lg shadow-lg fadeIn flex flex-col items-center">
@@ -184,7 +226,7 @@ export default function TicTacToeGame({ onBack }) {
         {/* End of Game Section */}
 
         {/* GitHub Link Section */}
-        <div className="mx-auto max-w-xl text-center p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+        <div className="mx-auto max-w-xl text-center my-4 p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
           <h4 className="text-lg font-bold">Minimax AI Tic-Tac-Toe</h4>
           <p className="text-lg">
             🔍 Want to see the logic?
@@ -199,6 +241,15 @@ export default function TicTacToeGame({ onBack }) {
           >
             Visit My GitHub →
           </a>
+        </div>
+
+        <div className="mx-auto max-w-xl text-center p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+          <h4 className="text-lg font-bold">Upcoming Features</h4>
+          <p className="text-lg">
+          <span className="mt-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+            Roadmap: Socket.io Multiplayer
+          </span>  
+          </p>
         </div>
       </div>
     </article>
