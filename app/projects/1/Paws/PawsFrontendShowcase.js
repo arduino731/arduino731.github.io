@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
-import './style.css'
-import useHandleScroll from '../../hooks/HandleScroll'
+import '../style.css'
+import useHandleScroll from '../../../hooks/HandleScroll'
 
 export default function PawsFrontendShowcase({onBack}) {
   const { visibleSection:currentSection, showScrollButton } = useHandleScroll();
@@ -20,12 +20,12 @@ export default function PawsFrontendShowcase({onBack}) {
     <article className="colorBackgroundOpposite colorText">
       <button 
         onClick={onBack}
-        className="fixed top-[100px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all"
+        className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all"
       >
         ← Back to Showcase
       </button>
       {/* Wrap the button in a centering div */}
-      <div className="fixed top-[250px] left-1/2 -translate-x-1/2 z-50">
+      <div className="fixed top-[245px] left-1/2 -translate-x-1/2 z-50">
           <button 
               onClick={scrollToContent}
               className={`shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 
@@ -152,7 +152,7 @@ export default function PawsFrontendShowcase({onBack}) {
 
       {/* GitHub and Live Link Section */}
       <div
-        className={`scrollHandle md:mx-20 my-6 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
+        className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
           currentSection === 'gitHub' ? 'opacity-100' : 'opacity-0'
         }`}
         data-id="gitHub"
@@ -207,7 +207,7 @@ export default function PawsFrontendShowcase({onBack}) {
             Visit My GitHub →
           </a>
         </div>
-        <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+        {/* <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
           <h4 className="text-lg font-bold fadeIn">Full Stack Authentication App with Express, MongoDB, and EJS</h4>
           <p className="text-lg fadeIn">
             🔍 Want to see more source code?
@@ -222,7 +222,7 @@ export default function PawsFrontendShowcase({onBack}) {
           >
             Visit My GitHub →
           </a>
-        </div>
+        </div> */}
       </div>
 
 
