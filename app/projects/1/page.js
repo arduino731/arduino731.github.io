@@ -3,8 +3,8 @@ import React, { useState, useEffect} from 'react'
 import "../../globals.css"
 import "./style.css"
 import Showcases from './Showcases'
-import PawsFrontendShowcase from './PawsFrontendShowcase'
-import TetrisGame from './Tetris-game'
+import PawsFrontendShowcase from './Paws/PawsFrontendShowcase'
+import AstroDash from './AstroDash/AstroDash'
 import TicTacToe from './TicTacToe/TicTacToeGame'
 
 
@@ -26,9 +26,9 @@ export default function Page() {
       {view === 'paws' && (
         <PawsFrontendShowcase onBack={() => setView('list')} />
       )}
-      {/* 3. Tetris Project */}
-      {view === 'tetris' && (
-        <TetrisGame onBack={() => setView('list')} />
+      {/* 3. Astro Dash Project */}
+      {view === 'AstroDash' && (
+        <AstroDash onBack={() => setView('list')} />
       )}
       {/* 4. Tic Tac Toe Project */}
       {view === 'tictactoe' && (

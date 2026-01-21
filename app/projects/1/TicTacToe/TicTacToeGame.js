@@ -33,7 +33,7 @@ export default function TicTacToeGame({ onBack }) {
 
   // FIX: Re-adding the missing scrollToContent function
   const scrollToContent = () => {
-    const element = document.getElementById('tic-tac-toe-content');
+    const element = document.getElementById('target-section');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -110,13 +110,13 @@ export default function TicTacToeGame({ onBack }) {
       {/* Back Button */}
       <button 
         onClick={onBack}
-        className="fixed top-[100px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-semibold"
+        className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-semibold"
       >
         ← Back to Showcase
       </button>
 
       {/* Bounce Scroll Button */}
-      <div className="fixed top-[200px] left-1/2 -translate-x-1/2 z-50">
+      <div className="fixed top-[245px] left-1/2 -translate-x-1/2 z-50">
         <button 
           onClick={scrollToContent}
           className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce
@@ -127,23 +127,19 @@ export default function TicTacToeGame({ onBack }) {
       </div>
 
       <div className="flex items-center colorBackground pb-2">
-        <h1 className="p-4 colorTextOpposite text-3xl md:text-5xl font-medium my-10 w-full text-center">
+        <div className="flex-grow border-t border-gray-300"></div>
+        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10">
           Minimax AI Tic-Tac-Toe
         </h1>
+        <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
       <div 
-        id="tic-tac-toe-content" 
+        id="target-section" 
         className={`scroll-mt-[150px] scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out
           ${!currentSection || currentSection === 'TicTacToeGame' ? 'opacity-100' : 'opacity-0'}`}
         data-id="TicTacToeGame"
       >
-    <div 
-      id="tic-tac-toe-content" 
-      className={`scroll-mt-[150px] scrollHandle md:mx-20 p-8 colorBackgroundOpposite rounded-xl colorText transition-opacity duration-1000 ease-in-out
-        ${!currentSection || currentSection === 'TicTacToeGame' ? 'opacity-100' : 'opacity-0'}`}
-      data-id="TicTacToeGame"
-    >
       {/* Header Section */}
       <h2 className="text-3xl font-bold fadeIn tracking-tight">Minimax AI Tic-Tac-Toe</h2>
       
@@ -176,8 +172,14 @@ export default function TicTacToeGame({ onBack }) {
       </div>
     </div>
 
-        {/* Start of Game Section */}
-        <div className="bg-gray-200 p-6 sm:p-10 my-10 rounded-lg shadow-lg fadeIn flex flex-col items-center">
+      {/* Start of Game Section */}
+      <div
+        className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
+          currentSection === 'game' ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-id="game"
+      >
+        <div className="bg-gray-200 p-6 sm:p-10 rounded-lg shadow-lg fadeIn flex flex-col items-center">
           
           {/* SCOREBOARD UI */}
           <div className="flex justify-between w-full max-w-72 mb-6 gap-2 text-black">
@@ -223,9 +225,16 @@ export default function TicTacToeGame({ onBack }) {
             Reset All-Time Stats
           </button>
         </div>
-        {/* End of Game Section */}
+      </div>
+      {/* End of Game Section */}
 
         {/* GitHub Link Section */}
+      <div
+        className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
+          currentSection === 'gitHub' ? 'opacity-100' : 'opacity-0'
+        }`}
+        data-id="gitHub"
+      >
         <div className="mx-auto max-w-xl text-center my-4 p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
           <h4 className="text-lg font-bold">Minimax AI Tic-Tac-Toe</h4>
           <p className="text-lg">
@@ -251,7 +260,7 @@ export default function TicTacToeGame({ onBack }) {
           </span>  
           </p>
         </div>
-      </div>
+        </div>
     </article>
   );
 }

@@ -8,7 +8,7 @@ export default function useHandleScroll() {
   useEffect(() => {
     const handleScroll = () => {
       // 1. Logic for fading the Scroll Button
-      if (window.scrollY > 100) {
+      if (window.scrollY > 10) {
         setShowScrollButton(false);
       } else {
         setShowScrollButton(true);
