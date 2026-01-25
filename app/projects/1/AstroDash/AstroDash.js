@@ -183,7 +183,7 @@ export default function AstroDash({ onBack }) {
 
         {/* GitHub Link */}
         <div className="mt-20 text-center">
-          <a href="https://github.com/arduino731/paws-frontend-showcase" target="_blank" rel="noopener noreferrer" 
+          <a href="https://github.com/arduino731/arduino731.github.io/tree/main/app/projects/1/AstroDash" target="_blank" rel="noopener noreferrer" 
              className="inline-block bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-cyan-500 hover:text-white transition-all transform hover:-translate-y-1">
             View Project Architecture on GitHub →
           </a>
