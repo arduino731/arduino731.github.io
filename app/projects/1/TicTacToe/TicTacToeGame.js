@@ -119,7 +119,7 @@ export default function TicTacToeGame({ onBack }) {
           className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
             ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
-          ↓ Live Telemetry
+          ↓ Play Game
         </button>
       </nav>
 
@@ -171,7 +171,7 @@ export default function TicTacToeGame({ onBack }) {
       {/* Start of Game Section */}
       <div
         id="target-section" 
-        className={`scrollHandle  p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out 
+        className={`max-w-6xl mx-auto md:px-20 scrollHandle  p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out 
           ${currentSection === 'startGame' ? 'opacity-100' : 'opacity-0'}`}
         data-id="startGame"
       >
@@ -256,7 +256,7 @@ export default function TicTacToeGame({ onBack }) {
           </span>  
           </p>
         </div>
-        </div>
+      </div>
     </article>
   );
 }
