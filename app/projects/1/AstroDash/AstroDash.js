@@ -1,160 +1,195 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import useHandleScroll from '../../../hooks/HandleScroll'
 import { useTelemetry } from './useTelemetry';
 
 export default function AstroDash({ onBack }) {
-  // Use the hook to handle animations if needed
   const { visibleSection: currentSection, showScrollButton } = useHandleScroll();
-const telemetry = useTelemetry();
+  const { data, logs, setLogs } = useTelemetry();
+  const [isImperial, setIsImperial] = useState(false);
+
+  // --- Helper Functions ---
+  const getSignalQuality = (signal) => {
+    const s = Number(signal);
+    if (s >= 80) return { label: 'EXCELLENT', color: 'text-green-400', bar: 'bg-green-500', count: 4 };
+    if (s >= 60) return { label: 'GOOD', color: 'text-blue-400', bar: 'bg-blue-500', count: 3 };
+    if (s >= 40) return { label: 'FAIR', color: 'text-yellow-400', bar: 'bg-yellow-500', count: 2 };
+    return { label: 'POOR', color: 'text-red-500', bar: 'bg-red-500', count: 1 };
+  };
+
+  const formatTemp = (celsius) => {
+    const c = Number(celsius) || 0;
+    if (!isImperial) return `${c.toFixed(1)}°C`;
+    const fahrenheit = (c * 9) / 5 + 32;
+    return `${fahrenheit.toFixed(1)}°F`;
+  };
+
   const scrollToContent = () => {
     const element = document.getElementById('target-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   return (
-    <article className="colorBackgroundOpposite colorText">
-      {/* Fixed Navigation Buttons */}
-      <button 
-        onClick={onBack}
-        className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all"
-      >
-        ← Back to Showcase
-      </button>
-
-        <div className="fixed top-[245px] left-1/2 -translate-x-1/2 z-50">
-            <button 
-                onClick={scrollToContent}
-                className={`shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 
-                transition-all duration-700 animate-bounce hover:scale-110 active:scale-95
-                ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-                `}
-            >
-                ↓ Scroll Down
-            </button>
-        </div>
-
-    {/* Section Header */}
-      <div className="flex items-center colorBackground ">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10">
-          "Astro Dash" - Mission Control Telemetry Dashboard
-        </h1>
-        <div className="flex-grow border-t border-gray-300"></div>
-      </div>
-
-      {/* Project Summary */}
-      <div className="md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out">
-        <h2 className="text-2xl font-bold ">Project Overview</h2>
-        <p className=" mt-4 text-xl">
-          An interactive dashboard simulating real-time space mission telemetry data.
-        </p>
-      </div>
+    <article className="colorBackgroundOpposite colorText min-h-screen pb-20">
       
-      {/* Main Content Section */}
+      {/* CRITICAL OVERLAY: Shows when system status is CRITICAL */}
+      {data.status === 'CRITICAL' && (
+        <div className="fixed inset-0 z-[100] pointer-events-none border-[12px] border-red-600/30 animate-pulse shadow-[inset_0_0_100px_rgba(220,38,38,0.3)]">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-red-600 text-white px-6 py-1 rounded-b-lg font-black text-[10px] tracking-[0.2em]">
+            CRITICAL_SYSTEM_FAILURE_WARNING
+          </div>
+        </div>
+      )}
+
+      {/* Navigation */}
+      <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
+        <button onClick={onBack} className="shadow-xl hover:scale-105 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm">
+          ← Back to Showcase
+        </button>
+        <button 
+          onClick={scrollToContent} 
+          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          ↓ Live Telemetry
+        </button>
+      </nav>
+
+      {/* Hero Header */}
+      <header className="flex items-center colorBackground py-20 px-4">
+        <div className="flex-grow border-t border-slate-700/30"></div>
+        <h1 className="px-6 text-center text-3xl md:text-5xl font-black tracking-tighter colorTextOpposite uppercase">
+          Astro Dash <span className="colorTextOpposite font-light">Mission Control</span>
+        </h1>
+        <div className="flex-grow border-t border-slate-700/30"></div>
+      </header>
+
+      {/* Content Container */}
       <div 
         id="target-section" 
-        className={`scroll-mt-[150px] scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out
-            ${
-            // Add "!currentSection ||" so it's visible by default
-            !currentSection || currentSection === 'AstroDash' ? 'opacity-100' : 'opacity-0'
-            }`}
-        data-id="AstroDash"
-      > 
+        className={`max-w-6xl mx-auto p-4 md:p-10 scroll-mt-[100px] transition-opacity duration-1000 ${!currentSection || currentSection === 'AstroDash' ? 'opacity-100' : 'opacity-0'}`}
+      >
+        
+        {/* Project Summary Card */}
+        <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 mb-10">
+          <h2 className="text-xl font-bold uppercase tracking-widest text-slate-400 mb-2">Project Overview</h2>
+          <p className="text-lg opacity-80 leading-relaxed">
+            An interactive dashboard simulating real-time space mission telemetry. Designed to demonstrate 
+            <strong> high-frequency data handling</strong>, <strong>interpreting complex workflows</strong>, and <strong>responsive UI behaviors</strong> for mission-critical operations.
+          </p>
+        </section>
 
-        <div className="colorBackground p-10 my-5 rounded-lg shadow-lg fadeIn">  
-          <div className="min-h-screen bg-slate-950 text-slate-200 p-6 font-mono">
-          {/* Header Area */}
-          <header className="flex justify-between items-center border-b border-slate-800 pb-4 mb-8">
+        {/* MOCK SATELLITE INTERFACE */}
+        <div className="bg-slate-950 rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-800 font-mono ring-4 ring-slate-900/50">
+          
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6 mb-8 gap-4">
             <div>
-              <h1 className="text-2xl font-bold tracking-widest text-cyan-400">ASTRO-DASH v1.0</h1>
-              <p className="text-xs text-slate-500">MISSION: TERA-7 ORBITAL OPERATIONS</p>
+              <h2 className="text-2xl font-bold text-cyan-400 tracking-tighter">ASTRO-DASH <span className="font-light text-slate-500 text-sm italic">v1.0.4</span></h2>
+              <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.3em]">Sector: Tera-7 Orbital Operations</p>
             </div>
-            <div className="text-right">
-              <p className="text-sm font-bold">{telemetry.timestamp}</p>
-              <span className={`text-xs px-2 py-1 rounded ${telemetry.status === 'NOMINAL' ? 'bg-green-900 text-green-400' : 'bg-red-900 text-red-400 animate-pulse'}`}>
-                SYSTEM STATUS: {telemetry.status}
-              </span>
-            </div>
-          </header>
+            
+            <div className="flex items-center gap-6">
+              {/* Unit Toggle */}
+              <div className="flex items-center gap-2 bg-slate-900/80 p-1.5 rounded-full border border-slate-800">
+                <button 
+                  onClick={() => setIsImperial(!isImperial)}
+                  className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${!isImperial ? 'bg-cyan-500 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
+                >METRIC</button>
+                <button 
+                  onClick={() => setIsImperial(!isImperial)}
+                  className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${isImperial ? 'bg-cyan-500 text-white shadow-lg' : 'text-slate-500 hover:text-slate-300'}`}
+                >IMPERIAL</button>
+              </div>
 
-        {/* Telemetry Grid */}
-          <main className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Battery Card */}
-            <div className="bg-slate-900 p-6 rounded-lg border border-slate-800 shadow-xl text-center">
-              <h3 className="text-slate-500 text-sm font-bold mb-4">POWER_CELL_A</h3>
-              <div className="flex items-end gap-2">
-                <span className="text-xl font-black text-white">{telemetry.battery.toFixed(1)}%</span>
-                <div className="w-full h-4 bg-slate-800 rounded-full mb-2 overflow-hidden">
-                  <div 
-                    className="h-full bg-cyan-500 transition-all duration-1000" 
-                    style={{ width: `${telemetry.battery}%` }}
-                  />
+              <div className="text-right">
+                <p className="text-sm font-bold text-slate-300">{data.timestamp}</p>
+                <span className={`text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-tighter ${data.status === 'NOMINAL' ? 'bg-green-500/10 text-green-400 border border-green-500/20' : 'bg-red-500/20 text-red-500 border border-red-500/40 animate-pulse'}`}>
+                  STATUS: {data.status}
+                </span>
+              </div>
+            </div>
+          </div>
+
+          {/* Telemetry Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Battery */}
+            <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800">
+              <h3 className="text-slate-500 text-xs font-bold mb-4 tracking-widest uppercase">Power_Cell_A</h3>
+              <div className="flex items-end gap-3 mb-2">
+                <span className="text-4xl font-black text-white">{Number(data?.battery || 0).toFixed(1)}%</span>
+                <div className="flex-grow h-3 bg-slate-800 rounded-full mb-1.5 overflow-hidden">
+                  <div className="h-full bg-cyan-500 transition-all duration-1000" style={{ width: `${data.battery}%` }} />
+                </div>
+              </div>
+              <p className="text-[9px] text-slate-500">DISCHARGE_RATE: 0.05%/s</p>
+            </div>
+
+            {/* Temp */}
+            <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800">
+              <h3 className="text-slate-500 text-xs font-bold mb-4 tracking-widest uppercase">Thermal_Core</h3>
+              <div className="flex flex-col">
+                <span className={`text-4xl font-black transition-colors ${data.temp > 25 ? 'text-orange-500' : 'text-white'}`}>
+                  {formatTemp(data.temp)}
+                </span>
+                <p className="text-[9px] text-slate-500 mt-2 italic">THR_LIMIT: {isImperial ? '113.0°F' : '45.0°C'}</p>
+              </div>
+            </div>
+
+            {/* Signal */}
+            <div className="bg-slate-900/50 p-6 rounded-xl border border-slate-800">
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-slate-500 text-xs font-bold tracking-widest uppercase">Uplink_Signal</h3>
+                <span className={`text-[10px] font-bold ${getSignalQuality(data.signal).color}`}>{getSignalQuality(data.signal).label}</span>
+              </div>
+              <div className="flex items-end gap-3 h-10">
+                <span className="text-4xl font-black text-white">{data.signal}<span className="text-sm font-light text-slate-500 ml-1">dBm</span></span>
+                <div className="flex items-end gap-1 h-full pb-1">
+                  {[1, 2, 3, 4].map((bar) => (
+                    <div key={bar} className={`w-1.5 rounded-t-sm transition-all duration-500 ${bar <= getSignalQuality(data.signal).count ? getSignalQuality(data.signal).bar : 'bg-slate-800'}`} style={{ height: `${bar * 25}%` }} />
+                  ))}
                 </div>
               </div>
             </div>
-
-        {/* Temperature Card */}
-            <div className="bg-slate-900 p-6 rounded-lg border border-slate-800 shadow-xl text-center">
-              <h3 className="text-slate-500 text-sm font-bold mb-4">THERMAL_CORE</h3>
-              <div className="flex flex-col">
-                <span className={`text-xl font-black transition-colors ${telemetry.temp > 30 ? 'text-orange-500' : 'text-white'}`}>
-                  {Number(telemetry.temp).toFixed(1)}°C
-                </span>
-                <p className="text-xs mt-2 text-slate-400">THR_LIMIT: 45.0°C</p>
-              </div>
-            </div>
-
-        {/* Signal Card */}
-            <div className="bg-slate-900 p-6 rounded-lg border border-slate-800 shadow-xl text-center">
-              <h3 className="text-slate-500 text-sm font-bold mb-4">UPLINK_STRENGTH</h3>
-              <div className="flex flex-col">
-                <span className="text-xl font-black text-white">{telemetry.signal} dBm</span>
-                <p className="text-xs mt-2 text-slate-400 tracking-widest">
-                  {telemetry.signal > 90 ? '● ● ● ● ●' : telemetry.signal > 50 ? '● ● ● ○ ○' : '● ○ ○ ○ ○'}
-                </p>
-              </div>
-            </div>
-
-          </main>
-
-        {/* Mock Terminal Placeholder */}
-          <footer className="mt-10 bg-black p-4 rounded border border-slate-800 text-green-500 text-sm h-32 overflow-hidden font-mono">
-            <p className="">{`> SYSTEM_READY`}</p>
-            <p className="">{`> UPLINK_ESTABLISHED AT ${telemetry.timestamp}`}</p>
-            <p className="animate-pulse">{`> WAITING FOR COMMAND...`}</p>
-          </footer>
           </div>
+
+          {/* Event Log */}
+          <div className="mt-8 bg-black/40 rounded-xl border border-slate-800 flex flex-col h-64 overflow-hidden shadow-inner">
+            <div className="bg-slate-900/80 px-4 py-2 flex justify-between items-center border-b border-slate-800">
+              <h3 className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Event_Sequence_Log</h3>
+              <button 
+                onClick={() => { if(window.confirm("PURGE BUFFER?")) setLogs([]); }}
+                className="text-[9px] text-slate-500 hover:text-red-400 border border-slate-800 px-2 py-0.5 rounded transition-colors"
+              >CLEAR_BUFFER</button>
+            </div>
+            <div className="p-4 overflow-y-auto font-mono text-xs space-y-1">
+              {logs.map(log => (
+                <div key={log.id} className="flex gap-4 border-b border-slate-800/30 pb-1 animate-fadeIn">
+                  <span className="text-slate-600">[{log.time}]</span>
+                  <span className={`font-bold ${log.type === 'error' ? 'text-red-500' : log.type === 'warn' ? 'text-orange-400' : 'text-green-500'}`}>
+                    {log.msg}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Command Terminal Footer */}
+          <footer className="mt-8 bg-black p-4 rounded-lg border border-slate-900 text-green-500/80 text-[11px] h-24 overflow-hidden font-mono leading-relaxed shadow-inner">
+            <p className="">{`> SYSTEM_READY`}</p>
+            <p className="">{`> UPLINK_ESTABLISHED_SECURE_CHANNEL_T7`}</p>
+            <p className="animate-pulse">{`> WAITING_FOR_OPERATOR_INPUT...`}</p>
+          </footer>
         </div>
-        
-      </div>
-        {/* GitHub and Live Link Section */}
-      <div
-        className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
-          currentSection === 'gitHub' ? 'opacity-100' : 'opacity-0'
-        }`}
-        data-id="gitHub"
-      >
-        <div className="mx-auto max-w-xl text-center p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
-          <h4 className="text-lg font-bold fadeIn">Astro Dash</h4>
-          <p className="text-lg fadeIn">
-            🔍 Want to see more source code?
-            <br />
-            Check out my GitHub!
-          </p>
-          <a
-            href="https://github.com/arduino731/paws-frontend-showcase"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
-          >
-            Visit My GitHub →
+
+        {/* GitHub Link */}
+        <div className="mt-20 text-center">
+          <a href="https://github.com/arduino731/paws-frontend-showcase" target="_blank" rel="noopener noreferrer" 
+             className="inline-block bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-cyan-500 hover:text-white transition-all transform hover:-translate-y-1">
+            View Project Architecture on GitHub →
           </a>
-        </div>    
+        </div>
+
       </div>
-      
     </article>
   )
 }
