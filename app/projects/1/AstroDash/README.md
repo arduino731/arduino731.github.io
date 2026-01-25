@@ -46,10 +46,3 @@ The project follows a decoupled architecture to ensure the UI remains performant
 > 
 > **Solution:** Implemented a functional state update pattern within `setInterval` to prevent stale closures. Used `useCallback` to memoize the logging function, preventing unnecessary re-renders of the telemetry feed.
 
----
-
-## 🚦 Getting Started
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/arduino731/arduino731.github.io/tree/main/app/projects/1/AstroDash](https://github.com/arduino731/arduino731.github.io/tree/main/app/projects/1/AstroDash)
