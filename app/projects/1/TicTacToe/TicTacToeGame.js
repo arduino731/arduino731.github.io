@@ -31,7 +31,6 @@ export default function TicTacToeGame({ onBack }) {
     }
   }, [scores]);
 
-  // FIX: Re-adding the missing scrollToContent function
   const scrollToContent = () => {
     const element = document.getElementById('target-section');
     if (element) {
@@ -106,78 +105,75 @@ export default function TicTacToeGame({ onBack }) {
   };
 
   return (
-    <article className="colorBackgroundOpposite colorText">
-      {/* Back Button */}
-      <button 
-        onClick={onBack}
-        className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-semibold"
-      >
-        ← Back to Showcase
-      </button>
+    <article className="colorBackgroundOpposite colorText min-h-screen">
 
-      {/* Bounce Scroll Button */}
-      <div className="fixed top-[245px] left-1/2 -translate-x-1/2 z-50">
+      {/* Navigation */}
+      <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
         <button 
-          onClick={scrollToContent}
-          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce
-          ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        >
-          ↓ Play Now
+          onClick={onBack} 
+          className="shadow-xl hover:scale-105 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm">
+          ← Back to Showcase
         </button>
-      </div>
+        <button 
+          onClick={scrollToContent} 
+          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
+            ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          ↓ Live Telemetry
+        </button>
+      </nav>
 
-      <div className="flex items-center colorBackground pb-2">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10">
-          Minimax AI Tic-Tac-Toe
+
+      {/* Hero Header */}
+      <header className="flex items-center colorBackground py-20 px-4">
+        <div className="flex-grow border-t border-slate-700/30"></div>
+        <h1 className="px-6 text-center text-3xl md:text-5xl font-black tracking-tighter colorTextOpposite uppercase">
+          Minimax AI <span className="font-light">Tic-Tac-Toe</span>
         </h1>
-        <div className="flex-grow border-t border-gray-300"></div>
-      </div>
-
-      <div 
-        id="target-section" 
-        className={`scroll-mt-[150px] scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out
-          ${!currentSection || currentSection === 'TicTacToeGame' ? 'opacity-100' : 'opacity-0'}`}
-        data-id="TicTacToeGame"
-      >
-      {/* Header Section */}
-      <h2 className="text-3xl font-bold fadeIn tracking-tight">Minimax AI Tic-Tac-Toe</h2>
-      
-      <p className="fadeIn mt-4 text-xl leading-relaxed opacity-90">
-        An <strong>"Impossible-to-Win"</strong> strategic game built to showcase advanced frontend logic and algorithm implementation. 
-        This project highlights the bridge between game theory and modern web performance.
-      </p>
-
-      {/* Technical Spec Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 fadeIn">
+        <div className="flex-grow border-t border-slate-700/30"></div>
+      </header>
         
-        {/* Core Engine */}
-        <div className="p-4 border-l-4 border-blue-500 bg-blue-50/10 rounded-r-lg">
-          <h3 className="text-sm uppercase tracking-widest font-bold text-blue-400">Core Engine</h3>
-          <p className="text-lg mt-1 font-medium">Recursive Minimax Algorithm (Game Theory)</p>
-        </div>
+        {/* Project Summary Card */}
+      <div 
+        className={` md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out`}
+      >
+        <section className="colorBackground p-8 rounded-2xl border border-slate-800 mb-10">
+          <h2 className="text-xl font-bold uppercase tracking-widest colorTextOpposite mb-2">Project Overview</h2>
+          <p className="text-lg opacity-80 leading-relaxed colorTextOpposite">
+            An <strong>"Impossible-to-Win"</strong> strategic game built to showcase advanced frontend logic and algorithm implementation. 
+            This project highlights the bridge between game theory and modern web performance.
+          </p>
+        </section>
+        {/* Technical Spec Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 ">
+          
+          {/* Core Engine */}
+          <div className="p-4 border-l-4 border-blue-500 bg-blue-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-blue-400">Core Engine</h3>
+            <p className="text-lg mt-1 font-medium">Recursive Minimax Algorithm (Game Theory)</p>
+          </div>
 
-        {/* Tech Stack */}
-        <div className="p-4 border-l-4 border-cyan-500 bg-cyan-50/10 rounded-r-lg">
-          <h3 className="text-sm uppercase tracking-widest font-bold text-cyan-400">Tech Stack</h3>
-          <p className="text-lg mt-1 font-medium">React, Tailwind CSS, LocalStorage API</p>
-        </div>
+          {/* Tech Stack */}
+          <div className="p-4 border-l-4 border-cyan-500 bg-cyan-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-cyan-400">Tech Stack</h3>
+            <p className="text-lg mt-1 font-medium">React, Tailwind CSS, LocalStorage API</p>
+          </div>
 
-        {/* Focus Area */}
-        <div className="p-4 border-l-4 border-purple-500 bg-purple-50/10 rounded-r-lg">
-          <h3 className="text-sm uppercase tracking-widest font-bold text-purple-400">Focus</h3>
-          <p className="text-lg mt-1 font-medium">State management, persistent UI rendering</p>
-        </div>
+          {/* Focus Area */}
+          <div className="p-4 border-l-4 border-purple-500 bg-purple-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-purple-400">Focus</h3>
+            <p className="text-lg mt-1 font-medium">State management, persistent UI rendering</p>
+          </div>
 
+        </div>
       </div>
-    </div>
 
       {/* Start of Game Section */}
       <div
-        className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
-          currentSection === 'game' ? 'opacity-100' : 'opacity-0'
-        }`}
-        data-id="game"
+        id="target-section" 
+        className={`scrollHandle  p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out 
+          ${currentSection === 'startGame' ? 'opacity-100' : 'opacity-0'}`}
+        data-id="startGame"
       >
         <div className="bg-gray-200 p-6 sm:p-10 rounded-lg shadow-lg fadeIn flex flex-col items-center">
           
@@ -228,14 +224,14 @@ export default function TicTacToeGame({ onBack }) {
       </div>
       {/* End of Game Section */}
 
-        {/* GitHub Link Section */}
+      {/* GitHub Link Section */}
       <div
         className={`scrollHandle md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out ${
           currentSection === 'gitHub' ? 'opacity-100' : 'opacity-0'
         }`}
         data-id="gitHub"
       >
-        <div className="mx-auto max-w-xl text-center my-4 p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
+        <div className="mx-auto max-w-xl text-center mb-4 p-6 colorBackground fadeIn colorTextOpposite rounded-lg shadow-md border-slate-300 border">
           <h4 className="text-lg font-bold">Minimax AI Tic-Tac-Toe</h4>
           <p className="text-lg">
             🔍 Want to see the logic?
@@ -243,12 +239,12 @@ export default function TicTacToeGame({ onBack }) {
             Check out the source on GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1/TicTacToe.js"
+            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1/TicTacToe"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
           >
-            Visit My GitHub →
+            View Project Architecture on GitHub →
           </a>
         </div>
 
