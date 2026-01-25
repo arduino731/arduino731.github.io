@@ -30,7 +30,7 @@ export default function AstroDash({ onBack }) {
   };
 
   return (
-    <article className="colorBackgroundOpposite colorText min-h-screen pb-20">
+    <article className="colorBackgroundOpposite colorText min-h-screen">
       
       {/* CRITICAL OVERLAY: Shows when system status is CRITICAL */}
       {data.status === 'CRITICAL' && (
@@ -43,12 +43,15 @@ export default function AstroDash({ onBack }) {
 
       {/* Navigation */}
       <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
-        <button onClick={onBack} className="shadow-xl hover:scale-105 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm">
+        <button 
+          onClick={onBack} 
+          className="shadow-xl hover:scale-105 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm">
           ← Back to Showcase
         </button>
         <button 
           onClick={scrollToContent} 
-          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
+            ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         >
           ↓ Live Telemetry
         </button>
@@ -58,30 +61,54 @@ export default function AstroDash({ onBack }) {
       <header className="flex items-center colorBackground py-20 px-4">
         <div className="flex-grow border-t border-slate-700/30"></div>
         <h1 className="px-6 text-center text-3xl md:text-5xl font-black tracking-tighter colorTextOpposite uppercase">
-          Astro Dash <span className="colorTextOpposite font-light">Mission Control</span>
+          Astro Dash <span className="font-light">Mission Control</span>
         </h1>
         <div className="flex-grow border-t border-slate-700/30"></div>
       </header>
 
       {/* Content Container */}
-      <div 
-        id="target-section" 
-        className={`max-w-6xl mx-auto p-4 md:p-10 scroll-mt-[100px] transition-opacity duration-1000 ${!currentSection || currentSection === 'AstroDash' ? 'opacity-100' : 'opacity-0'}`}
-      >
-        
+      <div className="max-w-6xl mx-auto p-4 md:p-10 scroll-mt-[100px] transition-opacity duration-1000 ">
         {/* Project Summary Card */}
-        <section className="bg-slate-900/50 p-8 rounded-2xl border border-slate-800 mb-10">
-          <h2 className="text-xl font-bold uppercase tracking-widest text-slate-400 mb-2">Project Overview</h2>
-          <p className="text-lg opacity-80 leading-relaxed">
+        <section className="colorBackground p-8 rounded-2xl border border-slate-800 mb-10">
+          <h2 className="text-xl font-bold uppercase tracking-widest colorTextOpposite mb-2">Project Overview</h2>
+          <p className="text-lg opacity-80 leading-relaxed colorTextOpposite">
             An interactive dashboard simulating real-time space mission telemetry. Designed to demonstrate 
             <strong> high-frequency data handling</strong>, <strong>interpreting complex workflows</strong>, and <strong>responsive UI behaviors</strong> for mission-critical operations.
           </p>
         </section>
+        {/* Technical Spec Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+          
+          {/* Data Engine */}
+          <div className="p-4 border-l-4 border-blue-500 bg-blue-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-blue-400">Telemetry Engine</h3>
+            <p className="text-lg mt-1 font-medium">Asynchronous 1Hz Real-Time Data Stream</p>
+          </div>
+
+          {/* UI/UX Architecture */}
+          <div className="p-4 border-l-4 border-cyan-500 bg-cyan-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-cyan-400">UX Architecture</h3>
+            <p className="text-lg mt-1 font-medium">Conditional Unit Mapping & Event Sequence Logging</p>
+          </div>
+
+          {/* Performance Focus */}
+          <div className="p-4 border-l-4 border-purple-500 bg-purple-50/10 rounded-r-lg">
+            <h3 className="text-sm uppercase tracking-widest font-bold text-purple-400">Optimization</h3>
+            <p className="text-lg mt-1 font-medium">Memoized State Handling & Threshold Detection</p>
+          </div>
+
+        </div>
+        {/* GitHub Link Section */}
 
         {/* MOCK SATELLITE INTERFACE */}
         <div className="bg-slate-950 rounded-3xl p-6 md:p-10 shadow-2xl border border-slate-800 font-mono ring-4 ring-slate-900/50">
           
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6 mb-8 gap-4">
+          <div 
+          id="target-section" 
+          className={`scrollHandle flex flex-col md:flex-row justify-between items-start md:items-center border-b border-slate-800 pb-6 mb-8 gap-4
+          ${!currentSection || currentSection === 'AstroDash' ? 'opacity-100' : 'opacity-0'}`}
+          data-id="AstroDash"
+          >
             <div>
               <h2 className="text-2xl font-bold text-cyan-400 tracking-tighter">ASTRO-DASH <span className="font-light text-slate-500 text-sm italic">v1.0.4</span></h2>
               <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-[0.3em]">Sector: Tera-7 Orbital Operations</p>
@@ -181,14 +208,28 @@ export default function AstroDash({ onBack }) {
           </footer>
         </div>
 
-        {/* GitHub Link */}
-        <div className="mt-20 text-center">
-          <a href="https://github.com/arduino731/arduino731.github.io/tree/main/app/projects/1/AstroDash" target="_blank" rel="noopener noreferrer" 
-             className="inline-block bg-white text-black px-8 py-3 rounded-xl font-bold hover:bg-cyan-500 hover:text-white transition-all transform hover:-translate-y-1">
+        {/* GitHub Link Section */}
+        <div 
+          className={`scrollHandle mx-auto max-w-xl text-center mt-10 p-6 colorBackground colorTextOpposite rounded-lg shadow-md border-slate-300 border
+            ${currentSection === 'gitHub' ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000 ease-in-out
+          }`}
+          data-id="gitHub"
+        >
+          <h4 className="text-lg font-bold">AstroDash - Mission Control Telemetry Dashboard</h4>
+          <p className="text-lg">
+            🔍 Want to see the logic?
+            <br />
+            Check out the source on GitHub!
+          </p>
+          <a
+            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1/AstroDash"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
+          >
             View Project Architecture on GitHub →
           </a>
         </div>
-
       </div>
     </article>
   )
