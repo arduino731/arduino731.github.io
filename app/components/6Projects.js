@@ -7,55 +7,50 @@ import useHandleScroll from '../hooks/HandleScroll';
 // https://github.com/arduino731/van-vlymen-paws-portfolio
 
 
-// Project data
 const projects = [
-    {
-      id: 1,
-      title: "Interactive Front-End Developer Showcase",
-      description: "A high-performance, responsive portfolio engineered to demonstrate core frontend mastery and accessibility standards.",
-      image: "/images/secondPort.png",
-      url: "/projects/1",
-      tags: [
-        { name: "HTML5/CSS3", color: "orange" },
-        { name: "Tailwind CSS", color: "teal" },
-        { name: "Bootstrap", color: "indigo" },
-        { name: "NPM Modules", color: "red" },
-        { name: "LocalStorage", color: "yellow" },
-        { name: "Image Optimization", color: "green" }
-      ]
-    },
-    {
-      id: 2,
-      title: "DevOps Linux System Admin",
-      description: "A full-stack Dockerized project deployed on AWS EC2 using Terraform, bash automation, and monitoring tools. Includes infrastructure as code, rsync-based deployment, daily cron logging, and fail2ban security.",
-      image: "/images/DevOps-linux-system-admin.png",
-      url: "/projects/2",
-      tags: [
-        { name: "Linux", color: "slate" },
-        { name: "Container-Docker", color: "blue" },
-        { name: "IaC-Terraform", color: "purple" },
-        { name: "Automation", color: "teal" },
-        { name: "Monitoring", color: "yellow" },
-        { name: "AWS", color: "amber" }
-      ]
-    },
-    {
-      id: 3,
-      title: "E-commerce Platform",
-      description: "A full-stack e-commerce web application built with the MERN stack (MongoDB, Express, React, Node.js). It features user authentication with Passport.js, dynamic product listings, shopping cart functionality, user profiles, and product review submission. The platform includes role-based access, responsive UI design, and real-time feedback with toast notifications. Reviews are posted and automatically scrolled into view with visual highlights for seamless UX. Deployed on an AWS EC2 instance using Docker and automated with Bash scripting",
-      image: "/images/ecommerce.png",
-      url: "/projects/3",
-      tags: [
-        { name: "Next.js", color: "indigo" },
-        { name: "Tailwind CSS", color: "teal" },
-        { name: "API-Passport", color: "black" },
-        { name: "API-Plaid", color: "white" },
-        { name: "NOSQL", color: "green" },
-        { name: "IaC-Terraform", color: "purple" },
-        { name: "Docker", color: "blue" }
-      ]
-    }
-  ];
+  {
+    id: 1,
+    title: "Interactive UI/UX Engineering Lab",
+    description: "A specialized frontend suite focused on high-density data and complex logic. Includes AstroDash (Telemetry), Minimax AI (Algorithms), and Paws (Accessible E-commerce).",
+    image: "/images/secondPort.png",
+    url: "/projects/1",
+    tags: [
+      { name: "Frontend Mastery", color: "blue" },
+      { name: "AstroDash", color: "cyan" },
+      { name: "Minimax AI", color: "purple" },
+      { name: "Paws Frontend", color: "orange" },
+      { name: "WCAG Standards", color: "teal" }
+    ]
+  },
+  {
+    id: 3,
+    title: "Full-Stack Platform",
+    description: "Comprehensive MERN architecture featuring role-based access control, secure authentication via Passport.js, and real-time product feedback loops. Deployed via Dockerized microservices.",
+    image: "/images/ecommerce.png",
+    url: "/projects/3",
+    tags: [
+      { name: "System Architecture", color: "indigo" },
+      { name: "Backend API", color: "black" },
+      { name: "Database Design", color: "green" },
+      { name: "User Auth", color: "slate" },
+      { name: "MERN Stack", color: "teal" }
+    ]
+  },
+  {
+    id: 2,
+    title: "Linux & DevOps Admin",
+    description: "Cloud infrastructure management featuring automated deployments on AWS EC2. Implements IaC with Terraform, containerization with Docker, and fail-safe security protocols.",
+    image: "/images/DevOps-linux-system-admin.png",
+    url: "/projects/2",
+    tags: [
+      { name: "Infrastructure", color: "slate" },
+      { name: "AWS EC2", color: "amber" },
+      { name: "Terraform/IaC", color: "purple" },
+      { name: "Docker/WSL2", color: "blue" },
+      { name: "CI/CD Pipelines", color: "teal" }
+    ]
+  }
+];
 
 const colorMap = {
   blue: "bg-blue-100 text-blue-800",
@@ -70,56 +65,86 @@ const colorMap = {
   orange: "bg-orange-200 text-orange-900", 
   red: "bg-rose-100 text-rose-800", 
   white: "bg-gray-100 text-gray-800", 
-  black: "bg-black text-gray-100", 
+  black: "bg-slate-900 text-slate-100",
+  cyan: "bg-cyan-100 text-cyan-900 shadow-sm shadow-cyan-500/20", 
+  sky: "bg-sky-100 text-sky-800",
 };
 
 export default function ProjectsSection() {
   const { visibleSection: currentSection } = useHandleScroll();
   
-  return (
-    <div className="colorBackgroundOpposite ">
-      <div id="projects" className="py-16 px-6 md:px-20">
-        <div className={`scrollHandle transition-opacity duration-1000 ease-in-out flex flex-col gap-6 p-8 max-w-4xl mx-auto
-        ${
-        currentSection === 'Projects' ? 'opacity-100' : 'opacity-0'
-        }`}
+return (
+  <div className="colorBackgroundOpposite">
+    <div id="projects" className="min-h-screen flex items-center py-20">
+      {/* Changed max-w-4xl to max-w-6xl to give the 3-column grid more breathing room */}
+      <div 
+        className={`scrollHandle transition-opacity duration-1000 ease-in-out flex flex-col gap-10 p-2 max-w-6xl mx-auto
+        ${currentSection === 'Projects' ? 'opacity-100' : 'opacity-0'}`}
         data-id="Projects"
-        >
-          <h1 className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center fadeIn">PROJECTS</h1>
-          {/* This is the key change: Using grid with responsive columns */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((item, index) => (
-              <div key={item.id} className=" overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
-                <div className="relative w-full h-64 bg-gray-100 flex items-center justify-center cursor-pointer" onClick={() => window.location.href = item.url}>
-                  <Image 
-                    key={index}
-                    src={item.image}
-                    alt={`${item.title} project`}
-                    className="fadeIn w-full object-contain h-48 sm:h-56 md:h-64 lg:h-72 rounded-md"
-                    width={400}
-                    height={300}
-                  />                                         
-                </div>
-                <div className="p-4 colorBackground h-full">
-                  <h3 className="text-lg text-center font-semibold mb-2 colorTextOpposite">{item.title}</h3>
-                  <p className="text-sm text-gray-600 mb-2 colorTextOpposite">{item.description}</p>
-                  <div className="flex flex-wrap gap-2 ">
-                    {item.tags.map((tag, tagIndex) => (
-                      <span
-                        key={tagIndex}
-                        className={`inline-block text-xs px-2 py-1 rounded-full text-black
-                        ${colorMap[tag.color]} `}
-                      >
-                        {tag.name}
-                      </span>
-                    ))}
-                  </div>
+      >
+        <h1 className="colorBackground colorTextOpposite rounded-md text-5xl p-2 text-center fadeIn font-black tracking-tighter">
+          PROJECTS
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((item) => (
+            <div key={item.id} className="overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition-all duration-300 border border-slate-800/50 flex flex-col bg-slate-900/10">
+              
+              {/* Image Section */}
+              <div 
+                className="relative w-full aspect-video overflow-hidden cursor-pointer group" 
+                onClick={() => window.location.href = item.url}
+              >
+                <Image 
+                  src={item.image}
+                  alt={`${item.title} project`}
+                  fill 
+                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <span className="text-white font-bold text-sm border-2 border-white px-4 py-2 rounded-full backdrop-blur-md">
+                    Explore Track
+                  </span>
                 </div>
               </div>
-            ))}
-          </div>
+
+              {/* Content Section */}
+              <div className="p-6 colorBackground flex-grow border-t border-slate-800/50 flex flex-col">
+                
+                {/* FOCUS AREA TAG - Grabs the first tag from your data */}
+                <div className="mb-3">
+                  <span className={`block w-fit mx-auto text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-[0.15em] ${colorMap[item.tags[0].color]}`}>
+                    {item.tags[0].name}
+                  </span>
+                </div>
+
+                <h3 className="text-xl font-bold mb-2 colorTextOpposite tracking-tight">
+                  {item.title}
+                </h3>
+
+                {/* CONSISE DESCRIPTION */}
+                <p className="text-sm opacity-80 mb-6 colorTextOpposite leading-relaxed line-clamp-3">
+                  {item.description}
+                </p>
+                
+                {/* REMAINING TAGS (What's Inside) */}
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate-800/30">
+                  {item.tags.slice(1).map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className={`text-[9px] font-bold px-2 py-0.5 rounded-sm uppercase tracking-tighter opacity-90 text-black ${colorMap[tag.color]}`}
+                    >
+                      {tag.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  );
+  </div>
+);
 }

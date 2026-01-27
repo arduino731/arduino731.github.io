@@ -28,21 +28,28 @@ const About = () => {
       </div>
 
       {/* Text Container */}
-      <div className="flex-1 text-lg colorBackground colorTextOpposite rounded-md p-4 leading-relaxed fadeIn">
-        <p className="mb-4 fadeIn">
-          Frontend Developer with a deep technical foundation in Full-Stack logic and DevOps practices.
+      <div className="flex-1 text-lg colorBackground colorTextOpposite rounded-md p-6 md:p-8 leading-relaxed fadeIn shadow-lg border border-slate-800/50">
+  
+        {/* Headline: Education + Mission */}
+        <p className="mb-6 text-xl font-medium tracking-tight fadeIn">
+          I am a <span className=" font-bold">UI/UX Engineer</span> with a Computer Science background from <span className="border-b-2 border-orange-500 pb-0.5">UTSA</span> and a deep commitment to digital inclusion.
         </p>
         
-        <p className="mb-4 fadeIn">
-          I specialize in creating <strong>interactive, high-performance UIs</strong> using <strong>Next.js, Tailwind CSS, and GSAP</strong>. I am passionate about crafting seamless user experiences that are not only beautiful but also highly accessible and optimized for speed.
+        {/* Specialization: Data & Performance */}
+        <p className="mb-6 fadeIn">
+          I maintain a dedicated UI/UX Engineering Lab where I stress-test frontend performance through real-time telemetry and AI-driven logic, while keeping my architectural skills sharp through Full-Stack and DevOps projects.
         </p>
 
-        <p className="mb-4 fadeIn">
-          While my primary focus is the Frontend, I bring a unique "Systems Thinking" approach to my code. My project experience includes managing <strong>Linux (WSL2)</strong> environments, containerizing applications with <strong>Docker</strong>, and deploying to <strong>AWS EC2</strong>. I understand how to build interfaces that talk efficiently to the backend.
-        </p>
+        {/* The "Was" Certification / Accessibility Focus */}
+        <div className="mb-6 p-4 bg-slate-900/50 rounded-lg border-l-4 border-cyan-500 fadeIn">
+          <p className="text-base leading-snug">
+            As a certified <strong className="">Web Accessibility Specialist (WAS)</strong>, I believe the most powerful systems are the ones that everyone can use, regardless of ability or device. My goal is to build software that is as <strong>stable as it is accessible</strong>.
+          </p>
+        </div>
 
-        <p className="mb-4 fadeIn italic border-l-4 border-slate-400 pl-4 text-base">
-          I am currently looking for my first professional role where I can apply my side-project experience in automated deployments (CI/CD) and modern React development to solve real-world problems.
+        {/* Technical Footer */}
+        <p className="text-sm uppercase tracking-[0.2em] font-bold text-slate-500 fadeIn">
+          React // Next.js // WCAG 2.1 // Minimax AI
         </p>
       </div>
     </div>

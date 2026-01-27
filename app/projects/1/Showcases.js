@@ -12,7 +12,7 @@ export default function Showcases({ onProjectClick }) {
       {/* Section Header */}
       <div className="flex items-center colorBackground pb-2">
         <div className="flex-grow border-t border-gray-300"></div>
-        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10 w-full text-center">Interactive Front-End Developer Showcase</h1>
+        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10 w-full text-center">Interactive UI/UX Engineering Lab</h1>
         <div className="flex-grow border-t border-gray-300"></div>
       </div>
 
