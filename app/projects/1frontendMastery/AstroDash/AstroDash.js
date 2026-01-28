@@ -2,6 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { useTelemetry } from './useTelemetry';
 import "./AstroDash.css";
+import Link from 'next/link';
 
 export default function AstroDash({ onBack }) {
   // --- STATE FOR GAME RESET & FLOW ---
@@ -240,9 +241,9 @@ function AstroDashGame({ onBack, onReset }) {
 
       {/* Navigation */}
       <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4 w-full">
-        <button onClick={onBack} className="shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm hover:scale-105 active:scale-95">
-          ← Back to Showcase
-        </button>
+        <Link href="/projects/1frontendMastery" className="bg-white px-4 py-2 rounded shadow text-black">
+           ← Back to Home
+        </Link>
       </nav>
 
       <header className="relative flex flex-col items-center py-24 px-4 overflow-hidden">
@@ -443,7 +444,7 @@ function AstroDashGame({ onBack, onReset }) {
       <div className={`mx-auto max-w-xl text-center mt-10 p-6 colorBackground colorTextOpposite rounded-lg shadow-md border-slate-300 border`}>
         <h4 className="text-lg font-bold">AstroDash - Mission Control Telemetry Dashboard</h4>
         <p className="text-lg">🔍 Want to see the logic?<br />Check out the source on GitHub!</p>
-        <a href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1/AstroDash" target="_blank" rel="noopener noreferrer" className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out">
+        <a href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1frontendMastery/AstroDash" target="_blank" rel="noopener noreferrer" className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out">
           View Project Architecture on GitHub →
         </a>
       </div>

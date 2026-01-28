@@ -2,8 +2,11 @@
 import React, { useState, useEffect } from 'react'
 import useHandleScroll from '../../../hooks/HandleScroll'
 import { minimax, checkWinner } from './utils/tttMiniMaxLogic';
+import Link from 'next/link';
+import SectionHeader from '../../components/SectionHeader';
 
-export default function TicTacToeGame({ onBack }) {
+
+export default function TicTacToeGame() {
   const { visibleSection: currentSection, showScrollButton } = useHandleScroll();
   
   const [board, setBoard] = useState(Array(9).fill(null));
@@ -103,17 +106,16 @@ export default function TicTacToeGame({ onBack }) {
     setBoard(Array(9).fill(null));
     setStatus("Your turn! (O)");
   };
+  
 
   return (
     <article className="colorBackgroundOpposite colorText min-h-screen">
 
       {/* Navigation */}
       <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
-        <button 
-          onClick={onBack} 
-          className="shadow-xl hover:scale-105 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all font-bold text-sm">
-          ← Back to Showcase
-        </button>
+        <Link href="/projects/1frontendMastery" className="bg-white px-4 py-2 rounded shadow text-black">
+           ← Back to Home
+        </Link>
         <button 
           onClick={scrollToContent} 
           className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
@@ -123,19 +125,12 @@ export default function TicTacToeGame({ onBack }) {
         </button>
       </nav>
 
-
       {/* Hero Header */}
-      <header className="flex items-center colorBackground py-20 px-4">
-        <div className="flex-grow border-t border-slate-700/30"></div>
-        <h1 className="px-6 text-center text-3xl md:text-5xl font-black tracking-tighter colorTextOpposite uppercase">
-          Minimax AI <span className="font-light">Tic-Tac-Toe</span>
-        </h1>
-        <div className="flex-grow border-t border-slate-700/30"></div>
-      </header>
+      <SectionHeader title="Minimax AI" highlight='Tic-Tac-Toe' />
         
-        {/* Project Summary Card */}
+      {/* Project Summary Card */}
       <div 
-        className={` md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out`}
+        className="md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText transition-opacity duration-1000 ease-in-out"
       >
         <section className="colorBackground p-8 rounded-2xl border border-slate-800 mb-10">
           <h2 className="text-xl font-bold uppercase tracking-widest colorTextOpposite mb-2">Project Overview</h2>
@@ -239,7 +234,7 @@ export default function TicTacToeGame({ onBack }) {
             Check out the source on GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1/TicTacToe"
+            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1frontendMastery/TicTacToe"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"

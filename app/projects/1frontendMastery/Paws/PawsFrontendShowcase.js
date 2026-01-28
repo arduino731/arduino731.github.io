@@ -2,8 +2,11 @@
 import Image from 'next/image'
 import '../style.css'
 import useHandleScroll from '../../../hooks/HandleScroll'
+import Link from 'next/link'
+import SectionHeader from '../../components/SectionHeader';
 
-export default function PawsFrontendShowcase({onBack}) {
+
+export default function PawsFrontendShowcase() {
   const { visibleSection:currentSection, showScrollButton } = useHandleScroll();
 
   const scrollToContent = () => {
@@ -17,32 +20,23 @@ export default function PawsFrontendShowcase({onBack}) {
   };
   
   return (
-    <article className="colorBackgroundOpposite colorText">
-      <button 
-        onClick={onBack}
-        className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 shadow-xl hover:scale-110 active:scale-95 bg-white text-black px-6 py-2 rounded-full border border-slate-200 transition-all"
-      >
-        ← Back to Showcase
-      </button>
-      {/* Wrap the button in a centering div */}
-      <div className="fixed top-[245px] left-1/2 -translate-x-1/2 z-50">
-          <button 
-              onClick={scrollToContent}
-              className={`shadow-xl bg-white text-black px-6 py-2 rounded-full border border-slate-200 
-              transition-all duration-700 animate-bounce hover:scale-110 active:scale-95
-              ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}
-              `}
-          >
-              ↓ Scroll Down
-          </button>
-      </div>
+    <article className="colorBackgroundOpposite colorText min-h-screen">
+      {/* Navigation */}
+      <nav className="fixed top-[95px] left-1/2 -translate-x-1/2 z-50 flex flex-col items-center gap-4">
+        <Link href="/projects/1frontendMastery" className="bg-white px-4 py-2 rounded shadow text-black">
+           ← Back to Home
+        </Link>
+        <button 
+          onClick={scrollToContent} 
+          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
+            ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        >
+          ↓ Scroll Down
+        </button>
+      </nav>
       {/* Section Header */}
-      <div className="flex items-center colorBackground pb-2">
-        <div className="flex-grow border-t border-gray-300"></div>
-        <h1 className="p-4 colorTextOpposite rounded-md text-3xl md:text-5xl font-medium my-10 ">Paws Frontend Showcase</h1>
-        <div className="flex-grow border-t border-gray-300"></div>
-      </div>
-
+      <SectionHeader title="Paws Frontend" highlight='Showcase' />
+      
       {/* Project Summary */}
       <div
         id="target-section"
