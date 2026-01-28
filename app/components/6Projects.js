@@ -13,7 +13,7 @@ const projects = [
     title: "Interactive UI/UX Engineering Lab",
     description: "A specialized frontend suite focused on high-density data and complex logic. Includes AstroDash (Telemetry), Minimax AI (Algorithms), and Paws (Accessible E-commerce).",
     image: "/images/secondPort.png",
-    url: "/projects/1",
+    url: "/projects/1frontendMastery",
     tags: [
       { name: "Frontend Mastery", color: "blue" },
       { name: "AstroDash", color: "cyan" },
@@ -23,11 +23,11 @@ const projects = [
     ]
   },
   {
-    id: 3,
+    id: 2,
     title: "Full-Stack Platform",
     description: "Comprehensive MERN architecture featuring role-based access control, secure authentication via Passport.js, and real-time product feedback loops. Deployed via Dockerized microservices.",
     image: "/images/ecommerce.png",
-    url: "/projects/3",
+    url: "/projects/2systemArch",
     tags: [
       { name: "System Architecture", color: "indigo" },
       { name: "Backend API", color: "black" },
@@ -37,11 +37,11 @@ const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Linux & DevOps Admin",
     description: "Cloud infrastructure management featuring automated deployments on AWS EC2. Implements IaC with Terraform, containerization with Docker, and fail-safe security protocols.",
     image: "/images/DevOps-linux-system-admin.png",
-    url: "/projects/2",
+    url: "/projects/3infrastructure",
     tags: [
       { name: "Infrastructure", color: "slate" },
       { name: "AWS EC2", color: "amber" },
@@ -110,7 +110,7 @@ return (
               </div>
 
               {/* Content Section */}
-              <div className="p-6 colorBackground flex-grow border-t border-slate-800/50 flex flex-col">
+              <div className="p-6 colorBackground flex-grow border-t border-slate-800/50 flex flex-col text-center">
                 
                 {/* FOCUS AREA TAG - Grabs the first tag from your data */}
                 <div className="mb-3">
