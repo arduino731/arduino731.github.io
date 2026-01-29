@@ -19,7 +19,7 @@ export default function AstroDash({ onBack }) {
 }
 
 // --- MAIN GAME COMPONENT ---
-function AstroDashGame({ onBack, onReset }) {
+function AstroDashGame({ onReset }) {
   const [showBriefing, setShowBriefing] = useState(true);
   const [hasStarted, setHasStarted] = useState(false);
   const [isBoosting, setIsBoosting] = useState(false);
