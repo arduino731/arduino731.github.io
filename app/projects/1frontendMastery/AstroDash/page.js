@@ -1,11 +1,10 @@
 "use client";
 import React from 'react';
-import AstroDash from './AstroDash'; // Import your game component
+import AstroDash from './AstroDash'; 
 
 export default function AstroDashPage() {
   return (
     <main>
-      {/* Render the Game Component */}
       <AstroDash />
     </main>
   );
