@@ -19,11 +19,11 @@ export default function ContainerizationServices() {
       <main className="max-w-5xl mx-auto px-4 mt-10 space-y-12">
 
         {/* 2. Intro / Recruiter Summary */}
-        <section className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200">
+        <section className="colorBackgroundOpposite p-8 rounded-2xl shadow-sm border border-slate-200">
           <div className="flex flex-col md:flex-row gap-8 items-center">
             <div className="flex-1">
-              <h2 className="text-3xl font-bold text-slate-800 mb-4">Docker & Reverse Proxy Strategy</h2>
-              <p className="text-lg text-slate-600 mb-4">
+              <h2 className="text-3xl font-bold colorText mb-4">Docker & Reverse Proxy Strategy</h2>
+              <p className="text-lg colorText mb-4">
                 Containerization ensures that applications run identically in development and production. By pairing <strong>Docker</strong> with an <strong>Nginx Reverse Proxy</strong>, we create a secure, scalable deployment pipeline.
               </p>
               <div className="bg-cyan-50 border-l-4 border-cyan-500 p-4">
@@ -150,11 +150,11 @@ CMD ["python", "app.py"]`} />
         </section>
 
         {/* 5. Nginx & SSL Section (The "Install & Configure" part) */}
-        <section className="bg-slate-900 text-white p-8 rounded-2xl shadow-xl">
-           <h2 className="text-2xl font-bold text-white mb-2 flex items-center gap-2">
+        <section className="colorBackgroundOpposite colorText p-8 rounded-2xl shadow-xl">
+           <h2 className="text-2xl font-bold colorText mb-2 flex items-center gap-2">
               <span className="text-green-400">Step 2:</span> Add Security (SSL/TLS)
            </h2>
-           <p className="text-slate-400 mb-8">
+           <p className="colorText mb-8">
               Never expose a container directly to the internet. Use Nginx as a <strong>Reverse Proxy</strong> to handle HTTPS encryption.
            </p>
 
@@ -166,7 +166,7 @@ CMD ["python", "app.py"]`} />
 
               <div>
                  <h3 className="text-lg font-bold text-green-300 mb-2">2. Configure Reverse Proxy</h3>
-                 <p className="text-sm text-slate-400 mb-2">Edit default config: <code className="text-slate-200">/etc/nginx/sites-available/default</code></p>
+                 <p className="text-sm colorText mb-2">Edit default config: <code className="colorText font-bold">/etc/nginx/sites-available/default</code></p>
                  <pre className="bg-black p-4 rounded-lg overflow-x-auto text-sm font-mono text-green-100 border border-slate-700">
 {`server {
     listen 80;
@@ -186,7 +186,7 @@ CMD ["python", "app.py"]`} />
 
               <div>
                  <h3 className="text-lg font-bold text-green-300 mb-2">3. Enable HTTPS (Let's Encrypt)</h3>
-                 <p className="text-sm text-slate-400 mb-2">Use Certbot to automatically generate SSL certificates.</p>
+                 <p className="text-sm colorText mb-2">Use Certbot to automatically generate SSL certificates.</p>
                  <CodeBlock code={`sudo apt install certbot python3-certbot-nginx\nsudo certbot --nginx -d your-domain.com`} />
                  <p className="text-xs text-green-400 mt-2">✅ This automatically updates your Nginx config with the SSL keys.</p>
               </div>
@@ -203,7 +203,7 @@ function CodeBlock({ code, title }) {
   return (
     <div className="relative group">
       {title && <div className="bg-slate-200 text-xs text-slate-600 px-3 py-1 rounded-t-md font-mono font-bold inline-block">{title}</div>}
-      <pre className={`colorBackground p-4 rounded-md ${title ? 'rounded-tl-none' : ''} overflow-x-auto text-sm text-cyan-50 font-mono border border-slate-700 shadow-inner`}>
+      <pre className={`bg-black p-4 rounded-md ${title ? 'rounded-tl-none' : ''} overflow-x-auto text-sm text-green-100 font-mono border border-slate-700 shadow-inner`}>
         {code}
       </pre>
     </div>
