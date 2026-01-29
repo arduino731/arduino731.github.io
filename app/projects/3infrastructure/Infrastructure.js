@@ -79,7 +79,7 @@ const infrastructureTools = [
     bgColor: "bg-orange-500/10",
     hoverBg: "group-hover:bg-orange-500/20",
     linkText: "View Specs",
-    path: "/projects/3infrastructure/6Automation",
+    path: "/projects/3infrastructure/6IAC",
     svgD: "M13 10V3L4 14h7v7l9-11h-7z",
     extraStyles: ""
   },
