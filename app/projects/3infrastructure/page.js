@@ -1,13 +1,13 @@
 import React from 'react'
 import "../../globals.css"
-import Project2 from './Project3'
 import "./style.css"
+import Infrasturucture from './Infrastructure'
 
 
-export default function page() {
+export default function InfrasturucturePage() {
   return (
     <section>
-      <Project2 />  
+      <Infrasturucture />  
     </section>
   )
 }

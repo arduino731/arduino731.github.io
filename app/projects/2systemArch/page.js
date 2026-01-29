@@ -1,17 +1,13 @@
-'use client' // Required for useState
-// import React, { useState } from 'react'
+'use client' 
 import "../../globals.css"
-import Project2 from './Project2'
 import "./style.css"
-// import NewTabComponent from './MERN/Mern' // The new component you want to show
+import SystemArch from './SystemArch'
 
 
-export default function page() {
-  // const [showNewTab, setShowNewTab] = useState(false);
-  
+export default function SystemArchPage() {
   return (
     <section>
-      <Project2 />  
+      <SystemArch />  
     </section>
   )
 }

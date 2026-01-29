@@ -67,10 +67,3 @@ The system utilizes a decoupled "Subsystem/Station" architecture to ensure UI pe
 2. **Maintain Orbit:** Hold the **Spacebar** or the **"ENGAGE THRUSTERS"** button to increase altitude.
 3. **Power Management:** Release thrusters to allow the solar arrays to recharge the battery.
 4. **Recovery:** If the signal is lost, click "RE-INITIALIZE SYSTEM" to deploy a replacement satellite.
-
----
-
-## 🚀 Getting Started
-
-1. **Clone the repo:** ```bash
-   git clone [https://github.com/your-username/astrodash.git](https://github.com/your-username/astrodash.git)

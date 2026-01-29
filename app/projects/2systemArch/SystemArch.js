@@ -1,14 +1,13 @@
 'use client'
 import SectionHeader from '../components/SectionHeader';
-
-import Image from 'next/image'
 import './style.css'
-
+import Link from 'next/link'
 
 // --- JSON DATA SOURCE ---
 const PROJECT_DATA = [
   {
     id: 'MernEcommercePro',
+    path: '/projects/2systemArch/MernEcommercePro',
     title: 'MERN E-Commerce Pro',
     buttonLabel: 'View MERN E-Commerce Pro',
   },
@@ -17,15 +16,10 @@ const PROJECT_DATA = [
   //   title: 'Minimax AI Tic-Tac-Toe',
   //   buttonLabel: 'View Tic Tac Toe',
   // },
-  // {
-  //   id: 'paws',
-  //   title: 'Paws Frontend Showcase',
-  //   buttonLabel: 'View Paws Project',
-  // }
 
 ];
 
-export default function Project2() {
+export default function SystemArch() {
   return (
     <article className="colorBackgroundOpposite colorText">
       {/* Section Header */}
@@ -77,12 +71,12 @@ export default function Project2() {
           <div key={project.id} className="w-full md:w-1/2 lg:w-1/3 p-3">
             <div className="rounded-lg shadow-md border-slate-300 border colorBackground colorTextOpposite p-6 h-full flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300">
               <p className="text-xl font-bold">{project.title}</p>
-              <button
-                onClick={() => onProjectClick(project.id)}
-                className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded-full font-semibold transition-all duration-500 ease-in-out transform hover:scale-105"
+              <Link 
+                href={project.path}
+                className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded-full font-semibold"
               >
-                🌐 {project.buttonLabel} →
-              </button>
+                  🌐 {project.buttonLabel} →
+              </Link>
             </div>
           </div>
         ))}
@@ -91,39 +85,12 @@ export default function Project2() {
 
 
 
-      {/* GitHub and Live Link Section */}
-      <div className="md:mx-20 p-6 colorBackgroundOpposite rounded-lg colorText">
-        <div className="mx-auto max-w-xl text-center p-6 m-4 colorBackground colorTextOpposite rounded-lg shadow-md border-slate-300 border">
-          <p className="text-lg mt-6 colorTextOpposite">
-            🌐 Want to view the live demo?
-            <br />
-            Access the running project on AWS EC2:
-          </p>
-          <a
-            href="#"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hoverSpotlight colorText colorBackgroundOpposite  inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
-          >
-            🌐 View Live Project →
-          </a>
-        </div>
-        <div className="mx-auto max-w-xl text-center p-6 colorBackground  colorTextOpposite rounded-lg shadow-md border-slate-300 border">
-          <p className="text-lg mt-10 ">
-            🔍 Want to see more source code?
-            <br />
-            Check out my GitHub!
-          </p>
-          <a
-            href="https://github.com/arduino731/MernEcommercePro"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
-          >
-            Visit My GitHub →
-          </a>
-        </div>
-      </div>
+
+
+
+
+
+
     </article>
   )
 }
