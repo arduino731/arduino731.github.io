@@ -56,3 +56,7 @@ app/
 public/
 └── images/        # Static assets
 ```
+
+---
+
+> 💡 **Reminder:** While developing in WSL, keep projects in the Linux home directory (`~/...`), not on the Windows C: drive (`/mnt/c/...`). File access across the Windows/Linux boundary is much slower and breaks Hot Module Replacement.
