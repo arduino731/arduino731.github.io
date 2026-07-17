@@ -26,6 +26,7 @@ export const metadata = {
     'Web Accessibility',
     'WCAG',
     'San Antonio developer',
+    'Austin developer',
   ],
   authors: [{ name: 'Brian van Vlymen', url: 'https://van-vlymen.com' }],
   creator: 'Brian van Vlymen',
