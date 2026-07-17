@@ -1,4 +1,3 @@
-import { Analytics } from "@vercel/analytics/next"
 import Head from './components/1Head';
 import Nav from './components/2Nav';
 import Footer from './components/8Footer';
@@ -109,7 +108,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Head />
-        <Analytics />
           <ClientNextThemes>
             <Nav />
             {children}
