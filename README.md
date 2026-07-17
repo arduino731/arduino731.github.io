@@ -1,73 +1,58 @@
+# Brian van Vlymen · Portfolio
 
-$${\color{red}Welcome \space \color{#2048f7}to \space \color{orange}van-vlymen-paws-portfolio}$$
+**Live site: [van-vlymen.com](https://van-vlymen.com)**
 
-My specialized portfolio displays exceptional work with a minimalist yet impactful design. Created with React, Next.js, and WindTail CSS, it's hosted on GitHub Actions for swift modern website development.
+Portfolio of Brian van Vlymen — Senior Full-Stack Engineer · Cloud Infrastructure (AWS). A minimalist, accessible site built with Next.js (App Router, static export), React, and Tailwind CSS, deployed to GitHub Pages via GitHub Actions.
 
+## 🛠 Tech Stack
 
-## 🛠 Development Workflow
+| Layer | Tools |
+| :--- | :--- |
+| Framework | [Next.js 15](https://nextjs.org/) (App Router, `output: "export"`) |
+| UI | React 18 · Tailwind CSS · Framer Motion · Font Awesome |
+| Theming | next-themes (light/dark mode) |
+| SEO | Generated `sitemap.xml` + `robots.txt`, Open Graph & JSON-LD metadata |
+| Hosting | GitHub Pages with custom domain, deployed by GitHub Actions |
 
-This project uses a two-branch system to separate **Source Code** from **Production Builds**.
+## 🚀 Local Development
 
-### 🌿 Branch Strategy
+```bash
+npm install
+npm run dev
+```
 
-| Branch | Purpose | Key Contents |
-| :--- | :--- | :--- |
-| **`main`** | **Development** | React components (`.tsx`), Tailwind config, and logic. **Always work here.** |
-| **`gh-pages`** | **Deployment** | Compiled static assets (`html`, `css`, `js`). **Never edit manually.** |
+Open [http://localhost:3000](http://localhost:3000) to view the site. Hot reload is enabled.
 
+> **WSL tip:** Run this project from the Linux filesystem (e.g. `~/Github/...`), not `/mnt/c/...`, so Hot Module Replacement stays fast.
 
+To create a production build locally:
 
-### 🚀 How to Develop and Deploy
+```bash
+npm run build
+```
 
-1. **Check your branch:**
-   Ensure you are on the `main` branch before starting:
-   ```bash
-   git branch
-   # If not on main, run: git checkout main
-   ```
+The static site is exported to the `out/` folder.
 
-2. **Run Development Server:**
-  Since the project is hosted in **WSL (Linux Home)** for maximum performance:
-    ```bash
-    npm run dev
-    ```
+## 📦 Deployment
 
+Deployment is fully automated — **push to `main` and GitHub Actions does the rest:**
 
-3. **Deploy to GitHub Pages:**
-   When you are ready to push your changes live, run:
-    ```bash
-    npm run deploy
-    ```
+1. The [`publish.yml`](.github/workflows/publish.yml) workflow builds the site with `next build`.
+2. The exported `out/` folder is uploaded as a Pages artifact.
+3. GitHub Pages publishes it to [van-vlymen.com](https://van-vlymen.com).
 
-*This script automatically runs `next build`, exports the project to the `/out` folder, and pushes those static files to the `gh-pages` branch.*
+No manual deploy step is needed. Never commit to the `gh-pages` branch — it is a legacy artifact and not part of the deployment pipeline.
 
-### ⚠️ Important Reminders
+## 📁 Project Structure
 
-* **Don't touch `gh-pages` branch:** Manual changes there will be overwritten the next time you run the deploy script.
-* **WSL Performance:** Always run this project from the Linux filesystem (`~/projects/...`) to ensure Hot Module Replacement (HMR) works instantly.
-
-### How to save these changes to GitHub
-
-Once you have pasted the text above into your `README.md` file, run these commands in your WSL terminal to update your repository:
-
-1. **Stage the file:**
-
-    ```bash
-    git add README.md
-    ```
-
-2. **Commit the change:**
-    ```bash
-    git commit -m "docs: update development workflow in readme"
-    ```
-
-
-3. **Push to GitHub:**
-    ```bash
-    git push origin main
-    ```
-
-
-
-
-
+```
+app/
+├── layout.js      # Root layout, SEO metadata, JSON-LD
+├── page.js        # Home page
+├── sitemap.js     # Generates sitemap.xml
+├── robots.js      # Generates robots.txt
+├── components/    # UI components
+└── projects/      # Project case-study pages
+public/
+└── images/        # Static assets
+```
