@@ -32,12 +32,12 @@ const About = () => {
   
         {/* Headline: Education + Mission */}
         <p className="mb-6 text-xl font-medium tracking-tight fadeIn">
-          I am a <span className=" font-bold">UI/UX Engineer</span> with a Computer Science background from <span className="border-b-2 border-orange-500 pb-0.5">UTSA</span> and a deep commitment to digital inclusion.
+          I am a <span className=" font-bold">Senior Full-Stack Engineer</span> with a Computer Science background from <span className="border-b-2 border-orange-500 pb-0.5">UTSA</span> and a deep commitment to digital inclusion.
         </p>
-        
-        {/* Specialization: Data & Performance */}
+
+        {/* Specialization: Full-Stack + Cloud */}
         <p className="mb-6 fadeIn">
-          I maintain a dedicated UI/UX Engineering Lab where I stress-test frontend performance through real-time telemetry and AI-driven logic, while keeping my architectural skills sharp through Full-Stack and DevOps projects.
+          I build and ship production systems end-to-end — most recently as lead developer at <span className="font-bold">InterPicker</span>, a startup platform running on AWS (EC2, SES) with Next.js, MongoDB, Docker, and Nginx. I also maintain a dedicated UI/UX Engineering Lab where I stress-test frontend performance through real-time telemetry and AI-driven logic.
         </p>
 
         {/* The "Was" Certification / Accessibility Focus */}
@@ -49,7 +49,7 @@ const About = () => {
 
         {/* Technical Footer */}
         <p className="text-sm uppercase tracking-[0.2em] font-bold text-slate-500 fadeIn">
-          React // Next.js // WCAG 2.1 // Minimax AI
+          React // Next.js // MongoDB // AWS // WCAG 2.1
         </p>
       </div>
     </div>

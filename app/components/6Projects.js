@@ -9,6 +9,20 @@ import useHandleScroll from '../hooks/HandleScroll';
 
 const projects = [
   {
+    id: 4,
+    title: "InterPicker — Startup Platform",
+    description: "Lead developer on a startup platform, owning the full technical build alongside a digital-marketing partner. Built with Next.js, React, and MongoDB, deployed on AWS EC2 behind Nginx with Docker, SES email delivery, SSH deploys, and hardened security groups.",
+    image: "/images/ec2.png",
+    url: "#",
+    tags: [
+      { name: "Startup · Lead Developer", color: "amber" },
+      { name: "Next.js/React", color: "blue" },
+      { name: "MongoDB", color: "green" },
+      { name: "AWS EC2/SES", color: "orange" },
+      { name: "Docker/Nginx", color: "cyan" }
+    ]
+  },
+  {
     id: 1,
     title: "Interactive UI/UX Engineering Lab",
     description: "A specialized frontend suite focused on high-density data and complex logic. Includes AstroDash (Telemetry), Minimax AI (Algorithms), and Paws (Accessible E-commerce).",
