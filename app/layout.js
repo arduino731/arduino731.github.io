@@ -25,6 +25,8 @@ export const metadata = {
     'DevOps',
     'Web Accessibility',
     'WCAG',
+    'Web Accessibility Specialist',
+    'AI-assisted development',
     'San Antonio developer',
     'Austin developer',
   ],

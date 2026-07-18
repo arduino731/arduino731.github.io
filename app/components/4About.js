@@ -43,7 +43,7 @@ const About = () => {
         {/* The "Was" Certification / Accessibility Focus */}
         <div className="mb-6 p-4 bg-slate-900/50 rounded-lg border-l-4 border-cyan-500 fadeIn">
           <p className="text-base leading-snug">
-            As a certified <strong className="">Web Accessibility Specialist (WAS)</strong>, I believe the most powerful systems are the ones that everyone can use, regardless of ability or device. My goal is to build software that is as <strong>stable as it is accessible</strong>.
+            As a certified <strong className="">Web Accessibility Specialist (WAS)</strong>, I believe the most powerful systems are the ones that everyone can use, regardless of ability or device. I build with AI tools daily — and my certification is what lets me <strong>verify their output actually meets WCAG</strong>. In an era when anyone can generate plausible code, verified judgment is the differentiator. My goal is software that is as <strong>stable as it is accessible</strong>.
           </p>
         </div>
 
