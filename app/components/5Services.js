@@ -15,6 +15,12 @@ const Services = () => {
           >
             <div className="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1  className="colorBackgroundOpposite colorText rounded-md text-5xl p-2 text-center ">Services</h1>
+              <div className="flex items-center gap-4 p-6 bg-cyan-700 text-white rounded-lg shadow-lg fadeIn">
+                <span className="text-3xl">♿</span>
+                <p className="text-lg font-medium">
+                    <span className="font-bold">Accessibility Audits (WAS-Certified) –</span> WCAG 2.1 AA audits and remediation by a certified Web Accessibility Specialist — reducing ADA legal risk and opening your product to the 1 in 4 adults with a disability.
+                </p>
+              </div>
               <div className="flex items-center gap-4 p-6 bg-blue-500 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">☁️</span>
                 <p className="text-lg font-medium">
@@ -47,7 +53,7 @@ const Services = () => {
               </div>
               <div className="text-center mt-8 fadeIn">
                 <p className="text-xl font-semibold colorTextOpposite  ">
-                    I build and ship production systems end-to-end — from cloud infrastructure to accessible, high-performance interfaces.
+                    I build and ship production systems end-to-end — with AI-assisted speed, and WAS-certified judgment verifying everything that ships.
                 </p>
               </div>
             </div>
