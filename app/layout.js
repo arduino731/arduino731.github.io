@@ -14,6 +14,8 @@ export const metadata = {
     'Portfolio of Brian van Vlymen, Senior Full-Stack Engineer with 10+ years of experience building production systems end-to-end with React, Next.js, MongoDB, and AWS (EC2, SES) — certified Web Accessibility Specialist (WAS).',
   keywords: [
     'Brian van Vlymen',
+    'van Vlymen',
+    'van-vlymen',
     'Senior Full-Stack Engineer',
     'Cloud Infrastructure',
     'AWS',
@@ -40,7 +42,8 @@ export const metadata = {
     follow: true,
   },
   icons: {
-    icon: '/images/favicon.ico',
+    icon: '/images/wolfIcon.png',
+    apple: '/images/wolfIcon.png',
   },
   openGraph: {
     type: 'website',
@@ -51,9 +54,9 @@ export const metadata = {
       'Production systems end-to-end — React, Next.js, MongoDB, and AWS. Certified Web Accessibility Specialist (WAS).',
     images: [
       {
-        url: '/images/og-banner.png',
-        width: 1200,
-        height: 630,
+        url: '/images/portfolioImageCard.png',
+        width: 703,
+        height: 367,
         alt: 'Brian van Vlymen — Senior Full-Stack Engineer · Cloud Infrastructure (AWS)',
       },
     ],
@@ -65,7 +68,7 @@ export const metadata = {
     title: 'Brian van Vlymen · Senior Full-Stack Engineer · Cloud Infrastructure (AWS)',
     description:
       'Production systems end-to-end — React, Next.js, MongoDB, and AWS. Certified Web Accessibility Specialist (WAS).',
-    images: ['/images/og-banner.png'],
+    images: ['/images/portfolioImageCard.png'],
   },
 }
 
@@ -74,7 +77,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Brian van Vlymen',
   url: 'https://van-vlymen.com',
-  image: 'https://van-vlymen.com/images/portfolio.jpeg',
+  image: 'https://van-vlymen.com/images/portfolioImageCard.png',
   jobTitle: 'Senior Full-Stack Engineer',
   email: 'mailto:Arduino731@gmail.com',
   alumniOf: {
