@@ -92,12 +92,16 @@ const Nav = () => {
 
       {/* Mobile dropdown nav */}
       <div className="lg:hidden mt-2 px-4">
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="text-2xl focus:outline-none"
-        >
-          ☰
-        </button>
+        <div className="flex justify-end">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="text-2xl focus:outline-none"
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+          >
+            ☰
+          </button>
+        </div>
         {isOpen && (
           <div className="flex flex-col gap-2 mt-2 transition-all duration-300 ease-in-out items-center">
             {['Home', 'About', 'Services', 'Projects', 'Contact'].map((label, index) => {
