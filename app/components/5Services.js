@@ -15,31 +15,37 @@ const Services = () => {
           >
             <div className="flex flex-col gap-6 p-8 max-w-4xl mx-auto">
               <h1  className="colorBackgroundOpposite colorText rounded-md text-5xl p-2 text-center ">Services</h1>
-              <div className="flex items-center gap-4 p-6 bg-blue-500 text-white rounded-lg shadow-lg fadeIn">
+              <div className="flex items-center gap-4 p-6 bg-cyan-700 text-white rounded-lg shadow-lg fadeIn">
+                <span className="text-3xl">♿</span>
+                <p className="text-lg font-medium">
+                    <span className="font-bold">Accessibility Audits (WAS-Certified) –</span> WCAG 2.1 AA audits and remediation by a certified Web Accessibility Specialist — reducing ADA legal risk and opening your product to the 1 in 4 adults with a disability.
+                </p>
+              </div>
+              <div className="flex items-center gap-4 p-6 bg-blue-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">☁️</span>
                 <p className="text-lg font-medium">
                     <span className="font-bold">Cloud Infrastructure & Deployment –</span> Deploying production apps on AWS (EC2, SES, Elastic IP) with Docker, Nginx, and hardened security groups.
                 </p>
               </div>
-              <div className="flex items-center gap-4 p-6 bg-green-500 text-white rounded-lg shadow-lg fadeIn">
+              <div className="flex items-center gap-4 p-6 bg-green-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🧩</span>
                 <p className="text-lg font-medium">
                     <span className="font-bold ">Full-Stack Engineering –</span> End-to-end products with React, Next.js, Node.js, and MongoDB — from API design to responsive, accessible UIs.
                 </p>
               </div>
-              <div className="flex items-center gap-4 p-6 bg-purple-500 text-white rounded-lg shadow-lg fadeIn">
+              <div className="flex items-center gap-4 p-6 bg-purple-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">⚙️</span>
                 <p className="text-lg font-medium">
                     <span className="font-bold ">DevOps & Automation –</span> CI/CD pipelines with GitHub Actions, Docker Compose, and Bash/SSH tooling for repeatable, hands-off deployments.
                 </p>
               </div>
-              <div className="flex items-center gap-4 p-6 bg-red-500 text-white rounded-lg shadow-lg fadeIn">
+              <div className="flex items-center gap-4 p-6 bg-red-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🔐</span>
                 <p className="text-lg font-medium">
                     <span className="font-bold ">Reliability & Security –</span> Hardened systems with security groups, fail2ban, CloudWatch monitoring, and 3-2-1 backup strategies.
                 </p>
               </div>
-              <div className="flex items-center gap-4 p-6 bg-amber-500 text-white rounded-lg shadow-lg fadeIn">
+              <div className="flex items-center gap-4 p-6 bg-amber-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🚀</span>
                 <p className="text-lg font-medium">
                     <span className="font-bold ">Technical Leadership –</span> Lead developer at InterPicker (startup) — owning the full technical build alongside a digital-marketing partner.
@@ -47,7 +53,7 @@ const Services = () => {
               </div>
               <div className="text-center mt-8 fadeIn">
                 <p className="text-xl font-semibold colorTextOpposite  ">
-                    I build and ship production systems end-to-end — from cloud infrastructure to accessible, high-performance interfaces.
+                    I build and ship production systems end-to-end — with AI-assisted speed, and WAS-certified judgment verifying everything that ships.
                 </p>
               </div>
             </div>

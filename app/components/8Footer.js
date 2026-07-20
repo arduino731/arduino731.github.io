@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="mt-16 pt-8 border-t border-white/5 text-center colorText opacity-60 text-sm">
+        <div className="mt-16 pt-8 border-t border-white/5 text-center colorText opacity-80 text-sm">
           <p>&copy; {new Date().getFullYear()} Brian Van Vlymen. Designed & Built in Texas 🇺🇸</p>
           <p className="mt-1 font-mono tracking-tighter">Stack: Next.js 15 | WSL2 | Docker | GSAP</p>
         </div>
