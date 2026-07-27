@@ -36,7 +36,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold colorText">Get In Touch</h3>
             <p className="colorText opacity-80">
-              Open to collaborations or professional opportunities. Reach out via <a href="mailto:Arduino731@gmail.com" className="underline hover:text-blue-400 transition-colors">Arduino731@gmail.com</a>
+              Open to collaborations or professional opportunities. Reach out via <a href="mailto:bvanvlymen.dev@gmail.com" className="underline hover:text-blue-400 transition-colors">bvanvlymen.dev@gmail.com</a>
             </p>
             
             <form action="https://formspree.io/f/movdloyo" method="POST" className="group">

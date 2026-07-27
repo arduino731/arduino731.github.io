@@ -79,7 +79,7 @@ const jsonLd = {
   url: 'https://van-vlymen.com',
   image: 'https://van-vlymen.com/images/portfolioImageCard.png',
   jobTitle: 'Senior Full-Stack Engineer',
-  email: 'mailto:Arduino731@gmail.com',
+  email: 'mailto:bvanvlymen.dev@gmail.com',
   alumniOf: {
     '@type': 'CollegeOrUniversity',
     name: 'University of Texas at San Antonio',

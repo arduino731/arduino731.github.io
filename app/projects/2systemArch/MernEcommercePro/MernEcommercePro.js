@@ -116,7 +116,7 @@ return (
                 "I am happy to spin up the production instance for your review. Please allow ~5 minutes for system wake-up."
               </p>
               <a 
-                  href="mailto:Arduino731@gmail.com?subject=Requesting%20Live%20Demo%20Access%20-%20AWS%20Project" 
+                  href="mailto:bvanvlymen.dev@gmail.com?subject=Requesting%20Live%20Demo%20Access%20-%20AWS%20Project" 
                   className="hoverSpotlight inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition-all shadow-md transform hover:scale-105"
                   >
                   Request 1-Hour Access →
