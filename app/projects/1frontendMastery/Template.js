@@ -33,7 +33,7 @@ export default function TicTacToeGame() {
             Check out the source on GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1frontendMastery/TicTacToe"
+            href="https://github.com/bvanvlymen/bvanvlymen.github.io/blob/main/app/projects/1frontendMastery/TicTacToe"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"

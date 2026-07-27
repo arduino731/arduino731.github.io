@@ -99,7 +99,7 @@ const jsonLd = {
     'Web Accessibility',
   ],
   sameAs: [
-    'https://github.com/arduino731',
+    'https://github.com/bvanvlymen',
     'https://www.linkedin.com/in/vanvlymen/',
     'https://x.com/vanvlymenpaws',
   ],

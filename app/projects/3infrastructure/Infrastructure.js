@@ -287,7 +287,7 @@ export default function InfrastructurePage() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/DevOps-Linux-System-Admin"
+            href="https://github.com/bvanvlymen/DevOps-Linux-System-Admin"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded"

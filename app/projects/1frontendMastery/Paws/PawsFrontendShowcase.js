@@ -177,7 +177,7 @@ export default function PawsFrontendShowcase() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/paws-frontend-showcase"
+            href="https://github.com/bvanvlymen/paws-frontend-showcase"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
@@ -193,7 +193,7 @@ export default function PawsFrontendShowcase() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/jennifershows_Angular"
+            href="https://github.com/bvanvlymen/jennifershows_Angular"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"
@@ -209,7 +209,7 @@ export default function PawsFrontendShowcase() {
             Check out my GitHub!
           </p>
           <a
-            href="https://github.com/arduino731/vanVlymenList"
+            href="https://github.com/bvanvlymen/vanVlymenList"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out"

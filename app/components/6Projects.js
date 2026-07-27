@@ -3,8 +3,8 @@ import Image from 'next/image'
 import useHandleScroll from '../hooks/HandleScroll';
 
 // githubURL
-// https://github.com/arduino731/jennifershows_Angular
-// https://github.com/arduino731/van-vlymen-paws-portfolio
+// https://github.com/bvanvlymen/jennifershows_Angular
+// https://github.com/bvanvlymen/van-vlymen-paws-portfolio
 
 
 const projects = [

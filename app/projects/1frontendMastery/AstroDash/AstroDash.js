@@ -444,7 +444,7 @@ function AstroDashGame({ onReset }) {
       <div className={`mx-auto max-w-xl text-center mt-10 p-6 colorBackground colorTextOpposite rounded-lg shadow-md border-slate-300 border`}>
         <h4 className="text-lg font-bold">AstroDash - Mission Control Telemetry Dashboard</h4>
         <p className="text-lg">🔍 Want to see the logic?<br />Check out the source on GitHub!</p>
-        <a href="https://github.com/arduino731/arduino731.github.io/blob/main/app/projects/1frontendMastery/AstroDash" target="_blank" rel="noopener noreferrer" className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out">
+        <a href="https://github.com/bvanvlymen/bvanvlymen.github.io/blob/main/app/projects/1frontendMastery/AstroDash" target="_blank" rel="noopener noreferrer" className="hoverSpotlight colorText colorBackgroundOpposite inline-block mt-4 px-6 py-2 rounded transition-all duration-500 ease-in-out">
           View Project Architecture on GitHub →
         </a>
       </div>

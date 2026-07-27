@@ -136,7 +136,7 @@ return (
             <h4 className="text-2xl font-bold mb-4">🔍 Source Code</h4>
             <p className="mb-6 opacity-90">Review the architecture, Dockerfiles, and deployment scripts on GitHub.</p>
             <a
-            href="https://github.com/arduino731/MernEcommercePro"
+            href="https://github.com/bvanvlymen/MernEcommercePro"
             target="_blank"
             rel="noopener noreferrer"
             className="hoverSpotlight colorBackgroundOpposite colorText px-8 py-3 rounded-lg hover:bg-slate-900 transition-all inline-flex items-center gap-2 shadow-lg"
