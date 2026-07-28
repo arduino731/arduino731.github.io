@@ -54,7 +54,7 @@ export const metadata = {
       'Production systems end-to-end — React, Next.js, MongoDB, and AWS. Certified Web Accessibility Specialist (WAS).',
     images: [
       {
-        url: '/images/portfolioImageCard.png',
+        url: '/images/og-banner.png',
         width: 1200,
         height: 630,
         alt: 'Brian van Vlymen — Senior Full-Stack Engineer · Cloud Infrastructure (AWS)',
@@ -68,7 +68,12 @@ export const metadata = {
     title: 'Brian van Vlymen · Senior Full-Stack Engineer · Cloud Infrastructure (AWS)',
     description:
       'Production systems end-to-end — React, Next.js, MongoDB, and AWS. Certified Web Accessibility Specialist (WAS).',
-    images: ['/images/portfolioImageCard.png'],
+    images: [
+      {
+        url: '/images/og-banner.png',
+        alt: 'Brian van Vlymen — Senior Full-Stack Engineer · Cloud Infrastructure (AWS)',
+      },
+    ],
   },
 }
 
