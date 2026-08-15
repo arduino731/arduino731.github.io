@@ -25,6 +25,23 @@ const projects = [
     ]
   },
   {
+    id: 5,
+    title: "a11y-auditor — WCAG Audit Service",
+    description: "Flagship build: a serverless accessibility auditing service on AWS. Playwright and axe-core scans run on a queued Lambda worker, results land in DynamoDB and S3, and the Claude API explains each violation in plain English — all Terraform-managed for under $2/month.",
+    image: "/images/a11y-auditor.png",
+    url: "https://github.com/bvanvlymen/a11y-auditor",
+    cta: "View on GitHub",
+    status: "Still processing · M5",
+    tags: [
+      { name: "Cloud Architecture", color: "amber" },
+      { name: "Lambda/SQS", color: "blue" },
+      { name: "DynamoDB/S3", color: "green" },
+      { name: "Terraform IaC", color: "purple" },
+      { name: "Claude API", color: "indigo" },
+      { name: "Playwright/axe", color: "cyan" }
+    ]
+  },
+  {
     id: 1,
     title: "Interactive UI/UX Engineering Lab",
     description: "A specialized frontend suite focused on high-density data and complex logic. Includes AstroDash (Telemetry), Minimax AI (Algorithms), and Paws (Accessible E-commerce).",
@@ -106,7 +123,7 @@ return (
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-bold text-sm border-2 border-white px-4 py-2 rounded-full backdrop-blur-md">
-                    Explore Track
+                    {item.cta ?? "Explore Track"}
                   </span>
                 </div>
               </div>
@@ -124,6 +141,16 @@ return (
                 <h3 className="text-xl font-bold mb-2 colorTextOpposite tracking-tight">
                   {item.title}
                 </h3>
+
+                {/* IN-PROGRESS STATUS - only on cards that declare one */}
+                {item.status && (
+                  <div className="mb-3">
+                    <span className="inline-flex items-center gap-1.5 w-fit mx-auto text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-[0.15em] bg-amber-100 text-amber-900">
+                      <span className="w-1.5 h-1.5 rounded-full bg-amber-600" aria-hidden="true" />
+                      {item.status}
+                    </span>
+                  </div>
+                )}
 
                 {/* CONSISE DESCRIPTION */}
                 <p className="text-sm opacity-80 mb-6 colorTextOpposite leading-relaxed line-clamp-3">
