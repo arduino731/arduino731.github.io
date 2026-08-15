@@ -7,7 +7,7 @@ import SectionHeader from '../../components/SectionHeader';
 
 
 export default function TicTacToeGame() {
-  const { visibleSection: currentSection, showScrollButton } = useHandleScroll();
+  const { visibleSection: currentSection } = useHandleScroll();
   
   const [board, setBoard] = useState(Array(9).fill(null));
   const [status, setStatus] = useState("Your turn! (O)");
@@ -33,13 +33,6 @@ export default function TicTacToeGame() {
       localStorage.setItem('tictactoe-scores', JSON.stringify(scores));
     }
   }, [scores]);
-
-  const scrollToContent = () => {
-    const element = document.getElementById('target-section');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
 
   const handleMove = (index) => {
     if (board[index] || checkWinner(board) || status.includes("thinking")) return;
@@ -116,13 +109,6 @@ export default function TicTacToeGame() {
         <Link href="/projects/1frontendMastery" className="bg-white px-4 py-2 rounded shadow text-black">
            ← Back to Home
         </Link>
-        <button 
-          onClick={scrollToContent} 
-          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
-            ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        >
-          ↓ Play Game
-        </button>
       </nav>
 
       {/* Hero Header */}

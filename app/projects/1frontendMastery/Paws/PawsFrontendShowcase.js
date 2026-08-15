@@ -7,18 +7,8 @@ import SectionHeader from '../../components/SectionHeader';
 
 
 export default function PawsFrontendShowcase() {
-  const { visibleSection:currentSection, showScrollButton } = useHandleScroll();
+  const { visibleSection:currentSection } = useHandleScroll();
 
-  const scrollToContent = () => {
-    const element = document.getElementById('target-section');
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start' // This aligns the top of the section with the top of the screen
-      });
-    }
-  };
-  
   return (
     <article className="colorBackgroundOpposite colorText min-h-screen">
       {/* Navigation */}
@@ -26,13 +16,6 @@ export default function PawsFrontendShowcase() {
         <Link href="/projects/1frontendMastery" className="bg-white px-4 py-2 rounded shadow text-black">
            ← Back to Home
         </Link>
-        <button 
-          onClick={scrollToContent} 
-          className={`shadow-xl bg-cyan-500 text-white px-6 py-2 rounded-full transition-all duration-700 animate-bounce hover:scale-110 
-            ${showScrollButton ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
-        >
-          ↓ Scroll Down
-        </button>
       </nav>
       {/* Section Header */}
       <SectionHeader title="Paws Frontend" highlight='Showcase' />
