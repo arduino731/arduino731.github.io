@@ -12,7 +12,7 @@ const projects = [
     id: 4,
     title: "InterPicker — Full-Stack Startup Platform",
     description: "Sole technical architect and lead developer of a subscription-based SaaS platform, owning the full lifecycle alongside a digital-marketing lead — Next.js/React front end, Node.js/Express and MongoDB backend, Stripe subscription billing, and AWS cloud infrastructure.",
-    image: "/images/ec2.png",
+    image: "/images/interpicker.png",
     url: "/projects/Interpicker-full-stack-startup",
     tags: [
       { name: "Startup · Lead Architect", color: "amber" },
