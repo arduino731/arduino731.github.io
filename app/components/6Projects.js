@@ -51,20 +51,6 @@ const projects = [
       { name: "User Auth", color: "slate" },
       { name: "MERN Stack", color: "teal" }
     ]
-  },
-  {
-    id: 3,
-    title: "Linux & DevOps Admin",
-    description: "Cloud infrastructure management featuring automated deployments on AWS EC2. Implements IaC with Terraform, containerization with Docker, and fail-safe security protocols.",
-    image: "/images/DevOps-linux-system-admin.png",
-    url: "/projects/3infrastructure",
-    tags: [
-      { name: "Infrastructure", color: "slate" },
-      { name: "AWS EC2", color: "amber" },
-      { name: "Terraform/IaC", color: "purple" },
-      { name: "Docker/WSL2", color: "blue" },
-      { name: "CI/CD Pipelines", color: "teal" }
-    ]
   }
 ];
 
