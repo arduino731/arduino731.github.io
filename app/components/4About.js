@@ -32,24 +32,24 @@ const About = () => {
   
         {/* Headline: Education + Mission */}
         <p className="mb-6 text-xl font-medium tracking-tight fadeIn">
-          I am a <span className=" font-bold">Senior Full-Stack Engineer</span> with a Computer Science background from <span className="border-b-2 border-orange-500 pb-0.5">UTSA</span> and a deep commitment to digital inclusion.
+          I am a <span className=" font-bold">Senior Full-Stack Engineer and Cloud Architect</span> with a Computer Science background from <span className="border-b-2 border-orange-500 pb-0.5">UTSA</span> and a deep commitment to digital inclusion.
         </p>
 
         {/* Specialization: Full-Stack + Cloud */}
         <p className="mb-6 fadeIn">
-          I build and ship production systems end-to-end — most recently as lead developer at <span className="font-bold">InterPicker</span>, a startup platform running on AWS (EC2, SES) with Next.js, MongoDB, Docker, and Nginx. I also maintain a dedicated UI/UX Engineering Lab where I stress-test frontend performance through real-time telemetry and AI-driven logic.
+          I build and ship production systems end-to-end — most recently as lead developer at <span className="font-bold">InterPicker</span>, a startup platform running on AWS (ECS, SES, S3) with Next.js, MongoDB Atlas, Docker, and Nginx. I also maintain a dedicated engineering lab where I stress-test frontend performance through real-time telemetry and AI-driven logic.
         </p>
 
         {/* The "Was" Certification / Accessibility Focus */}
         <div className="mb-6 p-4 bg-slate-900/50 rounded-lg border-l-4 border-cyan-500 fadeIn">
           <p className="text-base leading-snug">
-            As a certified <strong className="">Web Accessibility Specialist (WAS)</strong>, I believe the most powerful systems are the ones that everyone can use, regardless of ability or device. I build with AI tools daily — and my certification is what lets me <strong>verify their output actually meets WCAG</strong>. In an era when anyone can generate plausible code, verified judgment is the differentiator. My goal is software that is as <strong>stable as it is accessible</strong>.
+            As a certified <strong className="">Web Accessibility Specialist (WAS)</strong>, I believe the most powerful systems are the ones that everyone can use, regardless of ability or device. I build with AI tools daily — and my certification is what lets me <strong>verify their output actually meets WCAG</strong>. In an era when anyone can generate plausible code, verified judgment is the differentiator. My goal is software that is as <strong>secure and scalable as it is accessible</strong>.
           </p>
         </div>
 
         {/* Technical Footer */}
         <p className="text-sm uppercase tracking-[0.2em] font-bold text-slate-500 fadeIn">
-          React // Next.js // MongoDB // AWS // WCAG 2.1
+          React // Next.js // MongoDB Atlas // AWS // Terraform // WCAG 2.1
         </p>
       </div>
     </div>

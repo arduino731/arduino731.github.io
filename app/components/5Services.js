@@ -24,31 +24,31 @@ const Services = () => {
               <div className="flex items-center gap-4 p-6 bg-blue-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">☁️</span>
                 <p className="text-lg font-medium">
-                    <span className="font-bold">Cloud Infrastructure & Deployment –</span> Deploying production apps on AWS (EC2, SES, Elastic IP) with Docker, Nginx, and hardened security groups.
+                    <span className="font-bold">Cloud Infrastructure & Deployment –</span> Deploying highly-available production apps on AWS (ECS, S3, SES) utilizing Docker, Nginx, and strict IAM security policies.
                 </p>
               </div>
               <div className="flex items-center gap-4 p-6 bg-green-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🧩</span>
                 <p className="text-lg font-medium">
-                    <span className="font-bold ">Full-Stack Engineering –</span> End-to-end products with React, Next.js, Node.js, and MongoDB — from API design to responsive, accessible UIs.
+                    <span className="font-bold ">Full-Stack Engineering –</span> End-to-end products with React, Next.js, Node.js, and MongoDB — from decoupled API design to responsive, accessible UIs.
                 </p>
               </div>
               <div className="flex items-center gap-4 p-6 bg-purple-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">⚙️</span>
                 <p className="text-lg font-medium">
-                    <span className="font-bold ">DevOps & Automation –</span> CI/CD pipelines with GitHub Actions, Docker Compose, and Bash/SSH tooling for repeatable, hands-off deployments.
+                    <span className="font-bold ">DevOps & Infrastructure as Code (IaC) –</span> Automated CI/CD pipelines with GitHub Actions and Terraform to establish immutable, reproducible cloud environments.
                 </p>
               </div>
               <div className="flex items-center gap-4 p-6 bg-red-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🔐</span>
                 <p className="text-lg font-medium">
-                    <span className="font-bold ">Reliability & Security –</span> Hardened systems with security groups, fail2ban, CloudWatch monitoring, and 3-2-1 backup strategies.
+                    <span className="font-bold ">Reliability & Security –</span> Hardened systems with strict SSL/TLS cryptographic protocols, CloudWatch monitoring, and automated disaster recovery backups.
                 </p>
               </div>
               <div className="flex items-center gap-4 p-6 bg-amber-700 text-white rounded-lg shadow-lg fadeIn">
                 <span className="text-3xl">🚀</span>
                 <p className="text-lg font-medium">
-                    <span className="font-bold ">Technical Leadership –</span> Lead developer at InterPicker (startup) — owning the full technical build alongside a digital-marketing partner.
+                    <span className="font-bold ">Technical Leadership –</span> Lead Architect at InterPicker (startup) — owning the full technical build, API integration, and cloud infrastructure.
                 </p>
               </div>
               <div className="text-center mt-8 fadeIn">
