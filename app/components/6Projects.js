@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import Link from 'next/link'
 import useHandleScroll from '../hooks/HandleScroll';
 
 // githubURL
@@ -109,24 +110,25 @@ return (
           {projects.map((item) => (
             <div key={item.id} className="overflow-hidden rounded-xl shadow-lg transform hover:scale-[1.02] transition-all duration-300 border border-slate-800/50 flex flex-col bg-slate-900/10">
               
-              {/* Image Section */}
-              <div 
-                className="relative w-full aspect-video overflow-hidden cursor-pointer group" 
-                onClick={() => window.location.href = item.url}
+              {/* Image Section — a real link so it is keyboard-reachable and
+                  announced as a link (WCAG 2.1.1). Was a div with onClick. */}
+              <Link
+                href={item.url}
+                className="relative block w-full aspect-video overflow-hidden group focus:outline-none focus-visible:ring-4 focus-visible:ring-cyan-400 focus-visible:ring-inset"
               >
-                <Image 
+                <Image
                   src={item.image}
                   alt={`${item.title} project`}
-                  fill 
-                  className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <span className="text-white font-bold text-sm border-2 border-white px-4 py-2 rounded-full backdrop-blur-md">
                     {item.cta ?? "Explore Track"}
                   </span>
                 </div>
-              </div>
+              </Link>
 
               {/* Content Section */}
               <div className="p-6 colorBackground flex-grow border-t border-slate-800/50 flex flex-col text-center">
