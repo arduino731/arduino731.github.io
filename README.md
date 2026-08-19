@@ -2,7 +2,7 @@
 
 **Live site: [van-vlymen.com](https://van-vlymen.com)**
 
-Portfolio of Brian van Vlymen — Senior Full-Stack Engineer · Cloud Infrastructure (AWS). A minimalist, accessible site built with Next.js (App Router, static export), React, and Tailwind CSS, deployed to GitHub Pages via GitHub Actions.
+Portfolio of Brian van Vlymen — AWS Cloud Engineer · Full-Stack Architect, and a certified Web Accessibility Specialist (WAS). A minimalist, accessible site built with Next.js (App Router, static export), React, and Tailwind CSS, deployed to GitHub Pages via GitHub Actions.
 
 ## 🛠 Tech Stack
 
@@ -41,7 +41,7 @@ Deployment is fully automated — **push to `main` and GitHub Actions does the r
 2. The exported `out/` folder is uploaded as a Pages artifact.
 3. GitHub Pages publishes it to [van-vlymen.com](https://van-vlymen.com).
 
-No manual deploy step is needed. Never commit to the `gh-pages` branch — it is a legacy artifact and not part of the deployment pipeline.
+No manual deploy step is needed. `main` is the only branch — the site is published from a Pages artifact, not from a branch.
 
 ## 📁 Project Structure
 
