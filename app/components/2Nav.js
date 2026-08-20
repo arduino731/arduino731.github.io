@@ -107,7 +107,7 @@ const Nav = () => {
         <div className="flex justify-end">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl focus:outline-none"
+            className="text-2xl leading-none text-slate-100 dark:text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 rounded"
             aria-label="Toggle navigation menu"
             aria-expanded={isOpen}
           >

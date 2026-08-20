@@ -72,14 +72,6 @@ const ImageSlider = () => {
   currentSection === 'slider' ? 'opacity-100' : 'opacity-0'
   }`}
   data-id="slider">
-    <div className="flex justify-center p-5">
-        <button
-        onClick={handleNext}
-        className="fadeIn hoverSpotlight colorBackgroundOpposite colorText px-6 py-2 rounded-md shadow-md transition"
-        >
-        Next
-        </button>
-    </div>
     <div className="relative flex justify-center items-center min-h-[60vh] sm:min-h-[70vh] flex-col gap-6">
 
       {/* Image animations */}
@@ -127,6 +119,17 @@ const ImageSlider = () => {
             <p className="fadeIn text-sm sm:text-lg">{item.describe}</p>
           </motion.div>
         ))}
+      </div>
+
+      {/* Advance control sits below the marks and their caption so the
+          carousel reads top-to-bottom: icon, label, then the control. */}
+      <div className="flex justify-center pt-2">
+        <button
+          onClick={handleNext}
+          className="fadeIn hoverSpotlight colorBackgroundOpposite colorText px-6 py-2 rounded-md shadow-md transition"
+        >
+          Next
+        </button>
       </div>
     </div>
   </div>
