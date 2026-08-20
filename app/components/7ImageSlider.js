@@ -104,6 +104,16 @@ const ImageSlider = () => {
         ))}
       </div>
 
+      {/* Advance control sits directly under the marks, above the caption. */}
+      <div className="flex justify-center">
+        <button
+          onClick={handleNext}
+          className="fadeIn hoverSpotlight colorBackgroundOpposite colorText px-6 py-2 rounded-md shadow-md transition"
+        >
+          Next
+        </button>
+      </div>
+
       {/* Text overlays */}
       <div className="relative h-32 w-full flex items-center justify-center">
         {findText.map((item, index) => (
@@ -119,17 +129,6 @@ const ImageSlider = () => {
             <p className="fadeIn text-sm sm:text-lg">{item.describe}</p>
           </motion.div>
         ))}
-      </div>
-
-      {/* Advance control sits below the marks and their caption so the
-          carousel reads top-to-bottom: icon, label, then the control. */}
-      <div className="flex justify-center pt-2">
-        <button
-          onClick={handleNext}
-          className="fadeIn hoverSpotlight colorBackgroundOpposite colorText px-6 py-2 rounded-md shadow-md transition"
-        >
-          Next
-        </button>
       </div>
     </div>
   </div>
