@@ -59,7 +59,7 @@ const projects = [
   {
     id: 2,
     title: "besHandyman — Services Marketplace",
-    description: "Sole technical architect of a TaskRabbit-style on-demand home services marketplace. Two-sided platform with Stripe Connect direct charges and a 20% platform fee, MongoDB Atlas, Mapbox geolocation matching, Twilio SMS, JWT role-based auth, an admin console, and AWS ECS/SES infrastructure.",
+    description: "Sole technical architect of a TaskRabbit-style on-demand home services marketplace. Two-sided platform with Stripe Connect direct charges and a 20% customer-facing service fee, MongoDB Atlas, Mapbox geolocation matching, Twilio SMS, JWT role-based auth, an admin console, and AWS ECS/SES infrastructure.",
     image: "/images/beshandyman.png",
     url: "/projects/besHandyman-services-marketplace",
     status: "Build in progress",

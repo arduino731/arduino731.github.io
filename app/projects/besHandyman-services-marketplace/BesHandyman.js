@@ -35,9 +35,10 @@ const contributions = [
     body: (
       <>
         Integrated <strong>Stripe Connect</strong> using <strong>direct charges</strong> — each job
-        is charged on the provider&apos;s own connected account, with a ~20% application fee routed
-        to the platform to fund the service. Charging per task on the connected account keeps the
-        provider as merchant of record and avoids the platform holding funds.
+        is charged on the provider&apos;s own connected account, with a <strong>~20% service fee
+        added on top of the job price</strong> and shown to the customer as a visible line item.
+        That fee is collected as the application fee, so the provider is paid the full quoted price,
+        stays merchant of record, and the platform never holds funds.
       </>
     ),
   },
