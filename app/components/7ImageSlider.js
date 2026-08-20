@@ -17,34 +17,34 @@ const ImageSlider = () => {
 
   const findText = [
     {
-      image: "/images/fast.png",
-      imageLight: "/images/fast-light.png",
-      title: "FAST",
-      describe: "Fast load times and lag free interaction, my highest priority.",
+      image: "/images/cloud.png",
+      imageLight: "/images/cloud-light.png",
+      title: "CLOUD-NATIVE",
+      describe: "Production systems on AWS — ECS, Lambda, S3, SES — built to scale and stay inexpensive.",
     },
     {
-      image: "/images/responsive.png",
-      imageLight: "/images/responsive-light.png",
-      title: "RESPONSIVE",
-      describe: "My layouts will work on any device, big or small.",
+      image: "/images/iac.png",
+      imageLight: "/images/iac-light.png",
+      title: "INFRASTRUCTURE AS CODE",
+      describe: "Terraform-managed environments: reproducible, reviewable, and rebuilt on demand.",
     },
     {
-      image: "/images/intuitive.png",
-      imageLight: "/images/intuitive-light.png",
-      title: "INTUITIVE",
-      describe: "Strong preference for easy to use, intuitive UX/UI.",
+      image: "/images/secure.png",
+      imageLight: "/images/secure-light.png",
+      title: "SECURE",
+      describe: "Scoped IAM, secrets out of source control, TLS end to end, least privilege by default.",
     },
     {
-      image: "/images/dynamic.png",
-      imageLight: "/images/dynamic-light.png",
-      title: "DYNAMIC",
-      describe: "Websites don't have to be static, I love making pages come to life.",
+      image: "/images/accessible.png",
+      imageLight: "/images/accessible-light.png",
+      title: "ACCESSIBLE",
+      describe: "WCAG 2.1 AA verified by a certified Web Accessibility Specialist — measured, not assumed.",
     },
     {
       image: "/images/stack.png",
       imageLight: "/images/stack-light.png",
       title: "FULL-STACK",
-      describe: "Both user-facing and server-side aspects of web applications.",
+      describe: "React and Next.js through Node.js APIs to the database and the infrastructure beneath it.",
     },
   ]
 
