@@ -12,7 +12,7 @@ const Home = () => {
             <h1 className="text-4xl md:text-6xl colorTextOpposite font-extrabold mb-4">Hello, I am&nbsp;
                 <span className="uppercase colorTextOpposite font-bold fadeIn">Brian van Vlymen</span>
             </h1>
-            <h1 className="text-2xl md:text-3xl colorTextOpposite font-semi mb-4 fadeIn">Senior Full-Stack Engineer · Cloud Infrastructure (AWS)</h1>
+            <h1 className="text-2xl md:text-3xl colorTextOpposite font-semi mb-4 fadeIn">Senior Full-Stack Engineer · AWS Cloud Engineer</h1>
 
             <div className="m-4">
                 <a href="/#projects">
