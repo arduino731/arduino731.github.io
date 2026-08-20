@@ -7,11 +7,11 @@ import ClientNextThemes from './clientNextThemes'
 export const metadata = {
   metadataBase: new URL('https://van-vlymen.com'),
   title: {
-    default: 'Brian van Vlymen · AWS Cloud Engineer · Full-Stack Architect',
+    default: 'Brian van Vlymen · Senior Full-Stack Engineer · AWS Cloud Engineer',
     template: '%s · Brian van Vlymen',
   },
   description:
-    'Portfolio of Brian van Vlymen, AWS Cloud Engineer and Full-Stack Architect with 10+ years of experience building production systems end-to-end with AWS (ECS, Lambda, S3, SES), Terraform, Next.js, and MongoDB Atlas — certified Web Accessibility Specialist (WAS).',
+    'Portfolio of Brian van Vlymen, Senior Full-Stack Engineer and AWS Cloud Engineer with 10+ years of experience building production systems end-to-end with AWS (ECS, Lambda, S3, SES), Terraform, Next.js, and MongoDB Atlas — certified Web Accessibility Specialist (WAS).',
   keywords: [
     'Brian van Vlymen',
     'van Vlymen',
@@ -19,6 +19,7 @@ export const metadata = {
     'AWS Cloud Engineer',
     'Cloud Architect',
     'Full Stack Architect',
+    'Solutions Architect',
     'Senior Full-Stack Engineer',
     'Cloud Infrastructure',
     'AWS',
@@ -57,7 +58,7 @@ export const metadata = {
     type: 'website',
     url: 'https://van-vlymen.com',
     siteName: 'Brian van Vlymen',
-    title: 'Brian van Vlymen · AWS Cloud Engineer · Full-Stack Architect',
+    title: 'Brian van Vlymen · Senior Full-Stack Engineer · AWS Cloud Engineer',
     description:
       'Production systems end-to-end — AWS, Terraform, Next.js, and Node.js. Certified Web Accessibility Specialist (WAS).',
     images: [
@@ -65,7 +66,7 @@ export const metadata = {
         url: '/images/og-banner.png',
         width: 1200,
         height: 630,
-        alt: 'Brian van Vlymen — AWS Cloud Engineer · Full-Stack Architect',
+        alt: 'Brian van Vlymen — Senior Full-Stack Engineer · AWS Cloud Engineer',
       },
     ],
   },
@@ -73,13 +74,13 @@ export const metadata = {
     card: 'summary_large_image',
     site: '@vanvlymenpaws',
     creator: '@vanvlymenpaws',
-    title: 'Brian van Vlymen · AWS Cloud Engineer · Full-Stack Architect',
+    title: 'Brian van Vlymen · Senior Full-Stack Engineer · AWS Cloud Engineer',
     description:
       'Production systems end-to-end — AWS, Terraform, Next.js, and Node.js. Certified Web Accessibility Specialist (WAS).',
     images: [
       {
         url: '/images/og-banner.png',
-        alt: 'Brian van Vlymen — AWS Cloud Engineer · Full-Stack Architect',
+        alt: 'Brian van Vlymen — Senior Full-Stack Engineer · AWS Cloud Engineer',
       },
     ],
   },
@@ -91,7 +92,7 @@ const jsonLd = {
   name: 'Brian van Vlymen',
   url: 'https://van-vlymen.com',
   image: 'https://van-vlymen.com/images/portfolioImageCard.png',
-  jobTitle: 'AWS Cloud Engineer & Full-Stack Architect',
+  jobTitle: 'Senior Full-Stack Engineer & AWS Cloud Engineer',
   email: 'mailto:bvanvlymen.dev@gmail.com',
   alumniOf: {
     '@type': 'CollegeOrUniversity',

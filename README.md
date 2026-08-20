@@ -2,7 +2,7 @@
 
 **Live site: [van-vlymen.com](https://van-vlymen.com)**
 
-Portfolio of Brian van Vlymen — AWS Cloud Engineer · Full-Stack Architect, and a certified Web Accessibility Specialist (WAS). A minimalist, accessible site built with Next.js (App Router, static export), React, and Tailwind CSS, deployed to GitHub Pages via GitHub Actions.
+Portfolio of Brian van Vlymen — Senior Full-Stack Engineer · AWS Cloud Engineer, and a certified Web Accessibility Specialist (WAS). A minimalist, accessible site built with Next.js (App Router, static export), React, and Tailwind CSS, deployed to GitHub Pages via GitHub Actions.
 
 ## 🛠 Tech Stack
 
