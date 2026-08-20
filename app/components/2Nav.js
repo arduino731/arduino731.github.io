@@ -27,7 +27,7 @@ const Nav = () => {
         <Link href="/" className="flex-shrink-0">
           <Image
             src={Logo}
-            alt="Logo"
+            alt="Brian van Vlymen — home"
             width={isScrolled ? 40 : 64}
             height={isScrolled ? 40 : 64}
             className="rounded-sm transition-all duration-300 ease-in-out"
