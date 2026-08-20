@@ -37,7 +37,7 @@ const About = () => {
 
         {/* Specialization: Full-Stack + Cloud */}
         <p className="mb-6 fadeIn">
-          I build and ship production systems end-to-end — most recently as lead developer at <span className="font-bold">InterPicker</span>, a startup platform running on AWS (ECS, SES, S3) with Next.js, MongoDB Atlas, Docker, and Nginx. I also maintain a dedicated engineering lab where I stress-test frontend performance through real-time telemetry and AI-driven logic.
+          I build and ship production systems end-to-end. I am currently the sole architect of <span className="font-bold">besHandyman</span>, a two-sided home services marketplace with Stripe Connect payments, MongoDB Atlas, and AWS ECS — and previously lead developer at <span className="font-bold">InterPicker</span>, a subscription SaaS platform on AWS with Next.js, MongoDB Atlas, Docker, and Nginx. Alongside client work I build <span className="font-bold">a11y-auditor</span>, a serverless WCAG auditing service on AWS Lambda, SQS, and DynamoDB, provisioned entirely with Terraform.
         </p>
 
         {/* The "Was" Certification / Accessibility Focus */}

@@ -10,19 +10,20 @@ import useHandleScroll from '../hooks/HandleScroll';
 
 const projects = [
   {
-    id: 4,
-    title: "InterPicker — Full-Stack Startup Platform",
-    description: "Sole technical architect and lead developer of a subscription-based SaaS platform, owning the full lifecycle alongside a digital-marketing lead — Next.js/React front end, Node.js/Express and MongoDB backend, Stripe subscription billing, and AWS cloud infrastructure.",
-    image: "/images/interpicker.png",
-    url: "/projects/Interpicker-full-stack-startup",
+    id: 2,
+    title: "besHandyman — Services Marketplace",
+    description: "Sole technical architect of a TaskRabbit-style on-demand home services marketplace. Two-sided platform with Stripe Connect direct charges and a 20% customer-facing service fee, MongoDB Atlas, Mapbox geolocation matching, Twilio SMS, JWT role-based auth, an admin console, and AWS ECS/SES infrastructure.",
+    image: "/images/beshandyman.png",
+    url: "/projects/besHandyman-services-marketplace",
+    status: "Build in progress",
     tags: [
-      { name: "Startup · Lead Architect", color: "amber" },
-      { name: "Next.js/React", color: "blue" },
-      { name: "Node.js/MongoDB", color: "green" },
-      { name: "Stripe Billing", color: "indigo" },
-      { name: "AWS ECS/EC2", color: "orange" },
-      { name: "Auto Scaling", color: "teal" },
-      { name: "Docker/Nginx", color: "cyan" }
+      { name: "Marketplace · Lead Architect", color: "amber" },
+      { name: "Stripe Connect", color: "indigo" },
+      { name: "Twilio/Mapbox", color: "purple" },
+      { name: "MongoDB Atlas", color: "green" },
+      { name: "JWT/Admin", color: "slate" },
+      { name: "AWS ECS/SES", color: "orange" },
+      { name: "Docker", color: "cyan" }
     ]
   },
   {
@@ -43,6 +44,22 @@ const projects = [
     ]
   },
   {
+    id: 4,
+    title: "InterPicker — Full-Stack Startup Platform",
+    description: "Sole technical architect and lead developer of a subscription-based SaaS platform, owning the full lifecycle alongside a digital-marketing lead — Next.js/React front end, Node.js/Express and MongoDB backend, Stripe subscription billing, and AWS cloud infrastructure.",
+    image: "/images/interpicker.png",
+    url: "/projects/Interpicker-full-stack-startup",
+    tags: [
+      { name: "Startup · Lead Architect", color: "amber" },
+      { name: "Next.js/React", color: "blue" },
+      { name: "Node.js/MongoDB", color: "green" },
+      { name: "Stripe Billing", color: "indigo" },
+      { name: "AWS ECS/EC2", color: "orange" },
+      { name: "Auto Scaling", color: "teal" },
+      { name: "Docker/Nginx", color: "cyan" }
+    ]
+  },
+  {
     id: 1,
     title: "Interactive UI/UX Engineering Lab",
     description: "A specialized frontend suite focused on high-density data and complex logic. Includes AstroDash (Telemetry), Minimax AI (Algorithms), and Paws (Accessible E-commerce).",
@@ -54,23 +71,6 @@ const projects = [
       { name: "Minimax AI", color: "purple" },
       { name: "Paws Frontend", color: "orange" },
       { name: "WCAG Standards", color: "teal" }
-    ]
-  },
-  {
-    id: 2,
-    title: "besHandyman — Services Marketplace",
-    description: "Sole technical architect of a TaskRabbit-style on-demand home services marketplace. Two-sided platform with Stripe Connect direct charges and a 20% customer-facing service fee, MongoDB Atlas, Mapbox geolocation matching, Twilio SMS, JWT role-based auth, an admin console, and AWS ECS/SES infrastructure.",
-    image: "/images/beshandyman.png",
-    url: "/projects/besHandyman-services-marketplace",
-    status: "Build in progress",
-    tags: [
-      { name: "Marketplace · Lead Architect", color: "amber" },
-      { name: "Stripe Connect", color: "indigo" },
-      { name: "Twilio/Mapbox", color: "purple" },
-      { name: "MongoDB Atlas", color: "green" },
-      { name: "JWT/Admin", color: "slate" },
-      { name: "AWS ECS/SES", color: "orange" },
-      { name: "Docker", color: "cyan" }
     ]
   }
 ];
