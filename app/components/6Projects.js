@@ -58,16 +58,18 @@ const projects = [
   },
   {
     id: 2,
-    title: "Full-Stack Platform",
-    description: "Comprehensive MERN architecture featuring role-based access control, secure authentication via Passport.js, and real-time product feedback loops. Deployed via Dockerized microservices.",
-    image: "/images/ecommerce.png",
-    url: "/projects/2systemArch",
+    title: "besHandyman — Services Marketplace",
+    description: "Sole technical architect of a TaskRabbit-style on-demand home services marketplace. Two-sided platform with Stripe Connect payments and provider payouts, Mapbox geolocation matching, Twilio SMS, JWT role-based auth, an admin console, and AWS ECS/SES infrastructure.",
+    image: "/images/beshandyman.png",
+    url: "/projects/besHandyman-services-marketplace",
+    status: "Build in progress",
     tags: [
-      { name: "System Architecture", color: "indigo" },
-      { name: "Backend API", color: "black" },
-      { name: "Database Design", color: "green" },
-      { name: "User Auth", color: "slate" },
-      { name: "MERN Stack", color: "teal" }
+      { name: "Marketplace · Lead Architect", color: "amber" },
+      { name: "Stripe Connect", color: "indigo" },
+      { name: "Twilio/Mapbox", color: "purple" },
+      { name: "JWT/Admin", color: "slate" },
+      { name: "AWS ECS/SES", color: "orange" },
+      { name: "Docker", color: "cyan" }
     ]
   }
 ];
