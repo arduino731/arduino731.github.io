@@ -67,7 +67,7 @@ const ImageSlider = () => {
   }
 
   return (
-  <div className={`scrollHandle transition-opacity duration-1000 ease-in-out colorBackground colorTextOpposite 
+  <div className={`scrollHandle transition-opacity duration-1000 ease-in-out colorBackground colorTextOpposite pt-10 sm:pt-16
   ${
   currentSection === 'slider' ? 'opacity-100' : 'opacity-0'
   }`}
