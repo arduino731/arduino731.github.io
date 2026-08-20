@@ -11,8 +11,6 @@ const routes = [
   { path: '/projects/1frontendMastery/AstroDash', priority: 0.6 },
   { path: '/projects/1frontendMastery/Paws', priority: 0.6 },
   { path: '/projects/1frontendMastery/TicTacToe', priority: 0.6 },
-  { path: '/projects/2systemArch', priority: 0.8 },
-  { path: '/projects/2systemArch/MernEcommercePro', priority: 0.6 },
 ]
 
 export default function sitemap() {

@@ -7,6 +7,7 @@ const techStack = [
   'React',
   'Next.js',
   'Node.js',
+  'MongoDB Atlas',
   'Stripe Connect',
   'Twilio',
   'Mapbox',
@@ -33,9 +34,10 @@ const contributions = [
     title: 'Stripe Connect Payments & Payouts',
     body: (
       <>
-        Integrated <strong>Stripe Connect</strong> to handle marketplace payments: collecting from
-        customers, splitting the platform fee, and paying out to provider accounts. Connect is what
-        makes routing money to third parties possible without holding funds directly.
+        Integrated <strong>Stripe Connect</strong> using <strong>direct charges</strong> — each job
+        is charged on the provider&apos;s own connected account, with a ~20% application fee routed
+        to the platform to fund the service. Charging per task on the connected account keeps the
+        provider as merchant of record and avoids the platform holding funds.
       </>
     ),
   },
@@ -76,6 +78,18 @@ const contributions = [
       <>
         Built an administrative interface for managing users, providers, and bookings — the
         operational surface a marketplace needs to handle disputes, verification, and oversight.
+      </>
+    ),
+  },
+  {
+    icon: '🍃',
+    title: 'MongoDB Atlas — a Deliberate Choice',
+    body: (
+      <>
+        Chose <strong>MongoDB Atlas</strong> over DynamoDB on purpose. A marketplace fits a document
+        model well, and Atlas keeps the data layer portable across providers rather than coupling
+        it to a single cloud&apos;s proprietary API — a tradeoff worth making when the application
+        tier already runs on AWS.
       </>
     ),
   },

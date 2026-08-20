@@ -5,12 +5,6 @@ import Link from 'next/link'
 
 // --- JSON DATA SOURCE ---
 const PROJECT_DATA = [
-  {
-    id: 'MernEcommercePro',
-    path: '/projects/2systemArch/MernEcommercePro',
-    title: 'MERN E-Commerce Pro',
-    buttonLabel: 'View MERN E-Commerce Pro',
-  },
   // {
   //   id: 'tictactoe',
   //   title: 'Minimax AI Tic-Tac-Toe',
