@@ -75,7 +75,7 @@ const ImageSlider = () => {
     <div className="relative flex justify-center items-center min-h-[60vh] sm:min-h-[70vh] flex-col gap-6">
 
       {/* Image animations */}
-      <div className="relative w-36 h-36 sm:w-56 sm:h-56">
+      <div className="relative w-32 h-32 sm:w-48 sm:h-48">
         {findText.map((item, index) => (
           <motion.div
             key={index}
