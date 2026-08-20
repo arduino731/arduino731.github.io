@@ -18,26 +18,31 @@ const ImageSlider = () => {
   const findText = [
     {
       image: "/images/fast.png",
+      imageLight: "/images/fast-light.png",
       title: "FAST",
       describe: "Fast load times and lag free interaction, my highest priority.",
     },
     {
       image: "/images/responsive.png",
+      imageLight: "/images/responsive-light.png",
       title: "RESPONSIVE",
       describe: "My layouts will work on any device, big or small.",
     },
     {
       image: "/images/intuitive.png",
+      imageLight: "/images/intuitive-light.png",
       title: "INTUITIVE",
       describe: "Strong preference for easy to use, intuitive UX/UI.",
     },
     {
       image: "/images/dynamic.png",
+      imageLight: "/images/dynamic-light.png",
       title: "DYNAMIC",
       describe: "Websites don't have to be static, I love making pages come to life.",
     },
     {
       image: "/images/stack.png",
+      imageLight: "/images/stack-light.png",
       title: "FULL-STACK",
       describe: "Both user-facing and server-side aspects of web applications.",
     },
@@ -88,11 +93,20 @@ const ImageSlider = () => {
             transition={{ duration: 0.5 }}
             className=" absolute w-full h-full"
           >
+            {/* Line-art marks on a tile whose background flips with the
+                theme, so the stroke color is swapped rather than fixed.
+                Exactly one is displayed, so only one is announced. */}
+            <Image
+              src={item.imageLight}
+              alt={item.title}
+              fill
+              className="fadeIn colorBackgroundOpposite object-contain rounded-xl border-2 border-white block dark:hidden"
+            />
             <Image
               src={item.image}
               alt={item.title}
               fill
-              className="fadeIn colorBackgroundOpposite object-contain rounded-xl border-2 border-white"
+              className="fadeIn colorBackgroundOpposite object-contain rounded-xl border-2 border-white hidden dark:block"
             />
           </motion.div>
         ))}
