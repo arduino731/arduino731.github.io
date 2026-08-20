@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import Logo from './wolfIcon.png'
+import LogoLight from './wolfIconLight.png'
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,12 +26,23 @@ const Nav = () => {
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8">
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
+          {/* The mark is a single-color silhouette while the nav background
+              flips with the theme, so the fill is swapped per theme rather
+              than sitting on a plate. Exactly one is displayed at a time, so
+              only one is announced. */}
+          <Image
+            src={LogoLight}
+            alt="Brian van Vlymen — home"
+            width={isScrolled ? 40 : 64}
+            height={isScrolled ? 40 : 64}
+            className="block dark:hidden rounded-sm transition-all duration-300 ease-in-out"
+          />
           <Image
             src={Logo}
             alt="Brian van Vlymen — home"
             width={isScrolled ? 40 : 64}
             height={isScrolled ? 40 : 64}
-            className="rounded-sm transition-all duration-300 ease-in-out"
+            className="hidden dark:block rounded-sm transition-all duration-300 ease-in-out"
           />
         </Link>
 
